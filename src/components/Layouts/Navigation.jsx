@@ -30,9 +30,9 @@ function Navigation() {
       <header className="">
         <nav
           className={`!flex ${
-            path != "/" && "bg-white !text-black"
+            path !== "/" && "bg-white !text-black"
           } h-full justify-between px-4 md:justify-around transition-all w-full ${
-            scrolled && path == "/" ? "glass " : "text-white pure-glass"
+            scrolled && path === "/" ? "glass " : "text-white pure-glass"
           }`}
         >
           <div

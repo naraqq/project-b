@@ -1,7 +1,6 @@
 import { ParallaxProvider } from "react-scroll-parallax";
 import Info from "../components/Info";
 import Layout from "../components/Layouts/Layout";
-import OurWork from "../components/OurWork";
 import RecentJobs from "../components/RecentJobs";
 function Home() {
   return (

@@ -1,7 +1,5 @@
 import Layout from "../components/Layouts/Layout";
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import Placeholder from "react-bootstrap/Placeholder";
 function OpenJobs() {
   const jobs = [
     {
