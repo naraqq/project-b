@@ -55,10 +55,14 @@ function OpenJobs() {
               return (
                 <Card
                   key={index}
-                  style={{ width: "18rem", marginBottom: "20px" }}
+                  style={{
+                    width: "18rem",
+                    marginBottom: "20px",
+                    border: "none",
+                  }}
                 >
                   <Card.Img variant="top" src={`${item.img_url}`} alt="img" />
-                  <Card.Body className="h-[180px] md:h-[200px]">
+                  <Card.Body className="h-[200px]">
                     <div className="flex flex-col w-full justify-between items-end h-full">
                       <div>
                         <Card.Title>{item.title}</Card.Title>
@@ -86,7 +90,6 @@ function OpenJobs() {
               show={modalShow}
               onHide={() => setModalShow(false)}
             />
-            ;
           </div>
         </div>
       </div>
