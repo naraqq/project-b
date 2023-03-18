@@ -1,4 +1,4 @@
-import { Parallax, ParallaxProvider } from "react-scroll-parallax";
+import { ParallaxProvider } from "react-scroll-parallax";
 import Info from "../components/Info";
 import Layout from "../components/Layouts/Layout";
 function Home() {
