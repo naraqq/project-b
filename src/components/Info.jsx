@@ -59,7 +59,7 @@ function Info() {
             onClick={() => {
               setModalShow(true);
             }}
-            className="cards_item"
+            className="!hidden cards_item"
           >
             <div className="card">
               <div className="card_image">
