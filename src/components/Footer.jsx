@@ -44,19 +44,15 @@ function Footer() {
               <h6>Холбоо барих</h6>
               <ul className="footer-links">
                 <li>
-                  <a className="hover:!text-white" href="">
+                  <button className="hover:!text-white">
                     info@example.com
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a className="hover:!text-white" href="">
-                    +976 9911 XXXX
-                  </a>
+                  <button className="hover:!text-white">+976 9911 XXXX</button>
                 </li>
                 <li>
-                  <a className="hover:!text-white" href="">
-                    +976 7011 XXXX
-                  </a>
+                  <button className="hover:!text-white">+976 7011 XXXX</button>
                 </li>
               </ul>
             </div>
@@ -72,24 +68,24 @@ function Footer() {
             <div className="col-md-4 col-sm-6 col-xs-12">
               <ul className="social-icons">
                 <li>
-                  <a className="facebook" href="#">
+                  <button className="facebook">
                     <i className="bi bi-facebook"></i>
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a className="twitter" href="#">
+                  <button className="twitter">
                     <i className="bi bi-twitter"></i>
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a className="dribbble" href="#">
+                  <button className="dribbble">
                     <i className="bi bi-instagram"></i>
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a className="linkedin" href="#">
+                  <button className="linkedin">
                     <i className="bi bi-linkedin"></i>
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>

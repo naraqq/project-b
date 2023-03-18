@@ -36,12 +36,9 @@ function Navigation() {
             <h1 className="logo flex items-center cursor-pointer hover:!text-black">
               {/* <img className="w-[50px] h-[50px] mr-2" src="logo2.png" /> */}
               <i className="bi bi-buildings-fill text-2xl mr-2 mb-1"></i>
-              <a
-                className="mt-[-3px] uppercase font-bold hover:text-black"
-                href="#"
-              >
+              <button className="mt-[-3px] uppercase font-bold hover:text-black">
                 Жишээ ХХК
-              </a>
+              </button>
             </h1>
           </div>
           <div className="block md:hidden">
@@ -52,17 +49,17 @@ function Navigation() {
               <a href="#">Нүүр</a>
             </li> */}
             <li>
-              <a className="hover:text-black transition-all" href="#">
+              <button className="hover:text-black transition-all">
                 Бидний тухай
-              </a>
+              </button>
             </li>
             <li>
-              <a className="hover:text-black transition-all" href="#">
+              <button className="hover:text-black transition-all">
                 Мэдээ мэдээлэл
-              </a>
+              </button>
             </li>
             <li>
-              <a className="hover:text-black parent" href="#">
+              <button className="hover:text-black parent">
                 Ажлын байр
                 <div className="dropdown absolute top-[60px] left-0  h-12">
                   <div
@@ -86,7 +83,7 @@ function Navigation() {
                     Нээлттэй ажлын байр
                   </div>
                 </div>
-              </a>
+              </button>
             </li>
           </ul>
         </nav>
