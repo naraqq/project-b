@@ -193,7 +193,7 @@ function OffCanvas({ name, ...props }) {
                       navigate("/Танилцуулга");
                       handleClose();
                     }}
-                    className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b"
+                    className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-0 text-gray-500 border-b"
                   >
                     <i className="bi bi-caret-right mr-2"></i>Танилцуулга
                   </div>
@@ -202,7 +202,7 @@ function OffCanvas({ name, ...props }) {
                       navigate("/Бидний-гүйцэтсэн-ажил");
                       handleClose();
                     }}
-                    className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b"
+                    className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-0 text-gray-500 border-b"
                   >
                     <i className="bi bi-caret-right mr-2"></i>Бидний гүйцэтгэсэн
                     ажил
