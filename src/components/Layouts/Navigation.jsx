@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function Navigation() {
   const location = useLocation();
+  const navigate = useNavigate();
   const path = location.pathname;
   // console.log(path);
   const [scrolled, setScrolled] = useState(false);
@@ -28,11 +29,18 @@ function Navigation() {
     <div className="custom-navigation">
       <header className="">
         <nav
-          className={`!flex h-full justify-between px-4 md:justify-around transition-all w-full ${
-            scrolled && path === "/" ? "glass " : "text-white pure-glass"
+          className={`!flex ${
+            path != "/" && "bg-white !text-black"
+          } h-full justify-between px-4 md:justify-around transition-all w-full ${
+            scrolled && path == "/" ? "glass " : "text-white pure-glass"
           }`}
         >
-          <div className="header-top h-full flex items-center">
+          <div
+            onClick={() => {
+              navigate("/");
+            }}
+            className="header-top h-full flex items-center "
+          >
             <h1 className="logo flex items-center cursor-pointer hover:!text-black">
               {/* <img className="w-[50px] h-[50px] mr-2" src="logo2.png" /> */}
               <i className="bi bi-buildings-fill text-2xl mr-2 mb-1"></i>
@@ -49,36 +57,66 @@ function Navigation() {
               <a href="#">Нүүр</a>
             </li> */}
             <li>
-              <button className="hover:text-black transition-all">
-                Бидний тухай
-              </button>
-            </li>
-            <li>
-              <button className="hover:text-black transition-all">
+              <button
+                onClick={() => {
+                  navigate("/news");
+                }}
+                className="hover:text-black transition-all"
+              >
                 Мэдээ мэдээлэл
               </button>
             </li>
             <li>
               <button className="hover:text-black parent">
+                Бидний тухай
+                <div className="dropdown absolute top-[60px] left-0  h-12">
+                  <div
+                    onClick={() => {
+                      navigate("/Танилцуулга");
+                    }}
+                    className={`max-w-[300px] transition-all bg-gray-200 pt-3 pb-3 h-[50px] 
+                   hover:bg-gray-400  text-[13px] px-3 border-b border-gray-100`}
+                  >
+                    Танилцуулга
+                  </div>
+                  <div
+                    onClick={() => {
+                      navigate("/Бидний-гүйцэтсэн-ажил");
+                    }}
+                    className={`max-w-[300px] transition-all bg-gray-200 pt-3 pb-3 h-[50px] 
+                   hover:bg-gray-400  text-[13px] px-3 `}
+                  >
+                    Бидний гүйцэтгэсэн ажил
+                  </div>
+                  <div
+                    className={`max-w-[300px] transition-all bg-gray-200 pt-3 pb-3 h-[50px] 
+                   hover:bg-gray-400  text-[13px] px-3 `}
+                  >
+                    Хамтарж ажиллах
+                  </div>
+                </div>
+              </button>
+            </li>
+
+            <li>
+              <button className="hover:text-black parent">
                 Ажлын байр
                 <div className="dropdown absolute top-[60px] left-0  h-12">
                   <div
-                    className={`max-w-[300px] transition-all ${
-                      scrolled && path === "/"
-                        ? "bg-gray-100 "
-                        : "text-white pure-glass "
-                    }  pt-3 pb-3 h-[50px] 
-                   hover:bg-gray-300  text-[13px] px-3 `}
+                    onClick={() => {
+                      navigate("/яагаад-xxk-гэж");
+                    }}
+                    className={`max-w-[300px] transition-all bg-gray-200 pt-3 pb-3 h-[50px] 
+                   hover:bg-gray-400  text-[13px] px-3 border-b border-gray-100`}
                   >
                     Яагаад ХХХ ХХК гэж ?
                   </div>
                   <div
-                    className={`max-w-[300px] transition-all ${
-                      scrolled && path === "/"
-                        ? "bg-gray-100 "
-                        : "text-white pure-glass "
-                    } pt-3 pb-3 h-[50px] 
-                   hover:bg-gray-300  text-[13px] px-3  border-t`}
+                    onClick={() => {
+                      navigate("/openings");
+                    }}
+                    className={`max-w-[300px] transition-all bg-gray-200 pt-3 pb-3 h-[50px] 
+                    hover:bg-gray-400  text-[13px] px-3 `}
                   >
                     Нээлттэй ажлын байр
                   </div>
@@ -96,7 +134,7 @@ export default Navigation;
 
 function OffCanvas({ name, ...props }) {
   const [show, setShow] = useState(false);
-
+  const navigate = useNavigate();
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
@@ -124,16 +162,44 @@ function OffCanvas({ name, ...props }) {
         </Offcanvas.Header>
         <Offcanvas.Body>
           <div className="w-full relative">
-            <div className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b">
+            <div
+              onClick={() => {
+                navigate("/");
+              }}
+              className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b"
+            >
               Нүүр
             </div>
-            <div className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b">
-              Бидний тухай
+            <div
+              onClick={() => {
+                navigate("/Танилцуулга");
+              }}
+              className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b"
+            >
+              Танилцуулга
             </div>
-            <div className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b">
+            <div
+              onClick={() => {
+                navigate("/Бидний-гүйцэтсэн-ажил");
+              }}
+              className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b"
+            >
+              Бидний гүйцэтгэсэн ажил
+            </div>
+            <div
+              onClick={() => {
+                navigate("/news");
+              }}
+              className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b"
+            >
               Мэдээ мэдээлэл
             </div>
-            <div className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b">
+            <div
+              onClick={() => {
+                navigate("/openings");
+              }}
+              className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b"
+            >
               Ажлийн байр
             </div>
             <div className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b">

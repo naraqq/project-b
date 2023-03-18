@@ -1,6 +1,8 @@
 import { ParallaxProvider } from "react-scroll-parallax";
 import Info from "../components/Info";
 import Layout from "../components/Layouts/Layout";
+import OurWork from "../components/OurWork";
+import RecentJobs from "../components/RecentJobs";
 function Home() {
   return (
     <Layout>
@@ -16,10 +18,15 @@ function Home() {
           ></div>
           {/* <HomeCarousel /> */}
         </div>
-        <div className="h-full py-10 bg-gray-50">
+        <div className="h-full">
           <Info />
         </div>
-        <div className="h-screen">im home page</div>
+        <div className="h-full">
+          <RecentJobs />
+        </div>
+        {/* <div className="h-full">
+          <OurWork />
+        </div> */}
       </ParallaxProvider>
     </Layout>
   );

@@ -1,7 +1,11 @@
 import Footer from "../Footer";
 import Navigation from "./Navigation";
+import { useEffect } from "react";
 
 function Layout({ children }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Navigation />

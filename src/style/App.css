@@ -58,34 +58,35 @@
   /* border-bottom: 1px solid white; */
 }
 
-.custom-navigation header nav .logo a {
-}
+/* .custom-navigation header nav .logo a {
+} */
 
 .custom-navigation header nav ul {
   display: flex;
   flex-wrap: wrap;
 }
 
-.custom-navigation header nav li a {
+.custom-navigation header nav li button {
   display: block;
   position: relative;
   padding: 20px;
   font-size: 13px;
-  width: 145px;
+  width: 165px;
   text-align: center;
 }
 
-.custom-navigation header nav li a:before,
-.custom-navigation header nav li a:after {
+.custom-navigation header nav li button:before,
+.custom-navigation header nav li button:after {
   content: "";
-  bottom: 0px;
+  bottom: -2px;
   width: 0px;
   height: 2px;
   display: block;
   position: absolute;
-  background-color: black;
+  /* background-color: black; */
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  z-index: 2;
 }
 .header-top {
   position: relative;
@@ -103,15 +104,15 @@
   transition: all 0.3s ease-in-out;
 }
 
-.custom-navigation header nav li a:before {
+.custom-navigation header nav li button:before {
   right: 50%;
 }
-.custom-navigation header nav li a:after {
+.custom-navigation header nav li button:after {
   left: 50%;
 }
 
-.custom-navigation header nav li a:hover:before,
-.custom-navigation header nav li a:hover:after {
+.custom-navigation header nav li button:hover:before,
+.custom-navigation header nav li button:hover:after {
   width: 50%;
 }
 

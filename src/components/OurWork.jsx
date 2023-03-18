@@ -1,4 +1,4 @@
-function Info() {
+function OurWork() {
   return (
     <div className="body">
       <div className="main">
@@ -8,7 +8,7 @@ function Info() {
         "
         >
           {" "}
-          Онцлох мэдээ
+          Мэдээ мэдээлэл
         </h1>
         <ul className="cards">
           <li className="cards_item">
@@ -56,7 +56,7 @@ function Info() {
               </div>
             </div>
           </li>
-          <li className="!hidden cards_item">
+          <li className="!hidden md:!flex cards_item">
             <div className="card">
               <div className="card_image">
                 <img src="https://picsum.photos/500/300/?image=14" />
@@ -71,7 +71,7 @@ function Info() {
               </div>
             </div>
           </li>
-          <li className="!hidden cards_item">
+          <li className="!hidden md:!flex cards_item">
             <div className="card">
               <div className="card_image">
                 <img src="https://picsum.photos/500/300/?image=17" />
@@ -86,7 +86,7 @@ function Info() {
               </div>
             </div>
           </li>
-          <li className="!hidden cards_item">
+          <li className="!hidden md:!flex cards_item">
             <div className="card">
               <div className="card_image">
                 <img src="https://picsum.photos/500/300/?image=2" />
@@ -109,4 +109,4 @@ function Info() {
   );
 }
 
-export default Info;
+export default OurWork;
