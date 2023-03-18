@@ -1,17 +1,46 @@
-import React, { useState } from "react";
-import Button from "react-bootstrap/Button";
+import React, { useState, useEffect } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import { useLocation } from "react-router-dom";
 
 function Navigation() {
+  const location = useLocation();
+  const path = location.pathname;
+  // console.log(path);
+  const [scrolled, setScrolled] = useState(false);
+
+  // handle scroll event
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    if (position >= 60) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+  // attach scroll event listener to window
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div className="custom-navigation">
       <header className="">
-        <nav className="!flex h-full justify-between px-4 md:justify-around w-full">
+        <nav
+          className={`!flex h-full justify-between px-4 md:justify-around transition-all w-full ${
+            scrolled && path === "/" ? "glass " : "text-white pure-glass"
+          }`}
+        >
           <div className="header-top h-full flex items-center">
-            <h1 className="logo flex items-center cursor-pointer">
-              <img className="w-[80px] h-[30px]" src="logo.png" />
-              <a className="mt-[-3px]" href="#">
-                Компани нэр
+            <h1 className="logo flex items-center cursor-pointer hover:!text-black">
+              {/* <img className="w-[50px] h-[50px] mr-2" src="logo2.png" /> */}
+              <i className="bi bi-buildings-fill text-2xl mr-2 mb-1"></i>
+              <a
+                className="mt-[-3px] uppercase font-bold hover:text-black"
+                href="#"
+              >
+                Жишээ ХХК
               </a>
             </h1>
           </div>
@@ -23,13 +52,41 @@ function Navigation() {
               <a href="#">Нүүр</a>
             </li> */}
             <li>
-              <a href="#">Бидний тухай</a>
+              <a className="hover:text-black transition-all" href="#">
+                Бидний тухай
+              </a>
             </li>
             <li>
-              <a href="#">Мэдээ мэдээлэл</a>
+              <a className="hover:text-black transition-all" href="#">
+                Мэдээ мэдээлэл
+              </a>
             </li>
             <li>
-              <a href="#">Ажлийн байр</a>
+              <a className="hover:text-black parent" href="#">
+                Ажлын байр
+                <div className="dropdown absolute top-[60px] left-0  h-12">
+                  <div
+                    className={`max-w-[300px] transition-all ${
+                      scrolled && path === "/"
+                        ? "bg-gray-100 "
+                        : "text-white pure-glass "
+                    }  pt-3 pb-3 h-[50px] 
+                   hover:bg-gray-300  text-[13px] px-3 `}
+                  >
+                    Яагаад ХХХ ХХК гэж ?
+                  </div>
+                  <div
+                    className={`max-w-[300px] transition-all ${
+                      scrolled && path === "/"
+                        ? "bg-gray-100 "
+                        : "text-white pure-glass "
+                    } pt-3 pb-3 h-[50px] 
+                   hover:bg-gray-300  text-[13px] px-3  border-t`}
+                  >
+                    Нээлттэй ажлын байр
+                  </div>
+                </div>
+              </a>
             </li>
           </ul>
         </nav>
@@ -49,7 +106,7 @@ function OffCanvas({ name, ...props }) {
   return (
     <>
       <button onClick={handleShow} className="">
-        <i className="bi bi-list text-2xl text-white"></i>
+        <i className="bi bi-list text-2xl"></i>
       </button>
       <Offcanvas
         style={{ width: "290px" }}
@@ -69,21 +126,24 @@ function OffCanvas({ name, ...props }) {
           </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          <div className="w-full h-full ">
-            <div className="max-w-[300px] py-3 text-[13px] px-3 text-gray-500 border-b">
+          <div className="w-full relative">
+            <div className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b">
               Нүүр
             </div>
-            <div className="max-w-[300px] py-3 text-[13px] px-3 text-gray-500 border-b">
+            <div className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b">
               Бидний тухай
             </div>
-            <div className="max-w-[300px] py-3 text-[13px] px-3 text-gray-500 border-b">
+            <div className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b">
               Мэдээ мэдээлэл
             </div>
-            <div className="max-w-[300px] py-3 text-[13px] px-3 text-gray-500 border-b">
+            <div className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b">
               Ажлийн байр
             </div>
-            <div className="max-w-[300px] py-3 text-[13px] px-3 text-gray-500 border-b">
+            <div className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b">
               Холбоо барих
+            </div>
+            <div className="min-w-[260px] pt-3 pb-3 bottom-0 text-[13px] px-3 text-gray-500 text-center fixed">
+              © 2023 X-X-X Холдинг ХХК
             </div>
           </div>
         </Offcanvas.Body>
