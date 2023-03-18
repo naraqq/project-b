@@ -6,7 +6,7 @@ function Info() {
     <div className="body">
       <div className="main">
         <h1
-          className=" w-[200px] pb-2 ml-0 md:ml-4 border-b-[2px] mt-2 md:mt-10 border-gray-600 text-[20px] text-start uppercase
+          className=" w-[200px] pb-2 ml-4 md:ml-4 border-b-[2px] mt-2 md:mt-10 border-gray-600 text-[20px] text-start uppercase
         font-[400]
         "
         >
