@@ -14,7 +14,7 @@ function RecentJobs() {
           <li className="cards_item">
             <div className="card">
               <div className="card_image">
-                <img src="job1.jpg" />
+                <img src="job1.jpg" alt="img" />
               </div>
               <div className="card_content">
                 <h2 className="card_title">Хийсэн ажил</h2>
@@ -29,7 +29,7 @@ function RecentJobs() {
           <li className="cards_item">
             <div className="card">
               <div className="card_image">
-                <img src="job1.jpg" />
+                <img src="job1.jpg" alt="img" />
               </div>
               <div className="card_content">
                 <h2 className="card_title">Хийсэн ажил</h2>
@@ -44,7 +44,7 @@ function RecentJobs() {
           <li className="cards_item">
             <div className="card">
               <div className="card_image">
-                <img src="job1.jpg" />
+                <img src="job1.jpg" alt="img" />
               </div>
               <div className="card_content">
                 <h2 className="card_title">Хийсэн ажил</h2>

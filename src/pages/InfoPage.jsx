@@ -17,7 +17,10 @@ function InfoPage() {
             <li className="cards_item">
               <div className="card">
                 <div className="card_image">
-                  <img src="https://picsum.photos/500/300/?image=10" />
+                  <img
+                    alt="img"
+                    src="https://picsum.photos/500/300/?image=10"
+                  />
                 </div>
                 <div className="card_content">
                   <h2 className="card_title">Мэдээ мэдээлэл</h2>
@@ -32,7 +35,7 @@ function InfoPage() {
             <li className="cards_item">
               <div className="card">
                 <div className="card_image">
-                  <img src="https://picsum.photos/500/300/?image=5" />
+                  <img alt="img" src="https://picsum.photos/500/300/?image=5" />
                 </div>
                 <div className="card_content">
                   <h2 className="card_title">Мэдээ мэдээлэл</h2>
@@ -47,7 +50,10 @@ function InfoPage() {
             <li className="cards_item">
               <div className="card">
                 <div className="card_image">
-                  <img src="https://picsum.photos/500/300/?image=11" />
+                  <img
+                    alt="img"
+                    src="https://picsum.photos/500/300/?image=11"
+                  />
                 </div>
                 <div className="card_content">
                   <h2 className="card_title">Мэдээ мэдээлэл</h2>
@@ -62,7 +68,10 @@ function InfoPage() {
             <li className=" cards_item">
               <div className="card">
                 <div className="card_image">
-                  <img src="https://picsum.photos/500/300/?image=14" />
+                  <img
+                    alt="img"
+                    src="https://picsum.photos/500/300/?image=14"
+                  />
                 </div>
                 <div className="card_content">
                   <h2 className="card_title">Мэдээ мэдээлэл</h2>
@@ -77,7 +86,10 @@ function InfoPage() {
             <li className=" cards_item">
               <div className="card">
                 <div className="card_image">
-                  <img src="https://picsum.photos/500/300/?image=17" />
+                  <img
+                    alt="img"
+                    src="https://picsum.photos/500/300/?image=17"
+                  />
                 </div>
                 <div className="card_content">
                   <h2 className="card_title">Мэдээ мэдээлэл</h2>
@@ -92,7 +104,7 @@ function InfoPage() {
             <li className=" cards_item">
               <div className="card">
                 <div className="card_image">
-                  <img src="https://picsum.photos/500/300/?image=2" />
+                  <img alt="img" src="https://picsum.photos/500/300/?image=2" />
                 </div>
                 <div className="card_content">
                   <h2 className="card_title">Мэдээ мэдээлэл</h2>

@@ -54,7 +54,7 @@ function OpenJobs() {
                   key={index}
                   style={{ width: "18rem", marginBottom: "20px" }}
                 >
-                  <Card.Img variant="top" src={`${item.img_url}`} />
+                  <Card.Img variant="top" src={`${item.img_url}`} alt="img" />
                   <Card.Body className="h-[180px] md:h-[200px]">
                     <div className="flex flex-col w-full justify-between items-end h-full">
                       <div>

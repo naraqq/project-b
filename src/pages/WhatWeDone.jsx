@@ -17,7 +17,7 @@ function WhatWeDone() {
             <li className="cards_item">
               <div className="card">
                 <div className="card_image">
-                  <img src="job1.jpg" />
+                  <img alt="img" src="job1.jpg" />
                 </div>
                 <div className="card_content">
                   <h2 className="card_title">Хийсэн ажил</h2>
@@ -32,7 +32,7 @@ function WhatWeDone() {
             <li className="cards_item">
               <div className="card">
                 <div className="card_image">
-                  <img src="job1.jpg" />
+                  <img alt="img" src="job1.jpg" />
                 </div>
                 <div className="card_content">
                   <h2 className="card_title">Хийсэн ажил</h2>
@@ -47,7 +47,7 @@ function WhatWeDone() {
             <li className="cards_item">
               <div className="card">
                 <div className="card_image">
-                  <img src="job1.jpg" />
+                  <img alt="img" src="job1.jpg" />
                 </div>
                 <div className="card_content">
                   <h2 className="card_title">Хийсэн ажил</h2>
@@ -62,7 +62,7 @@ function WhatWeDone() {
             <li className=" cards_item">
               <div className="card">
                 <div className="card_image">
-                  <img src="job1.jpg" />
+                  <img alt="img" src="job1.jpg" />
                 </div>
                 <div className="card_content">
                   <h2 className="card_title">Хийсэн ажил</h2>
@@ -77,7 +77,7 @@ function WhatWeDone() {
             <li className=" cards_item">
               <div className="card">
                 <div className="card_image">
-                  <img src="job1.jpg" />
+                  <img alt="img" src="job1.jpg" />
                 </div>
                 <div className="card_content">
                   <h2 className="card_title">Хийсэн ажил</h2>
@@ -92,7 +92,7 @@ function WhatWeDone() {
             <li className=" cards_item">
               <div className="card">
                 <div className="card_image">
-                  <img src="job1.jpg" />
+                  <img alt="img" src="job1.jpg" />
                 </div>
                 <div className="card_content">
                   <h2 className="card_title">Хийсэн ажил</h2>

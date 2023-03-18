@@ -14,7 +14,7 @@ function Info() {
           <li className="cards_item">
             <div className="card">
               <div className="card_image">
-                <img src="https://picsum.photos/500/300/?image=10" />
+                <img src="https://picsum.photos/500/300/?image=10" alt="img" />
               </div>
               <div className="card_content">
                 <h2 className="card_title">Мэдээ мэдээлэл</h2>
@@ -29,7 +29,7 @@ function Info() {
           <li className="cards_item">
             <div className="card">
               <div className="card_image">
-                <img src="https://picsum.photos/500/300/?image=5" />
+                <img src="https://picsum.photos/500/300/?image=5" alt="img" />
               </div>
               <div className="card_content">
                 <h2 className="card_title">Мэдээ мэдээлэл</h2>
@@ -44,7 +44,7 @@ function Info() {
           <li className="cards_item">
             <div className="card">
               <div className="card_image">
-                <img src="https://picsum.photos/500/300/?image=11" />
+                <img src="https://picsum.photos/500/300/?image=11" alt="img" />
               </div>
               <div className="card_content">
                 <h2 className="card_title">Мэдээ мэдээлэл</h2>
@@ -59,7 +59,7 @@ function Info() {
           <li className="!hidden cards_item">
             <div className="card">
               <div className="card_image">
-                <img src="https://picsum.photos/500/300/?image=14" />
+                <img src="https://picsum.photos/500/300/?image=14" alt="img" />
               </div>
               <div className="card_content">
                 <h2 className="card_title">Мэдээ мэдээлэл</h2>
@@ -74,7 +74,7 @@ function Info() {
           <li className="!hidden cards_item">
             <div className="card">
               <div className="card_image">
-                <img src="https://picsum.photos/500/300/?image=17" />
+                <img src="https://picsum.photos/500/300/?image=17" alt="img" />
               </div>
               <div className="card_content">
                 <h2 className="card_title">Мэдээ мэдээлэл</h2>
@@ -89,7 +89,7 @@ function Info() {
           <li className="!hidden cards_item">
             <div className="card">
               <div className="card_image">
-                <img src="https://picsum.photos/500/300/?image=2" />
+                <img src="https://picsum.photos/500/300/?image=2" alt="img" />
               </div>
               <div className="card_content">
                 <h2 className="card_title">Мэдээ мэдээлэл</h2>
