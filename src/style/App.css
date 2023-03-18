@@ -137,3 +137,36 @@
   height: 100px;
   width: 200px;
 }
+.accordion-item:last-of-type .accordion-button.collapsed {
+  padding: 0;
+  border-bottom: 1px solid #e5e7eb;
+  border-radius: 0;
+}
+.accordion-item:last-of-type .accordion-button.collapsed:active {
+  outline: none !important;
+}
+.accordion-item:first-of-type .accordion-button {
+  border-radius: 0;
+  padding: 0;
+  background-color: none;
+  outline: none;
+  box-shadow: none;
+}
+.accordion-button:focus:active {
+  box-shadow: none;
+}
+.accordion-button:not(.collapsed) {
+  background-color: white;
+}
+.accordion-button::after {
+  background-image: none;
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: none;
+}
+.accordion-item:first-of-type .accordion-button {
+  border-bottom: 1px solid silver;
+}
+.accordion-body {
+  padding: 0 20px;
+}

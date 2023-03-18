@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { useLocation, useNavigate } from "react-router-dom";
-
+import Accordion from "react-bootstrap/Accordion";
 function Navigation() {
   const location = useLocation();
   const navigate = useNavigate();
@@ -165,6 +165,7 @@ function OffCanvas({ name, ...props }) {
             <div
               onClick={() => {
                 navigate("/");
+                handleClose();
               }}
               className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b"
             >
@@ -172,37 +173,80 @@ function OffCanvas({ name, ...props }) {
             </div>
             <div
               onClick={() => {
-                navigate("/Танилцуулга");
-              }}
-              className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b"
-            >
-              Танилцуулга
-            </div>
-            <div
-              onClick={() => {
-                navigate("/Бидний-гүйцэтсэн-ажил");
-              }}
-              className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b"
-            >
-              Бидний гүйцэтгэсэн ажил
-            </div>
-            <div
-              onClick={() => {
                 navigate("/news");
+                handleClose();
               }}
               className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b"
             >
               Мэдээ мэдээлэл
             </div>
+            <Accordion style={{ border: "none" }}>
+              <Accordion.Item eventKey="0" style={{ border: "none" }}>
+                <Accordion.Header>
+                  <div className="max-w-[300px] pt-3 pb-3 text-[13px] px-3 text-gray-500">
+                    Бидний тухай
+                  </div>
+                </Accordion.Header>
+                <Accordion.Body>
+                  <div
+                    onClick={() => {
+                      navigate("/Танилцуулга");
+                      handleClose();
+                    }}
+                    className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b"
+                  >
+                    <i className="bi bi-caret-right mr-2"></i>Танилцуулга
+                  </div>
+                  <div
+                    onClick={() => {
+                      navigate("/Бидний-гүйцэтсэн-ажил");
+                      handleClose();
+                    }}
+                    className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b"
+                  >
+                    <i className="bi bi-caret-right mr-2"></i>Бидний гүйцэтгэсэн
+                    ажил
+                  </div>
+                </Accordion.Body>
+              </Accordion.Item>
+            </Accordion>
+            <Accordion style={{ border: "none" }}>
+              <Accordion.Item eventKey="0" style={{ border: "none" }}>
+                <Accordion.Header>
+                  <div className="max-w-[300px] pt-3 pb-3 text-[13px] px-3 text-gray-500">
+                    Ажлын байр
+                  </div>
+                </Accordion.Header>
+                <Accordion.Body>
+                  <div
+                    onClick={() => {
+                      navigate("/яагаад-xxk-гэж");
+                      handleClose();
+                    }}
+                    className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b"
+                  >
+                    <i className="bi bi-caret-right mr-2"></i>Яагаад-xxk-гэж
+                  </div>
+                  <div
+                    onClick={() => {
+                      navigate("/Ажлын-байр");
+                      handleClose();
+                    }}
+                    className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b"
+                  >
+                    <i className="bi bi-caret-right mr-2"></i>Нээлттэй
+                    ажлын-байр
+                  </div>
+                </Accordion.Body>
+              </Accordion.Item>
+            </Accordion>
             <div
               onClick={() => {
-                navigate("/Ажлын-байр");
+                navigate("/Холбоо-барих");
+                handleClose();
               }}
               className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b"
             >
-              Ажлын байр
-            </div>
-            <div className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b">
               Холбоо барих
             </div>
             <div className="min-w-[260px] pt-3 pb-3 bottom-0 text-[13px] px-3 text-gray-500 text-center fixed">
