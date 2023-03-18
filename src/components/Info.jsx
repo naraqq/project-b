@@ -1,5 +1,4 @@
 import Modal from "react-bootstrap/Modal";
-import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 function Info() {
   const [modalShow, setModalShow] = useState(false);
