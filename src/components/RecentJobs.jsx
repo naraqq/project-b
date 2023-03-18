@@ -12,7 +12,7 @@ function RecentJobs() {
       "
         >
           {" "}
-          Бидний гүйцэтгэсэн ажилуудаас
+          Бидний гүйцэтгэсэн ажлуудаас
         </h1>
         <RecentDetail show={modalShow} onHide={() => setModalShow(false)} />
         <ul className="cards">
