@@ -1,6 +1,7 @@
 import Layout from "../components/Layouts/Layout";
-
+import { useNavigate } from "react-router-dom";
 function WhyourCompany() {
+  const navigate = useNavigate();
   return (
     <Layout>
       <div className="h-full relative bg-white">
@@ -10,7 +11,7 @@ function WhyourCompany() {
               <img
                 src="https://cdn-res.keymedia.com/cms/images/ca/126/0399_637873576761775202.jpg"
                 alt="Ажил"
-                className=" h-[500px]"
+                className="h-[250px] md:h-[500px]"
               />
             </div>
             <h1
@@ -42,8 +43,20 @@ function WhyourCompany() {
                 боломж
               </li>
             </ul>
-
-            <button className="px-3 py-2 border">CV илгээх</button>
+            <div className="text-[13px] bg-gray-100 px-3 py-4 border">
+              <p>
+                Та нээлттэй ажлын байранд тавигдах шаардлагыг хангаж байна гэж
+                үзвэл онлайн анкетаа илгээнэ үү.
+              </p>
+              <button
+                onClick={() => {
+                  navigate("/CV");
+                }}
+                className="px-3 py-2  border mt-2 active:bg-gray-100 bg-white"
+              >
+                CV илгээх
+              </button>
+            </div>
           </div>
         </div>
       </div>
