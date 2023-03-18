@@ -29,7 +29,7 @@ function Navigation() {
     <div className="custom-navigation">
       <header className="">
         <nav
-          className={`!flex ${
+          className={`!flex shadow ${
             path !== "/" && "bg-white !text-black"
           } h-full justify-between px-4 md:justify-around transition-all w-full ${
             scrolled && path === "/" ? "glass " : "text-white pure-glass"
@@ -113,7 +113,7 @@ function Navigation() {
                   </div>
                   <div
                     onClick={() => {
-                      navigate("/openings");
+                      navigate("/Ажлын-байр");
                     }}
                     className={`max-w-[300px] transition-all bg-gray-200 pt-3 pb-3 h-[50px] 
                     hover:bg-gray-400  text-[13px] px-3 `}
@@ -196,11 +196,11 @@ function OffCanvas({ name, ...props }) {
             </div>
             <div
               onClick={() => {
-                navigate("/openings");
+                navigate("/Ажлын-байр");
               }}
               className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b"
             >
-              Ажлийн байр
+              Ажлын байр
             </div>
             <div className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b">
               Холбоо барих

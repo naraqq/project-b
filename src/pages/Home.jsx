@@ -9,8 +9,9 @@ function Home() {
         <div className="h-[calc(100vh-60px)] relative">
           <div
             style={{
-              // backgroundSize: "cover",
+              // backgroundSize: "fit",
               background: `url(https://dmd-mongolie.com/en/wp-content/uploads/2019/08/220cc9453cbf66516e333fbabcf33e85.jpg)`,
+              // background: `url(https://cdn.mongolia-guide.com/generated/aimag/lnj1nD84PAkagj0NeXxnTZHA6blVJZJuHA6qENcv_1920_1000.jpeg)`,
               // backgroundSize: "cover",
             }}
             className="absolute top-[-60px] h-screen w-screen"

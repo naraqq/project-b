@@ -10,14 +10,16 @@ import WhyourCompany from "./pages/WhyourCompany";
 import InfoPage from "./pages/InfoPage";
 import OurHistory from "./pages/OurHistory";
 import WhatWeDone from "./pages/WhatWeDone";
+import CV from "./pages/CV";
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="*" element={<NotFound />} />
-        <Route path="/openings" element={<OpenJobs />} />
+        <Route path="/Ажлын-байр" element={<OpenJobs />} />
         <Route path="/news" element={<InfoPage />} />
+        <Route path="/CV" element={<CV />} />
         <Route path="/Танилцуулга" element={<OurHistory />} />
         <Route path="/яагаад-xxk-гэж" element={<WhyourCompany />} />
         <Route path="/Бидний-гүйцэтсэн-ажил" element={<WhatWeDone />} />

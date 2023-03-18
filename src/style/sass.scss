@@ -50,7 +50,8 @@ img {
 
 .btn:hover {
   background-color: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border: 1px solid rgb(121, 121, 121) !important;
+  color: rgb(121, 121, 121);
 }
 
 .cards {
@@ -113,4 +114,8 @@ img {
   font-size: 13px;
   margin-top: 35px;
   text-align: center;
+}
+
+.modal-content {
+  border: none !important;
 }
