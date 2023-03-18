@@ -25,7 +25,7 @@ function WhatWeDone() {
                     Барилгын салбар дахь 2023 оны дижитал шилжилт · BIM бол
                     ирээдүй гэдгийг ойлгосон учраас 100 хувь нэвтрүүлсэн.
                   </p>
-                  <button className="btn card_btn">Дэлгэнгүй</button>
+                  <button className="btn card_btn">Дэлгэрэнгүй</button>
                 </div>
               </div>
             </li>
@@ -40,7 +40,7 @@ function WhatWeDone() {
                     Барилгын салбар дахь 2023 оны дижитал шилжилт · BIM бол
                     ирээдүй гэдгийг ойлгосон учраас 100 хувь нэвтрүүлсэн.
                   </p>
-                  <button className="btn card_btn">Дэлгэнгүй</button>
+                  <button className="btn card_btn">Дэлгэрэнгүй</button>
                 </div>
               </div>
             </li>
@@ -55,7 +55,7 @@ function WhatWeDone() {
                     Барилгын салбар дахь 2023 оны дижитал шилжилт · BIM бол
                     ирээдүй гэдгийг ойлгосон учраас 100 хувь нэвтрүүлсэн.
                   </p>
-                  <button className="btn card_btn">Дэлгэнгүй</button>
+                  <button className="btn card_btn">Дэлгэрэнгүй</button>
                 </div>
               </div>
             </li>
@@ -70,7 +70,7 @@ function WhatWeDone() {
                     Барилгын салбар дахь 2023 оны дижитал шилжилт · BIM бол
                     ирээдүй гэдгийг ойлгосон учраас 100 хувь нэвтрүүлсэн.
                   </p>
-                  <button className="btn card_btn">Дэлгэнгүй</button>
+                  <button className="btn card_btn">Дэлгэрэнгүй</button>
                 </div>
               </div>
             </li>
@@ -85,7 +85,7 @@ function WhatWeDone() {
                     Барилгын салбар дахь 2023 оны дижитал шилжилт · BIM бол
                     ирээдүй гэдгийг ойлгосон учраас 100 хувь нэвтрүүлсэн.
                   </p>
-                  <button className="btn card_btn">Дэлгэнгүй</button>
+                  <button className="btn card_btn">Дэлгэрэнгүй</button>
                 </div>
               </div>
             </li>
@@ -100,7 +100,7 @@ function WhatWeDone() {
                     Барилгын салбар дахь 2023 оны дижитал шилжилт · BIM бол
                     ирээдүй гэдгийг ойлгосон учраас 100 хувь нэвтрүүлсэн.
                   </p>
-                  <button className="btn card_btn">Дэлгэнгүй</button>
+                  <button className="btn card_btn">Дэлгэрэнгүй</button>
                 </div>
               </div>
             </li>

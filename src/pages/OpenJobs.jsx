@@ -78,7 +78,7 @@ function OpenJobs() {
                         }}
                         className="rounded border px-3 py-2 hover:bg-gray-100 active:bg-gray-200"
                       >
-                        Дэлгэнгүй
+                        Дэлгэрэнгүй
                       </button>
                     </div>
                   </Card.Body>
