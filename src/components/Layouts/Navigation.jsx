@@ -50,21 +50,7 @@ function Navigation() {
                 className="w-[40px] md:w-[50px] h-[40px] md:h-[50px] mr-1"
                 src="logo.svg"
               />
-              {/* <i className="bi bi-buildings-fill text-2xl mr-2 mb-1"></i> */}
-              <span className="h-10 flex items-center font-[900] text-[38px] text-[#415361] roboto ">
-                ИНК
-              </span>
-              <div className="flex flex-col justify-between items-start ml-1 h-[20px] ">
-                <button className="justify-between roboto leading-[2px] uppercase text-[#415361] font-[300] text-shadow  text-[10px]  ">
-                  Инсталл <br />
-                </button>
-                <button className="justify-between roboto leading-[2px] uppercase text-[#415361] font-[300] text-shadow  text-[10px]  ">
-                  наран <br />
-                </button>
-                <button className="justify-between roboto leading-[2px] uppercase text-[#415361] font-[300] text-shadow  text-[10px]  ">
-                  констракшн
-                </button>
-              </div>
+              <img className="w-[130px] h-[40px] mr-1" src="logowords.png" />
             </h1>
           </div>
           <div className="block md:hidden">
