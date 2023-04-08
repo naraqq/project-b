@@ -41,11 +41,21 @@ function Navigation() {
             }}
             className="header-top h-full flex items-center "
           >
-            <h1 className="logo flex items-center cursor-pointer hover:!text-black">
-              {/* <img className="w-[50px] h-[50px] mr-2" src="logo2.png" /> */}
-              <i className="bi bi-buildings-fill text-2xl mr-2 mb-1"></i>
-              <button className="mt-[-3px] uppercase font-bold hover:text-black">
-                Жишээ ХХК
+            <h1
+              className={`logo flex items-center cursor-pointer hover:!text-black`}
+            >
+              <img
+                className="w-[40px] md:w-[50px] h-[40px] md:h-[50px] mr-2"
+                src="logo.svg"
+              />
+              {/* <i className="bi bi-buildings-fill text-2xl mr-2 mb-1"></i> */}
+              <span className="font-[900] text-4xl text-[#415361] leading-[1px]">
+                ИНК
+              </span>
+              <button className="mt-[-3px] text-start uppercase text-[#415361] font-[300] text-shadow  text-[11px] pt-[7px] leading-[9px] ml-1 mb-[3px]">
+                Инсталл <br />
+                наран <br />
+                констракшн
               </button>
             </h1>
           </div>
