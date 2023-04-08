@@ -25,6 +25,9 @@ function Navigation() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <div className="custom-navigation">
       <header className="">
@@ -36,6 +39,7 @@ function Navigation() {
           <div
             onClick={() => {
               navigate("/");
+              scrollToTop();
             }}
             className="header-top h-full flex items-center "
           >
@@ -50,7 +54,7 @@ function Navigation() {
               <span className="font-[900] text-4xl text-[#415361] leading-[1px]">
                 ИНК
               </span>
-              <button className="ml-1 text-start uppercase text-[#415361] pt-[-1px] md:pt-[1.5px] font-[300] text-shadow  text-[11px] leading-[9px] ">
+              <button className="ml-1 mb-[1px]  text-start uppercase text-[#415361] font-[300] text-shadow  text-[11px] leading-[9px] ">
                 Инсталл <br />
                 наран <br />
                 констракшн
