@@ -55,13 +55,13 @@ function Navigation() {
                 ИНК
               </span>
               <div className="flex flex-col justify-between items-start ml-1 h-[20px] ">
-                <button className="justify-between roboto leading-[4px] uppercase text-[#415361] font-[300] text-shadow  text-[10px]  ">
+                <button className="justify-between roboto leading-[2px] uppercase text-[#415361] font-[300] text-shadow  text-[10px]  ">
                   Инсталл <br />
                 </button>
-                <button className="justify-between roboto leading-[4px] uppercase text-[#415361] font-[300] text-shadow  text-[10px]  ">
+                <button className="justify-between roboto leading-[2px] uppercase text-[#415361] font-[300] text-shadow  text-[10px]  ">
                   наран <br />
                 </button>
-                <button className="justify-between roboto leading-[4px] uppercase text-[#415361] font-[300] text-shadow  text-[10px]  ">
+                <button className="justify-between roboto leading-[2px] uppercase text-[#415361] font-[300] text-shadow  text-[10px]  ">
                   констракшн
                 </button>
               </div>
