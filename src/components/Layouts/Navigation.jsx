@@ -47,7 +47,7 @@ function Navigation() {
               className={`logo flex items-center cursor-pointer hover:!text-black select-none`}
             >
               <img
-                className="w-[40px] md:w-[50px] h-[40px] md:h-[50px] mr-2"
+                className="w-[40px] md:w-[50px] h-[40px] md:h-[50px] mr-1"
                 src="logo.svg"
               />
               {/* <i className="bi bi-buildings-fill text-2xl mr-2 mb-1"></i> */}
@@ -55,13 +55,13 @@ function Navigation() {
                 ИНК
               </span>
               <div className="flex flex-col ml-1">
-                <button className="  text-start uppercase text-[#415361] font-[300] text-shadow  text-[11px] leading-[9px] ">
+                <button className="leading-[10px]  text-start uppercase text-[#415361] font-[300] text-shadow  text-[11px]  ">
                   Инсталл <br />
                 </button>
-                <button className="  text-start uppercase text-[#415361] font-[300] text-shadow  text-[11px] leading-[9px] ">
+                <button className="leading-[10px]  text-start uppercase text-[#415361] font-[300] text-shadow  text-[11px]  ">
                   наран <br />
                 </button>
-                <button className="  text-start uppercase text-[#415361] font-[300] text-shadow  text-[11px] leading-[9px] ">
+                <button className="leading-[10px]  text-start uppercase text-[#415361] font-[300] text-shadow  text-[11px]  ">
                   констракшн
                 </button>
               </div>
