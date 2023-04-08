@@ -42,7 +42,7 @@ function Navigation() {
             className="header-top h-full flex items-center "
           >
             <h1
-              className={`logo flex items-center cursor-pointer hover:!text-black`}
+              className={`logo flex items-center cursor-pointer hover:!text-black select-none`}
             >
               <img
                 className="w-[40px] md:w-[50px] h-[40px] md:h-[50px] mr-2"
@@ -52,7 +52,7 @@ function Navigation() {
               <span className="font-[900] text-4xl text-[#415361] leading-[1px]">
                 ИНК
               </span>
-              <button className="mt-[-3px] text-start uppercase text-[#415361] font-[300] text-shadow  text-[11px] pt-[7px] leading-[9px] ml-1 mb-[3px]">
+              <button className="ml-1 text-start uppercase text-[#415361] pt-[1px] md:pt-[1.5px] font-[300] text-shadow  text-[11px] leading-[9px] ">
                 Инсталл <br />
                 наран <br />
                 констракшн
@@ -88,6 +88,15 @@ function Navigation() {
                    hover:bg-gray-400  text-[13px] px-3 border-b border-gray-100`}
                   >
                     Танилцуулга
+                  </div>
+                  <div
+                    onClick={() => {
+                      navigate("/Танилцуулга");
+                    }}
+                    className={`max-w-[300px] transition-all bg-gray-200 pt-3 pb-3 h-[50px] 
+                   hover:bg-gray-400  text-[13px] px-3 border-b border-gray-100`}
+                  >
+                    Бидний эрхэм зорилго
                   </div>
                   <div
                     onClick={() => {

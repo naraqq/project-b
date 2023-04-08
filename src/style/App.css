@@ -134,7 +134,7 @@
 /* show the dropdown on hover */
 .parent:hover .dropdown {
   opacity: 1;
-  height: 100px;
+  height: 150px;
   width: 200px;
 }
 .accordion-item:last-of-type .accordion-button.collapsed {
