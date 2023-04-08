@@ -57,9 +57,6 @@ function Navigation() {
             <Mobilebar />
           </div>
           <ul className="!hidden md:!flex">
-            {/* <li>
-              <a href="#">Нүүр</a>
-            </li> */}
             <li>
               <button
                 onClick={() => {

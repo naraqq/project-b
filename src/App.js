@@ -4,6 +4,7 @@ import "./style/footer.css";
 import "./style/sass.scss";
 import "./style/keepin.scss";
 import "./style/style.less";
+import "./style/home.scss";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import OpenJobs from "./pages/OpenJobs";

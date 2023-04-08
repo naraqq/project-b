@@ -1,0 +1,196 @@
+// Variables
+$red: #ad0000;
+
+// Placeholder selectors
+%transition {
+  transition: all 0.25s;
+}
+
+/*=Typography=*/
+
+.body-cus .main-heading {
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 9px;
+  text-transform: uppercase;
+}
+
+.body-cus .container > h1 {
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.body-cus p {
+  line-height: 1body-cus 0.5;
+}
+
+.body-cus .sec-about a {
+  text-decoration: underline;
+}
+
+.body-cus .sec-services h2,
+.body-cus .sec-services p {
+  font-weight: 300;
+  text-align: center;
+}
+
+.body-cus .sec-testimonials p {
+  font-style: italic;
+}
+
+.body-cus .sec-contact .btn {
+  text-transform: uppercase;
+}
+
+.body-cus .soc-media-ul a {
+  text-align: center;
+  text-decoration: none;
+}
+
+/*=Base=*/
+
+.body-cussection {
+  padding: 5em 0;
+}
+
+.body-cus ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.body-cus a {
+  @extend %transition;
+}
+
+.body-cus hr {
+  margin-bottom: 3em;
+  width: 7%;
+}
+
+/*=Layout=*/
+
+.body-cus .sec-folio .row {
+  margin-bottom: 3em;
+}
+
+.body-cus .sec-folio img {
+  max-width: 100%;
+}
+
+/*Header*/
+
+.body-cus .navbar-default {
+  background: #fff;
+}
+
+.body-cus .navbar .fa-external-link {
+  vertical-align: top;
+}
+
+.body-cus .navbar-default .navbar-nav > li > a:hover,
+.body-cus .navbar-default .navbar-nav > li > a:focus {
+  color: $red;
+}
+
+.body-cus .navbar-default .navbar-nav > li > a:active {
+  color: darken($red, 5%);
+}
+
+/*Main*/
+
+.body-cus .sec-main {
+  position: relative;
+  height: 560px;
+  background: url(https://source.unsplash.com/kVf7VRgg4p8/1920x1080) no-repeat
+    center center;
+  background-size: cover;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.body-cus .main-heading {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  padding: 0;
+  margin: auto;
+  height: 40px;
+  color: #fff;
+}
+
+/*About*/
+
+.body-cus .sec-about a {
+  color: #000;
+  &:hover,
+  &:focus {
+    color: $red;
+  }
+}
+
+/*Services*/
+
+.body-cus .sec-services {
+  background: #f9f9f9;
+}
+
+.body-cus .sec-services i {
+  display: block;
+  margin: auto;
+  width: 45px;
+}
+
+.body-cus .sec-services .fa-paint-brush {
+  width: 64px;
+}
+
+.body-cus .sec-services .fa-code {
+  width: 68px;
+}
+
+.body-cus .sec-services h2 {
+  margin: 1em 0;
+}
+
+/*Testimonials*/
+
+.body-cus .sec-testimonials {
+  background: #f9f9f9;
+}
+
+/*Contact*/
+
+.body-cus .sec-contact .form-control:focus {
+  border-color: $red;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(173, 0, 0, 0.6);
+}
+
+.body-cus .sec-contact .btn {
+  padding: 0body-cus 0.5rem 1body-cus 0.75rem;
+  background: #000;
+  font-size: 0.95rem;
+  color: #fff;
+
+  @extend %transition;
+
+  &:hover,
+  &:focus {
+    background: $red;
+    border-color: darken($red, 10%);
+  }
+}
+
+/*Footer*/
