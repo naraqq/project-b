@@ -50,7 +50,7 @@ function Navigation() {
               <span className="font-[900] text-4xl text-[#415361] leading-[1px]">
                 ИНК
               </span>
-              <button className="ml-1 text-start uppercase text-[#415361] pt-[1px] md:pt-[1.5px] font-[300] text-shadow  text-[11px] leading-[9px] ">
+              <button className="ml-1 text-start uppercase text-[#415361] pt-[-1px] md:pt-[1.5px] font-[300] text-shadow  text-[11px] leading-[9px] ">
                 Инсталл <br />
                 наран <br />
                 констракшн
