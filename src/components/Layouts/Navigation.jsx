@@ -55,13 +55,13 @@ function Navigation() {
                 ИНК
               </span>
               <div className="flex flex-col ml-1 mb-[-2px]">
-                <button className="leading-[9px]  text-start uppercase text-[#415361] font-[300] text-shadow  text-[10px]  ">
+                <button className="leading-[10px]  text-start uppercase text-[#415361] font-[300] text-shadow  text-[10px]  ">
                   Инсталл <br />
                 </button>
-                <button className="leading-[9px]  text-start uppercase text-[#415361] font-[300] text-shadow  text-[10px]  ">
+                <button className="leading-[10px]  text-start uppercase text-[#415361] font-[300] text-shadow  text-[10px]  ">
                   наран <br />
                 </button>
-                <button className="leading-[9px]  text-start uppercase text-[#415361] font-[300] text-shadow  text-[10px]  ">
+                <button className="leading-[10px]  text-start uppercase text-[#415361] font-[300] text-shadow  text-[10px]  ">
                   констракшн
                 </button>
               </div>
