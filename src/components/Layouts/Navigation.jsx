@@ -54,11 +54,17 @@ function Navigation() {
               <span className="font-[900] text-4xl text-[#415361] leading-[1px]">
                 ИНК
               </span>
-              <button className="ml-1 mb-[1px]  text-start uppercase text-[#415361] font-[300] text-shadow  text-[11px] leading-[9px] ">
-                Инсталл <br />
-                наран <br />
-                констракшн
-              </button>
+              <div className="flex flex-col ml-1">
+                <button className="  text-start uppercase text-[#415361] font-[300] text-shadow  text-[11px] leading-[9px] ">
+                  Инсталл <br />
+                </button>
+                <button className="  text-start uppercase text-[#415361] font-[300] text-shadow  text-[11px] leading-[9px] ">
+                  наран <br />
+                </button>
+                <button className="  text-start uppercase text-[#415361] font-[300] text-shadow  text-[11px] leading-[9px] ">
+                  констракшн
+                </button>
+              </div>
             </h1>
           </div>
           <div className="block md:hidden">
