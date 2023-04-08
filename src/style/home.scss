@@ -1,23 +1,49 @@
 // Variables
 $red: #ad0000;
-
+@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;500;600&family=Fasthand&family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap");
 // Placeholder selectors
 %transition {
   transition: all 0.25s;
 }
 
+.nunito-200 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 200;
+}
+.nunito-300 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+}
+.nunito-900 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+}
+.nunito-400 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+}
+.nunito-500 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+}
+.nunito-600 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+}
+.nunito-700 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+}
+.nunito-800 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+}
+
 /*=Typography=*/
 
 .body-cus .main-heading {
-  font-weight: 300;
   text-align: center;
   letter-spacing: 9px;
-  text-transform: uppercase;
-}
-
-.body-cus .container > h1 {
-  font-weight: 300;
-  text-align: center;
   text-transform: uppercase;
 }
 

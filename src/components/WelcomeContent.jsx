@@ -3,18 +3,27 @@ function WelcomeContent() {
     <div>
       <div className="body-cus wrapper">
         <section id="home" className="sec-main">
-          <h1 className="main-heading">Where creativity happens.</h1>
+          <h1 className="main-heading nunito-500 text-[30px] md:text-[30px]">
+            Таны итгэлт түнш.
+          </h1>
         </section>
 
-        <section id="about" className="sec-about px-1 py-5 md:p-5">
+        <section
+          id="about"
+          className="sec-about px-1 !py-[70px] md:!py-[90px] md:p-5"
+        >
           <div className="container">
-            <h1 className="mb-5">Бидний тухай</h1>
-            <div className="row">
-              <div className="">
-                <p className="text-[14px] text-center">
+            <h1 className="mb-5 nunito-500 uppercase ">
+              ИНСТАЛЛ НАРАН КОНСТРАКШН ХХК
+            </h1>
+            <div className="row flex items-center justify-center">
+              <div className=" w-full md:w-2/3">
+                <p className="text-[15px] text-center nunito-400">
                   Манай компани нь анх 2009 онд байгуулагдаж өнөөг хүртэл МУын
-                  барилгын салбарт үйл ажилгаагаа амжилттай явуулж байна. • Бид
-                  2014 онд компаниа өргөжүүлж “Инсталл наран констракшн” ХХК
+                  барилгын салбарт үйл ажилгаагаа амжилттай явуулж байгаа билээ.
+                </p>
+                <p className="text-[15px] text-center nunito-400">
+                  Бид 2014 онд компаниа өргөжүүлж “Инсталл наран констракшн” ХХК
                   болгон БУА-ын 2.1.1~5, 2.2.1~4 болон БА-6.2 тус тус заалттай
                   тусгай зөвшөөрөлтэйгээр үйл ажиллагаагаа явуулж байна
                 </p>
@@ -22,41 +31,45 @@ function WelcomeContent() {
             </div>
           </div>
         </section>
-        <section id="services" className="sec-services">
+        <section
+          id="services"
+          className="sec-services px-1 !py-[70px] md:!py-[110px] md:p-5"
+        >
           <div className="container">
-            <h1>Services</h1>
-
+            <h1 className="mb-5 nunito-600 uppercase ">
+              ИНСТАЛЛ НАРАН КОНКРИТ ХХК
+            </h1>
             <div className="row">
               <div className="col-sm-4">
-                <i className="fa fa-4x fa-paint-brush"></i>
+                <i className="bi bi-droplet-half text-4xl"></i>
 
-                <h2 className="h3">Beautiful Design</h2>
+                <h2 className="h3 nunito-200">Чанар</h2>
 
-                <p>
-                  Every website is beautiful, unique and tailored to suit your
-                  needs and requirements.
+                <p className="text-[15px] text-center nunito-400">
+                  Бид иргэний барилга байгууламж болон дэд бүтцийн төслийн
+                  хэрэгцээ, шаардлагад нийцсэн бетон зуурмагийн үйлдвэрлэл,
+                  нийлүүлэлтийн цогц үйлчилгээг санал болгон ажиллаж байна
                 </p>
               </div>
 
               <div className="col-sm-4">
-                <i className="fa fa-4x fa-code"></i>
+                <i className="bi bi-clock-history text-4xl"></i>
 
-                <h2 className="h3">Clean Code</h2>
+                <h2 className="h3 nunito-200">24/7</h2>
 
-                <p>
-                  All websites are written in valid and clean HTML5 / CSS3 &amp;
-                  JavaScript (jQuery).
+                <p className="text-[15px] text-center nunito-400">
+                  Манай компани нь тасралтгүй ажиллах 24/7 үйлчилгээг санал
+                  болгон ажиллаж байна
                 </p>
               </div>
-
               <div className="col-sm-4">
-                <i className="fa fa-4x fa-tablet"></i>
+                <i className="bi bi-lightning-charge-fill text-4xl"></i>
 
-                <h2 className="h3">Always Responsive</h2>
+                <h2 className="h3 nunito-200">Хурд</h2>
 
-                <p>
-                  All websites are responsive. They will look great on desktop,
-                  tablets and mobile phones too.
+                <p className="text-[15px] text-center nunito-400">
+                  Манай компани нь анх 2009 онд байгуулагдаж өнөөг хүртэл МУын
+                  барилгын салбарт үйл ажилгаагаа амжилттай явуулж байгаа билээ.
                 </p>
               </div>
             </div>
@@ -147,39 +160,11 @@ function WelcomeContent() {
           </div>
         </section>
 
-        <section id="testimonials" className="sec-testimonials">
+        <section id="folio" className="sec-folio">
           <div className="container">
-            <h1>Clients said</h1>
-
-            <div className="row">
-              <div className="col-sm-4">
-                <p className="text-center">
-                  "Alex did great job when designing our website. It was
-                  pleasure to work with him and I'm sure we will hire him
-                  again."
-                </p>
-
-                <p className="text-right">&mdash; Marc Andressen</p>
-              </div>
-
-              <div className="col-sm-4">
-                <p className="text-center">
-                  "Alex proved to be truly creative designer who is able to
-                  create just stunning design I immediately fell in love with!"
-                </p>
-
-                <p className="text-right">&mdash; Emily Cooper</p>
-              </div>
-
-              <div className="col-sm-4">
-                <p className="text-center">
-                  "I have worked with several different people and it always
-                  seemed like a pain—luckily I found Alex Devero. Thank you
-                  Alex!"
-                </p>
-
-                <p className="text-right">&mdash; Scott Grubber</p>
-              </div>
+            <h1 className="mb-5 nunito-600 uppercase ">түнш && харилцагчид</h1>
+            <div className="w-full flex justify-center pb-10">
+              <img className="w-[600px]" src="collaberates.png" alt="" />
             </div>
           </div>
         </section>

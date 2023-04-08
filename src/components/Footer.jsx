@@ -24,15 +24,15 @@ function Footer() {
                   <span className="">Улаанбаатар, Монгол</span>
                 </li>
                 <li>
-                  <span className="">Сүхбаатар дүүрэг, 1-р хороо</span>
+                  <span className="">ХУД 2-р хороо</span>
                 </li>
                 <li>
-                  <span className="">Central Park оффис, 4 давхар</span>
+                  <span className="">Чингисийн өргөн чөлөө 70-15</span>
                 </li>
                 <li>
                   <a
                     className="!text-gray-400 hover:!text-white"
-                    href="https://www.google.com/maps/place/Central+Park+Tower/@47.913548,106.9132874,17z/data=!3m1!4b1!4m5!3m4!1s0x5d9693e1351db867:0x5156d46e7ec45634!8m2!3d47.9135444!4d106.9154761?shorturl=1"
+                    href="https://www.google.com/maps/dir/?api=1&destination=47.89096%2C106.86967&fbclid=IwAR16HoebO8RJKEURvtCpnglCLic33WQ1PupfKtPVb2jpQikGw9Vl2GZTXD4"
                   >
                     <i className="bi bi-map-fill text-md mr-2"></i>Газрын зураг
                   </a>
@@ -45,14 +45,11 @@ function Footer() {
               <ul className="footer-links">
                 <li>
                   <button className="hover:!text-white">
-                    info@example.com
+                    install_naran@yahoo.com
                   </button>
                 </li>
                 <li>
-                  <button className="hover:!text-white">+976 9911 XXXX</button>
-                </li>
-                <li>
-                  <button className="hover:!text-white">+976 7011 XXXX</button>
+                  <button className="hover:!text-white">+976 7777 9292</button>
                 </li>
               </ul>
             </div>
