@@ -51,17 +51,17 @@ function Navigation() {
                 src="logo.svg"
               />
               {/* <i className="bi bi-buildings-fill text-2xl mr-2 mb-1"></i> */}
-              <span className="font-[900] text-4xl text-[#415361] leading-[1px]">
+              <span className="font-[900] text-4xl text-[#415361] !mb-[-1px]">
                 ИНК
               </span>
               <div className="flex flex-col ml-1">
-                <button className="leading-[10px]  text-start uppercase text-[#415361] font-[300] text-shadow  text-[11px]  ">
+                <button className="leading-[9px]  text-start uppercase text-[#415361] font-[300] text-shadow  text-[11px]  ">
                   Инсталл <br />
                 </button>
-                <button className="leading-[10px]  text-start uppercase text-[#415361] font-[300] text-shadow  text-[11px]  ">
+                <button className="leading-[9px]  text-start uppercase text-[#415361] font-[300] text-shadow  text-[11px]  ">
                   наран <br />
                 </button>
-                <button className="leading-[10px]  text-start uppercase text-[#415361] font-[300] text-shadow  text-[11px]  ">
+                <button className="leading-[9px]  text-start uppercase text-[#415361] font-[300] text-shadow  text-[11px]  ">
                   констракшн
                 </button>
               </div>
