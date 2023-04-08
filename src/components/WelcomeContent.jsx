@@ -36,7 +36,7 @@ function WelcomeContent() {
           className="sec-services px-1 !py-[70px] md:!py-[110px] md:p-5"
         >
           <div className="container">
-            <h1 className=" nunito-600 uppercase ">SERVICE</h1>
+            <h1 className=" nunito-600 uppercase ">БИДНИЙ давуу тал</h1>
             <div className="row">
               <div className="col-sm-4 mt-5">
                 <i className="bi bi-droplet-half text-4xl"></i>
