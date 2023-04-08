@@ -36,11 +36,9 @@ function WelcomeContent() {
           className="sec-services px-1 !py-[70px] md:!py-[110px] md:p-5"
         >
           <div className="container">
-            <h1 className="mb-5 nunito-600 uppercase ">
-              ИНСТАЛЛ НАРАН КОНКРИТ ХХК
-            </h1>
+            <h1 className=" nunito-600 uppercase ">SERVICE</h1>
             <div className="row">
-              <div className="col-sm-4">
+              <div className="col-sm-4 mt-5">
                 <i className="bi bi-droplet-half text-4xl"></i>
 
                 <h2 className="h3 nunito-200">Чанар</h2>
@@ -52,7 +50,7 @@ function WelcomeContent() {
                 </p>
               </div>
 
-              <div className="col-sm-4">
+              <div className="col-sm-4 mt-5">
                 <i className="bi bi-clock-history text-4xl"></i>
 
                 <h2 className="h3 nunito-200">24/7</h2>
@@ -62,7 +60,7 @@ function WelcomeContent() {
                   болгон ажиллаж байна
                 </p>
               </div>
-              <div className="col-sm-4">
+              <div className="col-sm-4 mt-5">
                 <i className="bi bi-lightning-charge-fill text-4xl"></i>
 
                 <h2 className="h3 nunito-200">Хурд</h2>
@@ -76,10 +74,14 @@ function WelcomeContent() {
           </div>
         </section>
 
-        <section id="folio" className="sec-folio">
+        <section
+          id="folio"
+          className="sec-folio px-1 !py-[70px] md:!py-[110px] md:p-5 "
+        >
           <div className="container">
-            <h1>Previous Work</h1>
-
+            <h1 className=" nunito-600 uppercase mb-5">
+              БИДНИЙ ГҮЙЦЭТГЭСЭН АЖИЛУУДААС
+            </h1>
             <div className="row">
               <div className="col-md-4">
                 <img
@@ -159,11 +161,45 @@ function WelcomeContent() {
             </div>
           </div>
         </section>
-
-        <section id="folio" className="sec-folio">
+        <section
+          id="services"
+          className="sec-services px-1 !py-[70px] md:!py-[110px] md:p-5"
+        >
           <div className="container">
-            <h1 className="mb-5 nunito-600 uppercase ">түнш && харилцагчид</h1>
-            <div className="w-full flex justify-center pb-10">
+            <h1 className=" nunito-600 uppercase ">
+              ИНСТАЛЛ НАРАН КОНКРИТ ХХК
+            </h1>
+            <div className="row">
+              <div className="w-1/2 mt-5">
+                <i className="bi bi-droplet-half text-4xl"></i>
+
+                <h2 className="h3 nunito-200">Чанар</h2>
+
+                <p className="text-[15px] text-center nunito-400">
+                  Бид иргэний барилга байгууламж болон дэд бүтцийн төслийн
+                  хэрэгцээ, шаардлагад нийцсэн бетон зуурмагийн үйлдвэрлэл,
+                  нийлүүлэлтийн цогц үйлчилгээг санал болгон ажиллаж байна
+                </p>
+              </div>
+
+              <div className="w-1/2 mt-5">
+                <i className="bi bi-clock-history text-4xl"></i>
+
+                <h2 className="h3 nunito-200">24/7</h2>
+
+                <p className="text-[15px] text-center nunito-400">
+                  Манай компани нь тасралтгүй ажиллах 24/7 үйлчилгээг санал
+                  болгон ажиллаж байна
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="folio" className="sec-folio px-1 !py-[50px]  md:p-5 ">
+          <div className="container">
+            <h1 className="mb-5 nunito-600 uppercase">түнш && харилцагчид</h1>
+            <div className="w-full flex justify-center pb-5">
               <img className="w-[600px]" src="collaberates.png" alt="" />
             </div>
           </div>
