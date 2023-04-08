@@ -31,9 +31,7 @@ function Navigation() {
         <nav
           className={`!flex shadow ${
             path !== "/" && "bg-white !text-black"
-          } h-full justify-between px-4 md:justify-around transition-all w-full ${
-            scrolled && path === "/" ? "glass " : "text-white pure-glass"
-          }`}
+          } h-full justify-between px-4 md:justify-around transition-all w-full glass`}
         >
           <div
             onClick={() => {
@@ -96,7 +94,7 @@ function Navigation() {
                     className={`max-w-[300px] transition-all bg-gray-200 pt-3 pb-3 h-[50px] 
                    hover:bg-gray-400  text-[13px] px-3 border-b border-gray-100`}
                   >
-                    Бидний эрхэм зорилго
+                    Тусгай зөвшөөрөл
                   </div>
                   <div
                     onClick={() => {

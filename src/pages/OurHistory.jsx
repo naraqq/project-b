@@ -1,43 +1,145 @@
 import Layout from "../components/Layouts/Layout";
 
 function OurHistory() {
+  const specialists = [
+    {
+      id: 1,
+      title: "Зөвлөх инженер",
+      name: "С.Содтуяа",
+      experience: "БУА-н чиглэлээр 20 жил ажилласан.",
+    },
+    {
+      id: 2,
+      title: "Барилгын инженер",
+      name: "П.Миеэгомбо",
+      experience: "БУА-н чиглэлээр 4 жил ажилласан.",
+    },
+    {
+      id: 3,
+      title: "",
+      name: "Т.Чимэдцэрэн",
+      experience: "БУА-н чиглэлээр 4 жил ажилласан.",
+    },
+    {
+      id: 4,
+      title: "",
+      name: "Э.Алзахгүй",
+      experience: "БУА-н чиглэлээр 7 жил ажилласан.",
+    },
+    {
+      id: 5,
+      title: "",
+      name: "Э.Нармандах",
+      experience: "БУА-н чиглэлээр 1 жил ажилласан.",
+    },
+    {
+      id: 6,
+      title: "ХЭМАБ-н инженер",
+      name: "Д.Баярмаа",
+      experience: "БУА-н чиглэлээр 8 жил ажилласан.",
+    },
+    {
+      id: 7,
+      title: "ХЭМАБ-н инженер",
+      name: "Б.Мижиддорж ",
+      experience: "БУА-н чиглэлээр 20 жил ажилласан.",
+    },
+    {
+      id: 8,
+      title: "Хэв хашмал угсрах бригадын ахлагч",
+      name: "Б.Ариунболд",
+      experience: "Ажиллах хүч - 30 мужаан",
+    },
+    {
+      id: 9,
+      title: "Хэв хашмал угсрах бригадын ахлагч",
+      name: "Б.Ууганбаяр",
+      experience: "Ажиллах хүч - 20 мужаан",
+    },
+    {
+      id: 10,
+      title: "Арматурын бригадын ахлагч",
+      name: "А.Даваадалай",
+      experience: "Ажиллах хүч - 30 мужаан",
+    },
+    {
+      id: 11,
+      title: "Бетон арматурын бригадын ахлагч",
+      name: "П.Энхбаяр",
+      experience: "Ажиллах хүч - 30 хүн",
+    },
+    {
+      id: 12,
+      title: "Бетон арматурын бригадын ахлагч",
+      name: "Э.Төрмөнх ",
+      experience: "Ажиллах хүч - 30 хүн",
+    },
+  ];
+  function randomIntFrom1To4() {
+    // Generate a random number between 0 (inclusive) and 1 (exclusive)
+    const randomNumber = Math.random();
+
+    // Scale the random number to be between 1 (inclusive) and 5 (exclusive)
+    const scaledNumber = randomNumber * 4 + 1;
+
+    // Floor the scaled number to get an integer between 1 and 4 (inclusive)
+    const randomInt = Math.floor(scaledNumber);
+
+    // Return the randomly generated integer
+    return randomInt;
+  }
   return (
     <Layout>
       <div className="body">
         <div className="main">
-          <div className="w-full flex justify-center">
-            <img
-              src="https://www.paulhypepage.co.id/wp-content/uploads/2017/12/Register-a-company-in-indonesia.svg"
-              alt="out"
-              className="max-h-[400px]"
-            />
+          <div className="w-full flex justify-center about">
+            <ul>
+              <li>
+                Манай компани нь анх 2009 онд байгуулагдаж өнөөг хүртэл МУын
+                барилгын салбарт үйл ажилгаагаа амжилттай явуулж байна.
+              </li>
+              <li>
+                Бид 2014 онд компаниа өргөжүүлж “Инсталл наран констракшн” ХХК
+                болгон БУА-ын 2.1.1~5, 2.2.1~4 болон БА-6.2 тус тус заалттай
+                тусгай зөвшөөрөлтэйгээр үйл ажиллагаагаа явуулж байна.
+              </li>
+              <li>
+                БУА-н чиглэлийн ИТА болон бусад ажиллах хүчний бүрэлдэхүүний
+                танилцуулга:
+              </li>
+            </ul>
           </div>
-          <p className="text-[13px] mt-4 px-2 text-center">
-            Эрчим хүчний зөвлөгөө өгөх чиглэлээр 1993 онд үүсгэн байгуулагдсан
-            М-Си-Эс компани шилжилтийн он жилүүдэд олон салбарт бизнесийн үйл
-            ажиллагаа эрхлэн, улсын нийгэм, эдийн засгийн хөгжилд хувь нэмрээ
-            оруулсаар ирсэн бөгөөд өдгөө татвар шимтгэл, хөрөнгө оруулалт, ажлын
-            байр зэрэг үзүүлэлтээр тэргүүлэгч үндэсний томоохон Групп болоод
-            байна. Аливаа улс орны хөгжлийг шинэ шатанд хүргэдэг дэд бүтэц,
-            эрчим хүч, инженеринг, мэдээлэл, харилцаа холбоо, барилга, үл хөдлөх
-            хөрөнгийн салбар, эдийн засгийг үлэмж тэтгэдэг уул уурхай, өргөн
-            хэрэглээний бараа бүтээгдэхүүнийн салбар, нийгмийн сайн сайхан,
-            хүний хөгжлийг дэмждэг эрүүл мэнд, боловсрол зэрэг чухал салбарт
-            ажилласан он жилүүддээ бид тогтсон байгууллагын соёлтой, төлөвшсөн
-            боловсон хүчинтэй, түүчээлэх өрсөлдөх чадвартай Групп болон тэлжээ.
-            Өдөрт 1.3 тэрбум, сард 38.5 орчим тэрбум төгрөгийн татвар,
-            шимтгэлийг улсын төсөвт төвлөрүүлж, өөрийн 10,000 ажилтандаа сард 24
-            тэрбум төгрөгийн цалин олгохоос гадна дотоодын 4400 орчим бизнес
-            эрхлэгчээс сард 83 тэрбум төгрөгийн бараа, ажил үйлчилгээ худалдан
-            авч, шууд бусаар мөн 20,000 хүнийг тогтмол ажлын байртай болгож,
-            сард доод тал нь 20 орчим тэрбум төгрөгийн цалин тавих боломжийг
-            олгон улс орны нийгэм, эдийн засгийн хөгжилд бодитой, том хувь
-            нэмрийг оруулж байна. Бизнесийн цар хүрээ тэлж, компаниуд маань өсч
-            томрохын хэрээр нийгэм, улс орныхоо өмнө хүлээх бидний үүрэг,
-            хариуцлага улам бүр өндөрсөж, дэлхийн стандарт, дэвшилтэт техник,
-            технологийг эх орондоо нэвтрүүлж, нийгмийн өмнө хүлээсэн хариуцлагаа
-            бүрэн дүүрэн хэрэгжүүлэхийг эрхэм зорилгоо болгон ажиллаж байна.
-          </p>
+
+          <div className="specialists">
+            <div className="l-container">
+              {specialists.map((item, index) => {
+                return (
+                  <div key={index} className="b-game-card">
+                    <div
+                      className="b-game-card__cover"
+                      style={{
+                        backgroundImage: `url(https://c8.alamy.com/comp/2F44ABG/asian-engineer-or-foreman-wearing-safety-vest-hard-hat-2F44ABG.jpg)`,
+                      }}
+                    >
+                      <div className="w-full h-full relative z-1">
+                        <div className="absolute leading-[13px] md:leading-[20px] w-full h-20 pure-glass !bg-gray-500 bottom-0 flex flex-col text-[12px] text-center text-white p-2">
+                          <h6>
+                            {item.title !== "" ? (
+                              item.title
+                            ) : (
+                              <div className="mt-auto">?</div>
+                            )}
+                          </h6>
+                          <p>{item.name}</p>
+                          <p>{item.experience}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </Layout>
