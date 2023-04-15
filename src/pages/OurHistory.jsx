@@ -118,7 +118,7 @@ function OurHistory() {
                     <div
                       className="b-game-card__cover"
                       style={{
-                        backgroundImage: `url(https://c8.alamy.com/comp/2F44ABG/asian-engineer-or-foreman-wearing-safety-vest-hard-hat-2F44ABG.jpg)`,
+                        backgroundImage: `url(https://static.vecteezy.com/system/resources/previews/000/439/863/original/vector-users-icon.jpg)`,
                       }}
                     >
                       <div className="w-full h-full relative z-1">

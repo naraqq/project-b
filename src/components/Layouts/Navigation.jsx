@@ -33,7 +33,7 @@ function Navigation() {
       <header className="">
         <nav
           className={`!flex shadow ${
-            path !== "/" && "bg-white !text-black"
+            path !== "/" && " !text-black"
           } h-full justify-between px-4 md:justify-around transition-all w-full glass`}
         >
           <div
@@ -57,67 +57,61 @@ function Navigation() {
             <Mobilebar />
           </div>
           <ul className="!hidden md:!flex">
-            <li>
+            <li className="parent-red">
               <button
                 onClick={() => {
                   navigate("/news");
                 }}
-                className="hover:text-black transition-all"
+                className="hover:text-black transition-all nunito-600 child-red"
               >
-                Мэдээ мэдээлэл
+                МЭДЭЭ МЭДЭЭЛЭЛ
               </button>
             </li>
-            <li>
-              <button className="hover:text-black parent">
-                Бидний тухай
+            <li className="parent-red">
+              <button className="hover:text-black parent nunito-400 nunito-600 child-red">
+                БИДНИЙ ТУХАЙ
                 <div className="dropdown absolute top-[60px] left-0  h-12">
                   <div
                     onClick={() => {
-                      navigate("/Танилцуулга");
+                      navigate("/захирлын-мэндчилгээ");
                     }}
-                    className={`max-w-[300px] transition-all bg-gray-200 pt-3 pb-3 h-[50px] 
-                   hover:bg-gray-400  text-[13px] px-3 border-b border-gray-100`}
+                    className={`max-w-[300px] transition-all bg-white pt-3 pb-3 h-[50px] 
+                   hover:!bg-gray-100  text-[11px] px-[10px]  border-red-500  text-black  nunito-600 border-t-[2px] uppercase`}
                   >
-                    Танилцуулга
+                    захирлын мэндчилгээ
                   </div>
                   <div
                     onClick={() => {
                       navigate("/Танилцуулга");
                     }}
-                    className={`max-w-[300px] transition-all bg-gray-200 pt-3 pb-3 h-[50px] 
-                   hover:bg-gray-400  text-[13px] px-3 border-b border-gray-100`}
+                    className={`max-w-[300px] transition-all bg-white pt-3 pb-3 h-[50px] 
+                   hover:!bg-gray-100 text-start text-[11px] px-[30px] border-b border-t border-gray-200 text-black nunito-600 uppercase`}
                   >
-                    Тусгай зөвшөөрөл
+                    компаний тухай
                   </div>
                   <div
                     onClick={() => {
                       navigate("/Бидний-гүйцэтсэн-ажил");
                     }}
-                    className={`max-w-[300px] transition-all bg-gray-200 pt-3 pb-3 h-[50px] 
-                   hover:bg-gray-400  text-[13px] px-3 `}
+                    className={`max-w-[300px] transition-all bg-white pt-3 pb-3 h-[50px] 
+                    hover:!bg-gray-100  text-[11px] px-[10px]  text-black nunito-600 uppercase`}
                   >
                     Бидний гүйцэтгэсэн ажил
-                  </div>
-                  <div
-                    className={`max-w-[300px] transition-all bg-gray-200 pt-3 pb-3 h-[50px] 
-                   hover:bg-gray-400  text-[13px] px-3 `}
-                  >
-                    Хамтарж ажиллах
                   </div>
                 </div>
               </button>
             </li>
 
-            <li>
-              <button className="hover:text-black parent">
-                Ажлын байр
+            <li className="parent-red">
+              <button className="hover:text-black parent nunito-400 nunito-600 child-red">
+                ХҮНИЙ НӨӨЦ{" "}
                 <div className="dropdown absolute top-[60px] left-0  h-12">
                   <div
                     onClick={() => {
                       navigate("/яагаад-xxk-гэж");
                     }}
                     className={`max-w-[300px] transition-all bg-gray-200 pt-3 pb-3 h-[50px] 
-                   hover:bg-gray-400  text-[13px] px-3 border-b border-gray-100`}
+                   hover:bg-gray-400  text-[13px] px-3 text-gray-600 border-red-500 nunito-400 border-t-[2px] `}
                   >
                     Яагаад ХХХ ХХК гэж ?
                   </div>
@@ -126,7 +120,7 @@ function Navigation() {
                       navigate("/Ажлын-байр");
                     }}
                     className={`max-w-[300px] transition-all bg-gray-200 pt-3 pb-3 h-[50px] 
-                    hover:bg-gray-400  text-[13px] px-3 `}
+                    hover:bg-gray-400  text-[13px] px-3 nunito-400`}
                   >
                     Нээлттэй ажлын байр
                   </div>

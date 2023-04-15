@@ -5,46 +5,66 @@ function WhyourCompany() {
   return (
     <Layout>
       <div className="h-full relative bg-white">
+        <div className="body-cus wrapper">
+          <section id="home" className="sec-main">
+            <h1 className="main-heading nunito-500 text-[30px] md:text-[30px]">
+              Таны итгэлт түнш.
+            </h1>
+          </section>
+        </div>
         <div className="body">
           <div className="main">
-            <div className="w-full flex justify-center mb-10">
-              <img
-                src="https://cdn-res.keymedia.com/cms/images/ca/126/0399_637873576761775202.jpg"
-                alt="Ажил"
-                className="h-[250px] md:h-[500px]"
-              />
-            </div>
             <h1
-              className=" w-full pb-2 ml-4 md:ml-4 border-b-[2px] mt-2 md:mt-10 border-gray-600 text-[20px] text-start uppercase
-        font-[400]
+              className=" w-full pb-2 ml-4 md:ml-4 mt-2 md:mt-10 border-gray-600 text-[20px] text-start uppercase
+       nunito-400
         "
             >
               {" "}
-              Манай компанийн ажилтанд санал болгох үнэ цэн:
+              Та манайд ажилд орсноор :
             </h1>
             <ul className="cards">
-              <li className="cards_item !text-[13px]">
-                • Байгууллагын эрүүл зөв соёл, ажлын таатай орчин нөхцөл
+              <li className="cards_item !text-[13px] nunito-400">
+                • Мэргэшсэн баг болон багийн ажиллагааг төлөвшүүлэх, өрсөлдөхүйц
+                цалин хөлс, хангамжуудыг цогцоор нь шийдсэн хүлээлтээс давсан
+                ханамжийг өгөх болно.
               </li>
-              <li className="cards_item !text-[13px]">
-                • Эрч хүчтэй, чадварлаг хамт олонтой нэг баг болон хамтран
-                ажиллах боломж
+              <li className="cards_item !text-[13px] nunito-400">
+                • Нэгдмэл зорилготой эрч хүчээр дүүрэн, эвсэг залуу хамт олонтой
+                мөр зэрэгцэн ажиллана.
               </li>
-              <li className="cards_item !text-[13px]">
-                • Тасралтгүй суралцах, ихийг хийж бүтээх хүсэл тэмүүллийг ямагт
-                дэмждэг орчин
+              <li className="cards_item !text-[13px] nunito-400">
+                • Зах зээлд өрсөлдөхүйц цалин хөлс, үр дүнд тулгуурласан шагнал
+                урамшуулал авна.
               </li>
-              <li className="cards_item !text-[13px]">
-                • Үр дүнд тулгуурласан өрсөлдөхүйц цалин, урамшуулал, ахиж
-                дэвших ижил тэгш боломж
+              <li className="cards_item !text-[13px] nunito-400">
+                • Ёс зүйтэй, шинэчлэгч, манлайлагч байх урам зориг, хүсэл
+                тэмүүллийг мэдэрнэ.
               </li>
-              <li className="cards_item !text-[13px]">
-                • Бизнесийн олон чиглэлд хөрвөн өөрийн мэдлэг чадвараа хөгжүүлэх
-                боломж
+              <li className="cards_item !text-[13px] nunito-400">
+                • Эрч хүчтэй, бүтээлч үйл ажиллагааг хүний нөөцийн бодлоготойгоо
+                уялдуулан, ховор соёл бүхий, ажил олгогч загвар байгууллага
+                болохоор зорьж ажиллана. Манай давуу тал
+              </li>
+              <li className="cards_item !text-[13px] nunito-400">
+                • Бид ажилтнууддаа тогтвор суурьшилтай ажиллах, хийж буй ажилдаа
+                сэтгэл хангалуун байх нөхцлийг нь бүрдүүлж өгөх үүднээс таатай
+                ажлын байр, зах зээлд өрсөлдөхүйц цалин, ажлын гүйцэтгэлтэй
+                уялдсан урамшуулал, өсөж дэвжих, өөрийгөө хөгжүүлэх боломж,
+                шаардлагатай нийгмийн халамж, дэмжлэгийг үзүүлэн ажилладаг.
               </li>
             </ul>
+            <h6
+              className=" w-full pb-2 ml-4 md:ml-4 mt-2 md:mt-10  text-[14px] text-start uppercase
+        font-[400] nunito-400
+        "
+            >
+              {" "}
+              ТА ТОМООХОН ТӨСӨЛД ОРОЛЦОЖ ТУРШЛАГА ХУРИМТЛУУЛАН, ЖИНХЭНЭ ӨВ
+              БҮТЭЭХИЙГ ЧИН СЭТГЭЛЭЭСЭЭ ХҮСЧ байгаа бол бидэнтэй нэгдэхийг урьж
+              байна.
+            </h6>
             <div className="text-[13px] bg-gray-100 px-3 py-4 border">
-              <p>
+              <p className="nunito-400">
                 Та нээлттэй ажлын байранд тавигдах шаардлагыг хангаж байна гэж
                 үзвэл онлайн анкетаа илгээнэ үү.
               </p>
@@ -52,9 +72,9 @@ function WhyourCompany() {
                 onClick={() => {
                   navigate("/CV");
                 }}
-                className="px-3 py-2  border mt-2 active:bg-gray-100 bg-white"
+                className="px-3 py-2 nunito-400 hover:!bg-gray-50 border mt-2 active:bg-gray-100 bg-white"
               >
-                CV илгээх
+                Анкет илгээх
               </button>
             </div>
           </div>

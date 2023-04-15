@@ -12,7 +12,7 @@
   align-items: center;
   flex-direction: column;
   z-index: 10;
-  /* box-shadow: 0 0 5px silver; */
+  box-shadow: 0 0 5px silver;
 }
 
 .custom-navigation header:before {
@@ -69,7 +69,7 @@
 .custom-navigation header nav li button {
   display: block;
   position: relative;
-  padding: 20px;
+  padding: 20px 0px;
   font-size: 13px;
   width: 165px;
   text-align: center;
@@ -83,7 +83,7 @@
   height: 2px;
   display: block;
   position: absolute;
-  /* background-color: black; */
+  background-color: red;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   z-index: 2;
@@ -187,4 +187,12 @@
   display: inline-block;
   width: 1em;
   margin-left: -1em;
+}
+
+.parent-red:hover .child-red {
+  color: red;
+}
+
+.parent-red:active .child-red {
+  color: rgb(254, 61, 61);
 }

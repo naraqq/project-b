@@ -1,3 +1,5 @@
+import OurPartners from "./OurPartners";
+
 function WelcomeContent() {
   return (
     <div>
@@ -80,7 +82,7 @@ function WelcomeContent() {
         >
           <div className="container">
             <h1 className=" nunito-600 uppercase mb-5">
-              БИДНИЙ ГҮЙЦЭТГЭСЭН АЖИЛУУДААС
+              БИДНИЙ ГҮЙЦЭТГЭСЭН АЖЛУУДААС
             </h1>
             <div className="row">
               <div className="col-md-4">
@@ -199,9 +201,7 @@ function WelcomeContent() {
         <section id="folio" className="sec-folio px-1 !py-[50px]  md:p-5 ">
           <div className="container">
             <h1 className="mb-5 nunito-600 uppercase">түнш && харилцагчид</h1>
-            <div className="w-full flex justify-center pb-5">
-              <img className="w-[600px]" src="collaberates.png" alt="" />
-            </div>
+            <OurPartners />
           </div>
         </section>
       </div>

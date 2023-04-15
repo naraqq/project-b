@@ -5,6 +5,7 @@ import "./style/sass.scss";
 import "./style/keepin.scss";
 import "./style/style.less";
 import "./style/home.scss";
+import "./style/partners.scss";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import OpenJobs from "./pages/OpenJobs";
@@ -14,6 +15,7 @@ import OurHistory from "./pages/OurHistory";
 import WhatWeDone from "./pages/WhatWeDone";
 import CV from "./pages/CV";
 import KeepInTouch from "./pages/KeepInTouch";
+import CEOWords from "./pages/CEOWords";
 function App() {
   return (
     <BrowserRouter>
@@ -24,6 +26,7 @@ function App() {
         <Route path="/news" element={<InfoPage />} />
         <Route path="/CV" element={<CV />} />
         <Route path="/Танилцуулга" element={<OurHistory />} />
+        <Route path="/захирлын-мэндчилгээ" element={<CEOWords />} />
         <Route path="/яагаад-xxk-гэж" element={<WhyourCompany />} />
         <Route path="/Бидний-гүйцэтсэн-ажил" element={<WhatWeDone />} />
         <Route path="/Холбоо-барих" element={<KeepInTouch />} />
