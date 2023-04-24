@@ -6,13 +6,13 @@ function Footer() {
         <div className="container w-11/12 md:w-9/12 flex justify-center">
           <div className="row">
             <div className="col-sm-12 col-md-6">
-              <h6 className="nunito-300">Бидний эрхэм зорилго</h6>
+              <h6 className="nunito-300">Бидний тухай</h6>
               <p className="text-justify nunito-300">
-                Бид үйл ажиллагаандаа МУ-д хүчин төгөлдөр мөрдөгдөж буй БНбД
-                болон бусад стандарт, журмуудыг баримтлан барилга угсралтын
-                салбарт шинэ дэвшилтэт технологийг нэвтрүүлэн үйл ажиллагаагаа
-                улам өргөжүүлж улс орныхоо эдийн засаг, нийгмийн хөгжил бүтээн
-                байгуулалтад үнэтэй хувь нэмэр оруулах нь бидний эрхэм зорилго.
+                Манай компани нь анх 2009 онд байгуулагдаж өнөөг хүртэл МУын
+                барилгын салбарт үйл ажилгаагаа амжилттай явуулж байгаа билээ.
+                Бид иргэний барилга байгууламж болон дэд бүтцийн төслийн
+                хэрэгцээ, шаардлагад нийцсэн бетон зуурмагийн үйлдвэрлэл,
+                нийлүүлэлтийн цогц үйлчилгээг санал болгон ажиллаж байна
               </p>
             </div>
 
@@ -23,12 +23,15 @@ function Footer() {
                   <span className="nunito-300">Улаанбаатар, Монгол</span>
                 </li>
                 <li>
-                  <span className="nunito-300">ХУД 2-р хороо</span>
+                  <span className="nunito-300">
+                    Хан-Уул дүүрэг 4 дүгээр хороо
+                  </span>
                 </li>
                 <li>
-                  <span className="nunito-300">
-                    Чингисийн өргөн чөлөө 70-15
-                  </span>
+                  <span className="nunito-300">Наадамчдын гудамж</span>
+                </li>
+                <li>
+                  <span className="nunito-300"> Сумо тауэр 7 давхар</span>
                 </li>
                 <li>
                   <a
@@ -45,14 +48,15 @@ function Footer() {
               <h6 className="nunito-300">Холбоо барих</h6>
               <ul className="footer-links">
                 <li>
-                  <button className="hover:!text-white nunito-300">
-                    install_naran@yahoo.com
-                  </button>
+                  <a className="hover:!text-white nunito-300">Утас: 7779292</a>
                 </li>
                 <li>
-                  <button className="hover:!text-white nunito-300">
-                    +976 7777 9292
-                  </button>
+                  <a className="hover:!text-white nunito-300">Факс: 77779292</a>
+                </li>
+                <li>
+                  <a className="hover:!text-white nunito-300">
+                    И мэйл: install.naran@gmail.com,
+                  </a>
                 </li>
               </ul>
             </div>
@@ -70,24 +74,28 @@ function Footer() {
             <div className="col-md-4 col-sm-6 col-xs-12">
               <ul className="social-icons">
                 <li>
-                  <button className="facebook">
+                  <a
+                    href="https://www.facebook.com/INC.2022.LLC"
+                    target="blank"
+                    className="facebook"
+                  >
                     <i className="bi bi-facebook"></i>
-                  </button>
+                  </a>
                 </li>
                 <li>
-                  <button className="twitter">
+                  <a className="twitter">
                     <i className="bi bi-twitter"></i>
-                  </button>
+                  </a>
                 </li>
                 <li>
-                  <button className="dribbble">
+                  <a className="dribbble">
                     <i className="bi bi-instagram"></i>
-                  </button>
+                  </a>
                 </li>
                 <li>
-                  <button className="linkedin">
+                  <a className="linkedin">
                     <i className="bi bi-linkedin"></i>
-                  </button>
+                  </a>
                 </li>
               </ul>
             </div>

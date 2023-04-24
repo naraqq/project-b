@@ -71,7 +71,15 @@
   position: relative;
   padding: 20px 0px;
   font-size: 13px;
-  width: 165px;
+  width: 125px;
+  text-align: center;
+}
+.custom-navigation header nav li .button-cus {
+  display: block;
+  position: relative;
+  padding: 20px 0px;
+  font-size: 13px;
+  width: 75px;
   text-align: center;
 }
 

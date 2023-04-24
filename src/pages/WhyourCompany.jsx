@@ -6,46 +6,45 @@ function WhyourCompany() {
     <Layout>
       <div className="h-full relative bg-white">
         <div className="body-cus wrapper">
-          <section id="home" className="sec-main">
+          <section id="home" className="sec-main2">
             <h1 className="main-heading nunito-500 text-[30px] md:text-[30px]">
-              Таны итгэлт түнш.
+              Нээлттэй ажлын байр
             </h1>
           </section>
         </div>
         <div className="body">
           <div className="main">
             <h1
-              className=" w-full pb-2 ml-4 md:ml-4 mt-2 md:mt-10 border-gray-600 text-[20px] text-start uppercase
+              className=" w-full pb-2 ml-4 md:ml-4 mt-5 md:mt-10 border-gray-600 text-[20px] text-start uppercase
        nunito-400
         "
             >
-              {" "}
-              Та манайд ажилд орсноор :
+              ТА МАНАЙД АЖИЛД ОРСНООР{" "}
             </h1>
             <ul className="cards">
-              <li className="cards_item !text-[13px] nunito-400">
+              <li className="cards_item !text-[14px] text-gray-600 nunito-400">
                 • Мэргэшсэн баг болон багийн ажиллагааг төлөвшүүлэх, өрсөлдөхүйц
                 цалин хөлс, хангамжуудыг цогцоор нь шийдсэн хүлээлтээс давсан
                 ханамжийг өгөх болно.
               </li>
-              <li className="cards_item !text-[13px] nunito-400">
+              <li className="cards_item !text-[14px] text-gray-600 nunito-400">
                 • Нэгдмэл зорилготой эрч хүчээр дүүрэн, эвсэг залуу хамт олонтой
                 мөр зэрэгцэн ажиллана.
               </li>
-              <li className="cards_item !text-[13px] nunito-400">
+              <li className="cards_item !text-[14px] text-gray-600 nunito-400">
                 • Зах зээлд өрсөлдөхүйц цалин хөлс, үр дүнд тулгуурласан шагнал
                 урамшуулал авна.
               </li>
-              <li className="cards_item !text-[13px] nunito-400">
+              <li className="cards_item !text-[14px] text-gray-600 nunito-400">
                 • Ёс зүйтэй, шинэчлэгч, манлайлагч байх урам зориг, хүсэл
                 тэмүүллийг мэдэрнэ.
               </li>
-              <li className="cards_item !text-[13px] nunito-400">
+              <li className="cards_item !text-[14px] text-gray-600 nunito-400">
                 • Эрч хүчтэй, бүтээлч үйл ажиллагааг хүний нөөцийн бодлоготойгоо
                 уялдуулан, ховор соёл бүхий, ажил олгогч загвар байгууллага
                 болохоор зорьж ажиллана. Манай давуу тал
               </li>
-              <li className="cards_item !text-[13px] nunito-400">
+              <li className="cards_item !text-[14px] text-gray-600 nunito-400">
                 • Бид ажилтнууддаа тогтвор суурьшилтай ажиллах, хийж буй ажилдаа
                 сэтгэл хангалуун байх нөхцлийг нь бүрдүүлж өгөх үүднээс таатай
                 ажлын байр, зах зээлд өрсөлдөхүйц цалин, ажлын гүйцэтгэлтэй
@@ -63,8 +62,8 @@ function WhyourCompany() {
               БҮТЭЭХИЙГ ЧИН СЭТГЭЛЭЭСЭЭ ХҮСЧ байгаа бол бидэнтэй нэгдэхийг урьж
               байна.
             </h6>
-            <div className="text-[13px] bg-gray-100 px-3 py-4 border">
-              <p className="nunito-400">
+            <div className="bg-gray-100 px-3 py-4 rounded mt-5 mb-4">
+              <p className="nunito-400 text-[15px] text-gray-600">
                 Та нээлттэй ажлын байранд тавигдах шаардлагыг хангаж байна гэж
                 үзвэл онлайн анкетаа илгээнэ үү.
               </p>
@@ -72,7 +71,7 @@ function WhyourCompany() {
                 onClick={() => {
                   navigate("/CV");
                 }}
-                className="px-3 py-2 nunito-400 hover:!bg-gray-50 border mt-2 active:bg-gray-100 bg-white"
+                className="px-3 py-2 text-[14px] text-gray-600 nunito-400 hover:!bg-gray-50 rounded mt-2 active:bg-gray-100 bg-white"
               >
                 Анкет илгээх
               </button>

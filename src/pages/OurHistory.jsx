@@ -1,5 +1,6 @@
 import Layout from "../components/Layouts/Layout";
-
+import { useState } from "react";
+import Button from "react-bootstrap/Button";
 function OurHistory() {
   const specialists = [
     {
@@ -88,58 +89,75 @@ function OurHistory() {
     // Return the randomly generated integer
     return randomInt;
   }
+  const [selected, setSelected] = useState(0);
   return (
     <Layout>
       <div className="body">
-        <div className="main">
-          <div className="w-full flex justify-center about">
-            <ul>
-              <li>
-                Манай компани нь анх 2009 онд байгуулагдаж өнөөг хүртэл МУын
-                барилгын салбарт үйл ажилгаагаа амжилттай явуулж байна.
-              </li>
-              <li>
-                Бид 2014 онд компаниа өргөжүүлж “Инсталл наран констракшн” ХХК
-                болгон БУА-ын 2.1.1~5, 2.2.1~4 болон БА-6.2 тус тус заалттай
-                тусгай зөвшөөрөлтэйгээр үйл ажиллагаагаа явуулж байна.
-              </li>
-              <li>
-                БУА-н чиглэлийн ИТА болон бусад ажиллах хүчний бүрэлдэхүүний
-                танилцуулга:
-              </li>
-            </ul>
-          </div>
-
-          <div className="specialists">
-            <div className="l-container">
-              {specialists.map((item, index) => {
-                return (
-                  <div key={index} className="b-game-card">
+        <div className="main about-us ">
+          <section className="contact" id="contact">
+            <div className="container">
+              <div className="row">
+                <div className="col-md-3">
+                  <div className="content">
                     <div
-                      className="b-game-card__cover"
-                      style={{
-                        backgroundImage: `url(https://static.vecteezy.com/system/resources/previews/000/439/863/original/vector-users-icon.jpg)`,
+                      onClick={() => {
+                        setSelected(0);
                       }}
+                      className={`border-b border-t ${
+                        selected === 0 && "!bg-gray-100"
+                      } p-3 nunito-400 text-gray-500 hover:bg-gray-50 select-none cursor-pointer rounded`}
                     >
-                      <div className="w-full h-full relative z-1">
-                        <div className="absolute leading-[13px] md:leading-[20px] w-full h-20 pure-glass !bg-gray-500 bottom-0 flex flex-col text-[12px] text-center text-white p-2">
-                          <h6>
-                            {item.title !== "" ? (
-                              item.title
-                            ) : (
-                              <div className="mt-auto">?</div>
-                            )}
-                          </h6>
-                          <p>{item.name}</p>
-                          <p>{item.experience}</p>
-                        </div>
-                      </div>
+                      Компанийн танилцуулга
+                    </div>
+                    <div
+                      onClick={() => {
+                        setSelected(1);
+                      }}
+                      className={`border-b ${
+                        selected === 1 && "!bg-gray-100"
+                      } p-3 nunito-400 text-gray-500 hover:bg-gray-50 select-none cursor-pointer rounded`}
+                    >
+                      Бидний эрхэм зорилго
+                    </div>
+                    <div
+                      onClick={() => {
+                        setSelected(2);
+                      }}
+                      className={`border-b ${
+                        selected === 2 && "!bg-gray-100"
+                      } p-3 nunito-400 text-gray-500 hover:bg-gray-50 select-none cursor-pointer rounded`}
+                    >
+                      Ойрын зорилт
+                    </div>
+                    <div
+                      onClick={() => {
+                        setSelected(3);
+                      }}
+                      className={`border-b ${
+                        selected === 3 && "!bg-gray-100"
+                      } p-3 nunito-400 text-gray-500 hover:bg-gray-50 select-none cursor-pointer rounded`}
+                    >
+                      Захирлын мэндчилгээ
                     </div>
                   </div>
-                );
-              })}
+                </div>
+
+                <div className="col-md-9">
+                  {selected === 0 && (
+                    <div>
+                      Манай компани нь анх 2009 онд байгуулагдаж өнөөг хүртэл
+                      МУ-ын барилгын салбарт үйл ажилгаагаа амжилттай явуулж
+                      байна. Санхүү болон нягтлан, нярав, хүний нөөцийн
+                      мэргэжилтэн, талбайн менежер гэсэн албан тушаал бүхий 100
+                      гаруй ажилчдаас бүрдсэн баг хамт олон ахисан түвшний
+                      менежмент, зохион байгуулалттайгаар үйл ажиллагаагаа
+                      явуулж байна.
+                    </div>
+                  )}
+                </div>
+              </div>
             </div>
-          </div>
+          </section>
         </div>
       </div>
     </Layout>

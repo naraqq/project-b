@@ -1,126 +1,92 @@
+import { useEffect, useState } from "react";
 import Layout from "../components/Layouts/Layout";
+import axios from "axios";
 
+import { useNavigate } from "react-router-dom";
+import Spinner from "react-bootstrap/Spinner";
 function InfoPage() {
+  const [news, setNews] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+  useEffect(() => {
+    setLoading(true);
+    axios
+      .get(`${process.env.REACT_APP_BASE_URL}/v1/News/getNews`, {
+        headers: {
+          "Content-Type": "applicaiton/json",
+        },
+      })
+      .then((res) => {
+        setNews(res.data.news);
+        setLoading(false);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
   return (
     <Layout>
-      <div className="body">
-        <div className="main">
-          <h1
-            className=" w-[200px] pb-2 ml-4 md:ml-4 border-b-[2px] mt-2 md:mt-10 border-gray-600 text-[20px] text-start uppercase
-        font-[400]
-        "
-          >
-            {" "}
-            Мэдээ мэдээлэл
-          </h1>
-          <ul className="cards">
-            <li className="cards_item">
-              <div className="card">
-                <div className="card_image">
-                  <img
-                    alt="img"
-                    src="https://picsum.photos/500/300/?image=10"
-                  />
-                </div>
-                <div className="card_content">
-                  <h2 className="card_title">Мэдээ мэдээлэл</h2>
-                  <p className="card_text">
-                    Барилгын салбар дахь 2023 оны дижитал шилжилт · BIM бол
-                    ирээдүй гэдгийг ойлгосон учраас 100 хувь нэвтрүүлсэн.
-                  </p>
-                  <button className="btn card_btn">Илүү унших</button>
-                </div>
-              </div>
-            </li>
-            <li className="cards_item">
-              <div className="card">
-                <div className="card_image">
-                  <img alt="img" src="https://picsum.photos/500/300/?image=5" />
-                </div>
-                <div className="card_content">
-                  <h2 className="card_title">Мэдээ мэдээлэл</h2>
-                  <p className="card_text">
-                    Барилгын салбар дахь 2023 оны дижитал шилжилт · BIM бол
-                    ирээдүй гэдгийг ойлгосон учраас 100 хувь нэвтрүүлсэн.
-                  </p>
-                  <button className="btn card_btn">Илүү унших</button>
-                </div>
-              </div>
-            </li>
-            <li className="cards_item">
-              <div className="card">
-                <div className="card_image">
-                  <img
-                    alt="img"
-                    src="https://picsum.photos/500/300/?image=11"
-                  />
-                </div>
-                <div className="card_content">
-                  <h2 className="card_title">Мэдээ мэдээлэл</h2>
-                  <p className="card_text">
-                    Барилгын салбар дахь 2023 оны дижитал шилжилт · BIM бол
-                    ирээдүй гэдгийг ойлгосон учраас 100 хувь нэвтрүүлсэн.
-                  </p>
-                  <button className="btn card_btn">Илүү унших</button>
-                </div>
-              </div>
-            </li>
-            <li className=" cards_item">
-              <div className="card">
-                <div className="card_image">
-                  <img
-                    alt="img"
-                    src="https://picsum.photos/500/300/?image=14"
-                  />
-                </div>
-                <div className="card_content">
-                  <h2 className="card_title">Мэдээ мэдээлэл</h2>
-                  <p className="card_text">
-                    Барилгын салбар дахь 2023 оны дижитал шилжилт · BIM бол
-                    ирээдүй гэдгийг ойлгосон учраас 100 хувь нэвтрүүлсэн.
-                  </p>
-                  <button className="btn card_btn">Илүү унших</button>
-                </div>
-              </div>
-            </li>
-            <li className=" cards_item">
-              <div className="card">
-                <div className="card_image">
-                  <img
-                    alt="img"
-                    src="https://picsum.photos/500/300/?image=17"
-                  />
-                </div>
-                <div className="card_content">
-                  <h2 className="card_title">Мэдээ мэдээлэл</h2>
-                  <p className="card_text">
-                    Барилгын салбар дахь 2023 оны дижитал шилжилт · BIM бол
-                    ирээдүй гэдгийг ойлгосон учраас 100 хувь нэвтрүүлсэн.
-                  </p>
-                  <button className="btn card_btn">Илүү унших</button>
-                </div>
-              </div>
-            </li>
-            <li className=" cards_item">
-              <div className="card">
-                <div className="card_image">
-                  <img alt="img" src="https://picsum.photos/500/300/?image=2" />
-                </div>
-                <div className="card_content">
-                  <h2 className="card_title">Мэдээ мэдээлэл</h2>
-                  <p className="card_text">
-                    Барилгын салбар дахь 2023 оны дижитал шилжилт · BIM бол
-                    ирээдүй гэдгийг ойлгосон учраас 100 хувь нэвтрүүлсэн.
-                  </p>
-                  <button className="btn card_btn">Илүү унших</button>
-                </div>
-              </div>
-            </li>
-          </ul>
+      {loading ? (
+        <div
+          style={{
+            background:
+              "url(https://www.hsimagazine.com/wp-content/uploads/2020/01/iStock-1028568006.jpg)",
+          }}
+          className="body"
+        >
+          <div className="main min-h-[calc(100vh-60px)] pure-glass pt-3 flex justify-center items-center ">
+            <Spinner animation="border" role="status" variant="danger">
+              <span className="visually-hidden">Loading...</span>
+            </Spinner>
+          </div>
         </div>
-
-        {/* <h3 className="made_by">Made with ♡</h3> */}
-      </div>
+      ) : (
+        <div
+          style={{
+            background:
+              "url(https://www.hsimagazine.com/wp-content/uploads/2020/01/iStock-1028568006.jpg)",
+          }}
+          className="body"
+        >
+          <div className="main min-h-[calc(100vh-60px)] pure-glass py-3">
+            <ul className="cards gap-4 justify-center flex-wrap md:justify-start flex-wrap px-5 ">
+              {news?.map((news, index) => {
+                return (
+                  <li
+                    key={index}
+                    className={`h-[390px] shadow hover:shadow w-full md:w-[calc(30%)] rounded bg-white ${
+                      news.newsType !== "1" && "!hidden"
+                    } `}
+                  >
+                    <img
+                      alt="img"
+                      className="rounded-t h-[220px]"
+                      src={`${news.imgPath}`}
+                    />
+                    <div className="p-2 h-[120px]">
+                      <h2 className="card_title nunito-500 truncate">
+                        {news.title}
+                      </h2>
+                      <div className="card_text nunito-400 h-[60px] overflow-hidden text-ellipsis">
+                        {news.description}
+                      </div>
+                      <div
+                        onClick={() => {
+                          navigate("/news-detail", {
+                            state: news,
+                          });
+                        }}
+                        className="btn card_btn mt-auto nunito-400"
+                      >
+                        Дэлгэрэнгүй
+                      </div>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
+      )}
     </Layout>
   );
 }

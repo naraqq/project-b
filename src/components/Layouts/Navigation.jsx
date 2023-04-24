@@ -32,7 +32,7 @@ function Navigation() {
     <div className="custom-navigation">
       <header className="">
         <nav
-          className={`!flex shadow ${
+          className={`!flex ${
             path !== "/" && " !text-black"
           } h-full justify-between px-4 md:justify-around transition-all w-full glass`}
         >
@@ -60,71 +60,62 @@ function Navigation() {
             <li className="parent-red">
               <button
                 onClick={() => {
-                  navigate("/news");
+                  navigate("/");
                 }}
-                className="hover:text-black transition-all nunito-600 child-red"
+                className={`hover:text-black parent nunito-400 nunito-600 child-red ${
+                  path == "/" && "text-red-500 "
+                } button-cus `}
               >
-                МЭДЭЭ МЭДЭЭЛЭЛ
+                НҮҮР
               </button>
             </li>
             <li className="parent-red">
-              <button className="hover:text-black parent nunito-400 nunito-600 child-red">
+              <button
+                onClick={() => {
+                  navigate("/news");
+                }}
+                className={`hover:text-black transition-all nunito-600 child-red ${
+                  path == "/news" && "text-red-500"
+                } button-cus`}
+              >
+                МЭДЭЭ
+              </button>
+            </li>
+            <li className="parent-red">
+              <button
+                onClick={() => {
+                  navigate("/about-us");
+                }}
+                className={`nunito-400 nunito-600 ${
+                  path == "/about-us" && "!text-red-500"
+                }  child-red`}
+              >
                 БИДНИЙ ТУХАЙ
-                <div className="dropdown absolute top-[60px] left-0  h-12">
-                  <div
-                    onClick={() => {
-                      navigate("/захирлын-мэндчилгээ");
-                    }}
-                    className={`max-w-[300px] transition-all bg-white pt-3 pb-3 h-[50px] 
-                   hover:!bg-gray-100  text-[11px] px-[10px]  border-red-500  text-black  nunito-600 border-t-[2px] uppercase`}
-                  >
-                    захирлын мэндчилгээ
-                  </div>
-                  <div
-                    onClick={() => {
-                      navigate("/Танилцуулга");
-                    }}
-                    className={`max-w-[300px] transition-all bg-white pt-3 pb-3 h-[50px] 
-                   hover:!bg-gray-100 text-start text-[11px] px-[30px] border-b border-t border-gray-200 text-black nunito-600 uppercase`}
-                  >
-                    компаний тухай
-                  </div>
-                  <div
-                    onClick={() => {
-                      navigate("/Бидний-гүйцэтсэн-ажил");
-                    }}
-                    className={`max-w-[300px] transition-all bg-white pt-3 pb-3 h-[50px] 
-                    hover:!bg-gray-100  text-[11px] px-[10px]  text-black nunito-600 uppercase`}
-                  >
-                    Бидний гүйцэтгэсэн ажил
-                  </div>
-                </div>
               </button>
             </li>
 
             <li className="parent-red">
-              <button className="hover:text-black parent nunito-400 nunito-600 child-red">
+              <button
+                onClick={() => {
+                  navigate("/human-resource");
+                }}
+                className={` ${
+                  path == "/human-resource" && "!text-red-500"
+                } parent nunito-400 nunito-600 child-red`}
+              >
                 ХҮНИЙ НӨӨЦ{" "}
-                <div className="dropdown absolute top-[60px] left-0  h-12">
-                  <div
-                    onClick={() => {
-                      navigate("/яагаад-xxk-гэж");
-                    }}
-                    className={`max-w-[300px] transition-all bg-gray-200 pt-3 pb-3 h-[50px] 
-                   hover:bg-gray-400  text-[13px] px-3 text-gray-600 border-red-500 nunito-400 border-t-[2px] `}
-                  >
-                    Яагаад ХХХ ХХК гэж ?
-                  </div>
-                  <div
-                    onClick={() => {
-                      navigate("/Ажлын-байр");
-                    }}
-                    className={`max-w-[300px] transition-all bg-gray-200 pt-3 pb-3 h-[50px] 
-                    hover:bg-gray-400  text-[13px] px-3 nunito-400`}
-                  >
-                    Нээлттэй ажлын байр
-                  </div>
-                </div>
+              </button>
+            </li>
+            <li className="parent-red">
+              <button
+                onClick={() => {
+                  navigate("/contact-us");
+                }}
+                className={` ${
+                  path == "/contact-us" && "!text-red-500"
+                } parent nunito-400 nunito-600 child-red`}
+              >
+                ХОЛБОО БАРИХ{" "}
               </button>
             </li>
           </ul>
@@ -184,7 +175,25 @@ function OffCanvas({ name, ...props }) {
             >
               Мэдээ мэдээлэл
             </div>
-            <Accordion style={{ border: "none" }}>
+            <div
+              onClick={() => {
+                navigate("/about-us");
+                handleClose();
+              }}
+              className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b"
+            >
+              Бидний тухай
+            </div>
+            <div
+              onClick={() => {
+                navigate("/human-resource");
+                handleClose();
+              }}
+              className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b"
+            >
+              Ажлын байр
+            </div>
+            {/* <Accordion style={{ border: "none" }}>
               <Accordion.Item eventKey="0" style={{ border: "none" }}>
                 <Accordion.Header>
                   <div className="max-w-[300px] pt-3 pb-3 text-[13px] px-3 text-gray-500">
@@ -213,40 +222,11 @@ function OffCanvas({ name, ...props }) {
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
-            </Accordion>
-            <Accordion style={{ border: "none" }}>
-              <Accordion.Item eventKey="0" style={{ border: "none" }}>
-                <Accordion.Header>
-                  <div className="max-w-[300px] pt-3 pb-3 text-[13px] px-3 text-gray-500">
-                    Ажлын байр
-                  </div>
-                </Accordion.Header>
-                <Accordion.Body>
-                  <div
-                    onClick={() => {
-                      navigate("/яагаад-xxk-гэж");
-                      handleClose();
-                    }}
-                    className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b"
-                  >
-                    <i className="bi bi-caret-right mr-2"></i>Яагаад-xxk-гэж
-                  </div>
-                  <div
-                    onClick={() => {
-                      navigate("/Ажлын-байр");
-                      handleClose();
-                    }}
-                    className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b"
-                  >
-                    <i className="bi bi-caret-right mr-2"></i>Нээлттэй
-                    ажлын-байр
-                  </div>
-                </Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
+            </Accordion> */}
+
             <div
               onClick={() => {
-                navigate("/Холбоо-барих");
+                navigate("/contact-us");
                 handleClose();
               }}
               className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b"
