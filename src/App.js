@@ -1,25 +1,25 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./style/App.css";
-import "./style/footer.css";
 import "./style/sass.scss";
-import "./style/keepin.scss";
-import "./style/style.less";
+import "./style/news.scss";
 import "./style/home.scss";
+import "./style/footer.css";
+import "./style/style.less";
+import "./style/keepin.scss";
 import "./style/partners.scss";
 import "./style/contact-us.scss";
-import "./style/news.scss";
+import CV from "./pages/CV";
 import Home from "./pages/Home";
+import CVDetail from "./pages/CVDetail";
 import NotFound from "./pages/NotFound";
 import OpenJobs from "./pages/OpenJobs";
-import WhyourCompany from "./pages/WhyourCompany";
 import InfoPage from "./pages/InfoPage";
+import CEOWords from "./pages/CEOWords";
 import OurHistory from "./pages/OurHistory";
 import WhatWeDone from "./pages/WhatWeDone";
-import CV from "./pages/CV";
-import KeepInTouch from "./pages/KeepInTouch";
-import CEOWords from "./pages/CEOWords";
 import NewsDetail from "./pages/NewsDetail";
-import CVDetail from "./pages/CVDetail";
+import KeepInTouch from "./pages/KeepInTouch";
+import WhyourCompany from "./pages/WhyourCompany";
 function App() {
   return (
     <BrowserRouter>

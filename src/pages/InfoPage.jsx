@@ -26,64 +26,69 @@ function InfoPage() {
   return (
     <Layout>
       {loading ? (
-        <div
-          style={{
-            background:
-              "url(https://www.hsimagazine.com/wp-content/uploads/2020/01/iStock-1028568006.jpg)",
-          }}
-          className="body"
-        >
-          <div className="main min-h-[calc(100vh-60px)] pure-glass pt-3 flex justify-center items-center ">
+        <div className="body">
+          <div className="main min-h-[calc(100vh-60px)] pt-3 flex justify-center items-center ">
             <Spinner animation="border" role="status" variant="danger">
               <span className="visually-hidden">Loading...</span>
             </Spinner>
           </div>
         </div>
       ) : (
-        <div
-          style={{
-            background:
-              "url(https://www.hsimagazine.com/wp-content/uploads/2020/01/iStock-1028568006.jpg)",
-          }}
-          className="body"
-        >
-          <div className="main min-h-[calc(100vh-60px)] pure-glass py-3">
-            <ul className="cards gap-4 justify-center flex-wrap md:justify-start flex-wrap px-5 ">
-              {news?.map((news, index) => {
-                return (
-                  <li
-                    key={index}
-                    className={`h-[390px] shadow hover:shadow w-full md:w-[calc(30%)] rounded bg-white ${
-                      news.newsType !== "1" && "!hidden"
-                    } `}
-                  >
-                    <img
-                      alt="img"
-                      className="rounded-t h-[220px]"
-                      src={`${news.imgPath}`}
-                    />
-                    <div className="p-2 h-[120px]">
-                      <h2 className="card_title nunito-500 truncate">
-                        {news.title}
-                      </h2>
-                      <div className="card_text nunito-400 h-[60px] overflow-hidden text-ellipsis">
-                        {news.description}
+        <div className="body ">
+          <div className="main about-us min-h-[calc(100vh-60px)]  ">
+            <section className="contact" id="contact">
+              <div className="container">
+                <div className="row">
+                  <div className="col-md-2">
+                    <div className="title mt-10">
+                      <div className="w-full border-b-[3px] border-red-500 mb-2">
+                        <h3 className="!text-[40px]">Мэдээ мэдээлэл</h3>
                       </div>
-                      <div
-                        onClick={() => {
-                          navigate("/news-detail", {
-                            state: news,
-                          });
-                        }}
-                        className="btn card_btn mt-auto nunito-400"
-                      >
-                        Дэлгэрэнгүй
-                      </div>
+                      <p>
+                        Бид компанийн үйл ажиллагаатай холбоотой мэдээ
+                        мэдээллийг танд хүргэж байна.
+                      </p>
                     </div>
-                  </li>
-                );
-              })}
-            </ul>
+                  </div>
+
+                  <div className="col-md-10 flex flex-wrap gap-4 justify-center md:justify-start ">
+                    {news.map((info, index) => {
+                      // console.log(info);
+                      return (
+                        <div
+                          key={index}
+                          onClick={() => {
+                            navigate("/news-detail", {
+                              state: info,
+                            });
+                          }}
+                          className={`w-[300px] ${
+                            info.newsType == 2 && "hidden"
+                          } p-2 rounded hover:!shadow-lg shadow h-[400px] overflow-hidden !text-[#999999] cursor-pointer`}
+                        >
+                          <img
+                            src={info.imgPath}
+                            alt=""
+                            className="rounded h-[200px] w-full"
+                          />
+                          <div className="h-[150px] w-full">
+                            <p className="nunito-500 text-sm mt-2 truncate">
+                              • {info.title}
+                            </p>
+                            <div className="nunito-500 text-sm mt-2">
+                              {info.description}
+                            </div>
+                          </div>
+                          <div className="nunito-500 text-sm mt-auto w-full flex justify-end">
+                            {info.createdDate}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
       )}

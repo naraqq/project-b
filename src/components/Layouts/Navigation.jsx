@@ -72,18 +72,6 @@ function Navigation() {
             <li className="parent-red">
               <button
                 onClick={() => {
-                  navigate("/news");
-                }}
-                className={`hover:text-black transition-all nunito-600 child-red ${
-                  path == "/news" && "text-red-500"
-                } button-cus`}
-              >
-                МЭДЭЭ
-              </button>
-            </li>
-            <li className="parent-red">
-              <button
-                onClick={() => {
                   navigate("/about-us");
                 }}
                 className={`nunito-400 nunito-600 ${
@@ -91,6 +79,18 @@ function Navigation() {
                 }  child-red`}
               >
                 БИДНИЙ ТУХАЙ
+              </button>
+            </li>
+            <li className="parent-red">
+              <button
+                onClick={() => {
+                  navigate("/news");
+                }}
+                className={`hover:text-black transition-all nunito-600 child-red ${
+                  path == "/news" && "text-red-500"
+                } button-cus`}
+              >
+                МЭДЭЭ
               </button>
             </li>
 
@@ -168,15 +168,6 @@ function OffCanvas({ name, ...props }) {
             </div>
             <div
               onClick={() => {
-                navigate("/news");
-                handleClose();
-              }}
-              className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b"
-            >
-              Мэдээ мэдээлэл
-            </div>
-            <div
-              onClick={() => {
                 navigate("/about-us");
                 handleClose();
               }}
@@ -184,6 +175,16 @@ function OffCanvas({ name, ...props }) {
             >
               Бидний тухай
             </div>
+            <div
+              onClick={() => {
+                navigate("/news");
+                handleClose();
+              }}
+              className="max-w-[300px] pt-3 pb-3 active:bg-gray-200 text-[13px] px-3 text-gray-500 border-b"
+            >
+              Мэдээ мэдээлэл
+            </div>
+
             <div
               onClick={() => {
                 navigate("/human-resource");

@@ -1,13 +1,12 @@
 function Footer() {
   return (
-    <div className="footer">
-      {" "}
-      <footer className="site-footer">
+    <div className="footer ">
+      <footer className="site-footer !bg-[#DF2F29]">
         <div className="container w-11/12 md:w-9/12 flex justify-center">
           <div className="row">
             <div className="col-sm-12 col-md-6">
               <h6 className="nunito-300">Бидний тухай</h6>
-              <p className="text-justify nunito-300">
+              <p className="text-justify nunito-300 text-white">
                 Манай компани нь анх 2009 онд байгуулагдаж өнөөг хүртэл МУын
                 барилгын салбарт үйл ажилгаагаа амжилттай явуулж байгаа билээ.
                 Бид иргэний барилга байгууламж болон дэд бүтцийн төслийн
@@ -20,22 +19,29 @@ function Footer() {
               <h6 className="nunito-300">Хаяг</h6>
               <ul className="footer-links">
                 <li>
-                  <span className="nunito-300">Улаанбаатар, Монгол</span>
+                  <span className="nunito-300 text-white">
+                    Улаанбаатар, Монгол
+                  </span>
                 </li>
                 <li>
-                  <span className="nunito-300">
+                  <span className="nunito-300 text-white">
                     Хан-Уул дүүрэг 4 дүгээр хороо
                   </span>
                 </li>
                 <li>
-                  <span className="nunito-300">Наадамчдын гудамж</span>
+                  <span className="nunito-300 text-white">
+                    Наадамчдын гудамж
+                  </span>
                 </li>
                 <li>
-                  <span className="nunito-300"> Сумо тауэр 7 давхар</span>
+                  <span className="nunito-300 text-white">
+                    {" "}
+                    Сумо тауэр 7 давхар
+                  </span>
                 </li>
                 <li>
                   <a
-                    className="!text-gray-400 hover:!text-white nunito-300"
+                    className="text-white hover:!text-gray-100 nunito-300"
                     href="https://www.google.com/maps/dir/?api=1&destination=47.89096%2C106.86967&fbclid=IwAR16HoebO8RJKEURvtCpnglCLic33WQ1PupfKtPVb2jpQikGw9Vl2GZTXD4"
                   >
                     <i className="bi bi-map-fill text-md mr-2"></i>Газрын зураг
@@ -48,13 +54,17 @@ function Footer() {
               <h6 className="nunito-300">Холбоо барих</h6>
               <ul className="footer-links">
                 <li>
-                  <a className="hover:!text-white nunito-300">Утас: 7779292</a>
+                  <a className="hover:!text-white nunito-300 text-white">
+                    Утас: 7779292
+                  </a>
                 </li>
                 <li>
-                  <a className="hover:!text-white nunito-300">Факс: 77779292</a>
+                  <a className="hover:!text-white nunito-300 text-white">
+                    Факс: 77779292
+                  </a>
                 </li>
                 <li>
-                  <a className="hover:!text-white nunito-300">
+                  <a className="hover:!text-white nunito-300 text-white">
                     И мэйл: install.naran@gmail.com,
                   </a>
                 </li>
@@ -66,7 +76,7 @@ function Footer() {
         <div className="container w-11/12 md:w-9/12">
           <div className="row pt-3 ">
             <div className="col-md-8 col-sm-6 col-xs-12">
-              <p className="copyright-text nunito-300">
+              <p className="copyright-text nunito-300 text-white">
                 © 2023 ИНСТАЛЛ НАРАН КОНСТРАКШН ХХК
               </p>
             </div>

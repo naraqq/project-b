@@ -21,13 +21,6 @@ function KeepInTouch() {
               </div>
               <div className="row">
                 <div className="col-md-5">
-                  <div className="title">
-                    <h3>Contact detail</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor{" "}
-                    </p>
-                  </div>
                   <div className="content">
                     <div className="info">
                       <i className="bi bi-phone"></i>

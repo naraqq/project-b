@@ -1,6 +1,9 @@
 import Layout from "../components/Layouts/Layout";
 import { useState } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import Button from "react-bootstrap/Button";
+import ReactPlayer from "react-player";
+
 function OurHistory() {
   const specialists = [
     {
@@ -76,19 +79,7 @@ function OurHistory() {
       experience: "Ажиллах хүч - 30 хүн",
     },
   ];
-  function randomIntFrom1To4() {
-    // Generate a random number between 0 (inclusive) and 1 (exclusive)
-    const randomNumber = Math.random();
 
-    // Scale the random number to be between 1 (inclusive) and 5 (exclusive)
-    const scaledNumber = randomNumber * 4 + 1;
-
-    // Floor the scaled number to get an integer between 1 and 4 (inclusive)
-    const randomInt = Math.floor(scaledNumber);
-
-    // Return the randomly generated integer
-    return randomInt;
-  }
   const [selected, setSelected] = useState(0);
   return (
     <Layout>
@@ -104,54 +95,114 @@ function OurHistory() {
                         setSelected(0);
                       }}
                       className={`border-b border-t ${
-                        selected === 0 && "!bg-gray-100"
-                      } p-3 nunito-400 text-gray-500 hover:bg-gray-50 select-none cursor-pointer rounded`}
+                        selected === 0 && "!bg-gray-100 text-red-500"
+                      } p-3 nunito-400 text-[14px] text-gray-500 hover:bg-gray-50 select-none cursor-pointer rounded`}
                     >
-                      Компанийн танилцуулга
+                      Захирлын мэндчилгээ
                     </div>
                     <div
                       onClick={() => {
                         setSelected(1);
                       }}
-                      className={`border-b ${
-                        selected === 1 && "!bg-gray-100"
-                      } p-3 nunito-400 text-gray-500 hover:bg-gray-50 select-none cursor-pointer rounded`}
+                      className={`border-b  ${
+                        selected === 1 && "!bg-gray-100 text-red-500"
+                      } p-3 nunito-400 text-[14px] text-gray-500 hover:bg-gray-50 select-none cursor-pointer rounded`}
                     >
-                      Бидний эрхэм зорилго
+                      Компанийн танилцуулга
                     </div>
                     <div
                       onClick={() => {
                         setSelected(2);
                       }}
                       className={`border-b ${
-                        selected === 2 && "!bg-gray-100"
-                      } p-3 nunito-400 text-gray-500 hover:bg-gray-50 select-none cursor-pointer rounded`}
+                        selected === 2 && "!bg-gray-100 text-red-500"
+                      } p-3 nunito-400 text-[14px] text-gray-500 hover:bg-gray-50 select-none cursor-pointer rounded`}
                     >
-                      Ойрын зорилт
+                      Бидний эрхэм зорилго
                     </div>
                     <div
                       onClick={() => {
                         setSelected(3);
                       }}
                       className={`border-b ${
-                        selected === 3 && "!bg-gray-100"
-                      } p-3 nunito-400 text-gray-500 hover:bg-gray-50 select-none cursor-pointer rounded`}
+                        selected === 3 && "!bg-gray-100 text-red-500"
+                      } p-3 nunito-400 text-[14px] text-gray-500 hover:bg-gray-50 select-none cursor-pointer rounded`}
                     >
-                      Захирлын мэндчилгээ
+                      Ойрын зорилт
                     </div>
                   </div>
                 </div>
 
                 <div className="col-md-9">
                   {selected === 0 && (
-                    <div>
-                      Манай компани нь анх 2009 онд байгуулагдаж өнөөг хүртэл
-                      МУ-ын барилгын салбарт үйл ажилгаагаа амжилттай явуулж
-                      байна. Санхүү болон нягтлан, нярав, хүний нөөцийн
-                      мэргэжилтэн, талбайн менежер гэсэн албан тушаал бүхий 100
-                      гаруй ажилчдаас бүрдсэн баг хамт олон ахисан түвшний
-                      менежмент, зохион байгуулалттайгаар үйл ажиллагаагаа
-                      явуулж байна.
+                    <div className="nunito-300 text-[14px] flex flex-col md:flex-row gap-4">
+                      <LazyLoadImage
+                        src={
+                          "https://www.rappler.com/tachyon/2021/08/Jocot_DeDios.jpg"
+                        }
+                        width={370}
+                        height={400}
+                        alt="Image Alt"
+                      />
+                      Инсталл наран констракшн ХХК нь барилга бүтээн
+                      байгуулалтын болон үл хөдлөх хөрөнгийн салбарт 2009 оноос
+                      эхлэн өнөөдрийг хүртэл амжилттай ажиллаж ирсэн.
+                      Байгуулагдсан цагаасаа эхлэн манай байгууллагын үйл
+                      ажиллагааны цар хүрээ өргөжин тэлж өнөөдөр 3 салбар
+                      компани бүхий Группийн нэгдлийг үүсгэн барилга бүтээн
+                      байгуулалтын салбарт болон 2022 онд Инсталл Наран Конкрит
+                      ХХК-ийг үүсгэн байгуулж, Бетон зуурмагийн үйлдвэрлэлийн
+                      салбарт төрөлжсөн бүх төрлийн үйлчилгээг эрхэлж, салбартаа
+                      тэргүүлэгч байгууллага болохоор зорилго тавин ажиллаж
+                      байна. Мөн байгууллагынхаа өрсөлдөхүйц чанарыг бэхжүүлэх
+                      үүднээс олон улсын орчин үеийн компанийн засаглал болон
+                      удирдлагын тогтолцоог өөрийн соёл, онцлогт тохируулан
+                      нэвтрүүлж харилцагчдынхаа 100%-ийн сэтгэл ханамж болон
+                      давтан бизнесийн төлөө сэтгэл зүрх нэгдсэн хамт олон
+                      хөдөлмөрлөж байна. Их бүтээн байгуулалтын зүг харилцагч та
+                      бүхэнтэйгээ хамтдаа тэмүүлцгээе. <br />
+                      Н.ЧУЛУУНБАЯР ЕРӨНХИЙ ЗАХИРАЛ
+                    </div>
+                  )}{" "}
+                  {selected === 1 && (
+                    <div className="nunito-300 text-[14px] my-3 min-h-[400px]">
+                      <ReactPlayer
+                        width={"100%"}
+                        url="https://fb.watch/khvhdcoiHZ/"
+                      />
+                      <div className="nunito-300 text-[14px] my-3 min-h-[400px] pt-8 !mt-[-180px] md:!mt-[20px]">
+                        • Манай компани нь анх 2009 онд байгуулагдаж өнөөг
+                        хүртэл МУын барилгын салбарт үйл ажилгаагаа амжилттай
+                        явуулж байна. <br />• Бид 2014 онд компаниа өргөжүүлж
+                        “Инсталл наран констракшн” ХХК болгон БУА-ын 2.1.1~5,
+                        2.2.1~4 болон БА-6.2 тус тус заалттай тусгай
+                        зөвшөөрөлтэйгээр үйл ажиллагаагаа явуулж байна
+                      </div>
+                    </div>
+                  )}
+                  {selected === 2 && (
+                    <div className="nunito-300 text-[14px] min-h-[400px]">
+                      <h6 className="nunito-400 mb-3 mt-3">
+                        Бидний эрхэм зорилго
+                      </h6>
+                      Бид үйл ажиллагаандаа МУ-д хүчин төгөлдөр мөрдөгдөж буй
+                      БНбД болон бусад стандарт, журмуудыг баримтлан барилга
+                      угсралтын салбарт шинэ дэвшилтэт технологийг нэвтрүүлэн
+                      үйл ажиллагаагаа улам өргөжүүлж улс орныхоо эдийн засаг,
+                      нийгмийн хөгжил бүтээн байгуулалтад үнэтэй хувь нэмэр
+                      оруулах нь бидний эрхэм зорилго.
+                    </div>
+                  )}
+                  {selected === 3 && (
+                    <div className="nunito-300 text-[14px] min-h-[400px]">
+                      <h6 className="nunito-400 mb-3 mt-3">Ойрын зорилт</h6>
+                      Нийт ажилчдын ажиллах таатай орчинг бүрдүүлэн, ХЭМАБ болон
+                      бусад мэргэжлийн ур чадвар дээшлүүлэх сургалт, дамжаанд
+                      идэвхтэй хамруулж, суралцах нөхцлөөр хангаж ажиллах.
+                      Цаашид үйл ажиллагаагаа улам өргөжүүлж ИТА болон бусад
+                      ажлын байрны орон тоог нэмэгдүүлэх, тэдгээрийн ажиллаж
+                      амьдрах таатай нөхцлийг бүрдүүлж санхүүгийн баталгаа олгох
+                      гэсэн зорилтуудыг тавин ажиллаж байна.
                     </div>
                   )}
                 </div>

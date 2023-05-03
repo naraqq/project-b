@@ -5,22 +5,21 @@ function NewsDetail() {
   const certainNews = location.state;
   return (
     <Layout>
-      <div
-        style={{
-          background:
-            "url(https://www.hsimagazine.com/wp-content/uploads/2020/01/iStock-1028568006.jpg)",
-        }}
-        className="body"
-      >
+      <div className="body">
         <div className="main min-h-[calc(100vh-60px)] glass">
-          <div className="w-full  h-full p-4">
+          <div className="w-full  h-full p-4 mb-5 rounded mt-5">
             <img
               className="w-full min-h-[calc(30vh)] rounded"
               src={`${certainNews?.imgPath}`}
               alt=""
             />
             <div className="w-full h-full p-3 bg-[#F9F9F9] my-2 rounded">
-              <p className="nunito-300 p-2">{certainNews?.description}</p>
+              <p className="nunito-300 p-2 text-center">
+                {certainNews?.description}
+              </p>
+            </div>
+            <div className="w-full h-full p-3 bg-[#F9F9F9] my-2 rounded">
+              <p className="nunito-300 p-2">{certainNews?.newsBody}</p>
             </div>
             <div className="w-full flex justify-end">
               {" "}

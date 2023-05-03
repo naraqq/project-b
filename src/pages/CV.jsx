@@ -6,6 +6,16 @@ function CV() {
   const [validated, setValidated] = useState(false);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+  const [lastname, setLastname] = useState("");
+  const [firstname, setFirstname] = useState("");
+  const [email, setEmail] = useState("");
+  const [selectedCompany, setSelectedCompany] = useState(0);
+  const meta_data = {
+    lastname: lastname,
+    firstname: firstname,
+    email: email,
+    selectedCompany: selectedCompany,
+  };
   const handleSubmit = async (event) => {
     event.preventDefault();
     const form = event.currentTarget;
@@ -105,6 +115,9 @@ function CV() {
                     <div className="row">
                       <div className="col-sm-6">
                         <input
+                          onChange={(e) => {
+                            setLastname(e.target.value);
+                          }}
                           type="text"
                           className="form-control"
                           placeholder="Овог"
@@ -112,6 +125,9 @@ function CV() {
                       </div>
                       <div className="col-sm-6">
                         <input
+                          onChange={(e) => {
+                            setFirstname(e.target.value);
+                          }}
                           type="text"
                           className="form-control"
                           placeholder="Нэр"
@@ -120,6 +136,9 @@ function CV() {
                       <div className="form-group">
                         <div className="col-sm-12">
                           <input
+                            onChange={(e) => {
+                              setEmail(e.target.value);
+                            }}
                             type="email"
                             className="form-control"
                             placeholder="И-мейл хаяг"
@@ -127,14 +146,21 @@ function CV() {
                         </div>
                       </div>
                       <div className="col-sm-12">
-                        <select className="form-control" placeholder="Гарчиг">
+                        <select
+                          onChange={(e) => {
+                            setSelectedCompany(e.target.value);
+                          }}
+                          value={selectedCompany}
+                          className="form-control"
+                          placeholder="Гарчиг"
+                        >
                           <option className="!p-2" value="">
                             СОНГОХ
                           </option>
-                          <option className="!p-2" value="">
+                          <option className="!p-2" value="1">
                             ИНСТАЛЛ НАРАН КОНСТРАКШН ХХК
                           </option>
-                          <option className="!p-2" value="">
+                          <option className="!p-2" value="2">
                             ИНСТАЛЛ НАРАН КОНКРИТ ХХК
                           </option>
                         </select>
@@ -143,7 +169,9 @@ function CV() {
 
                     <button
                       onClick={() => {
-                        navigate("/cv-detail");
+                        navigate("/cv-detail", {
+                          state: meta_data,
+                        });
                       }}
                       className="btn btn-block nunito-500"
                       type="submit"

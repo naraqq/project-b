@@ -1,11 +1,50 @@
 import OurPartners from "./OurPartners";
 
 function WelcomeContent() {
+  const collection = [
+    [
+      {
+        img: "done/1.jpg",
+      },
+      {
+        img: "done/2.jpg",
+      },
+      {
+        img: "done/3.jpg",
+      },
+    ],
+    [
+      {
+        img: "done/4.jpg",
+      },
+      {
+        img: "done/5.jpg",
+      },
+      {
+        img: "done/6.jpg",
+      },
+    ],
+    [
+      {
+        img: "done/7.jpg",
+      },
+      {
+        img: "done/8.jpg",
+      },
+      {
+        img: "done/9.jpg",
+      },
+    ],
+  ];
   return (
     <div>
       <div className="body-cus wrapper">
         <section id="home" className="sec-main">
-          <h1 className="main-heading  nunito-500 text-[20px] md:text-[30px]">
+          <h1 className="main-heading  nunito-500 text-[20px] md:text-[30px] flex flex-col  items-center justify-center">
+            <img
+              className=" rounded-full px-2 w-[60px] md:w-[100px]  mr-1 mb-3"
+              src="logo.svg"
+            />
             ИНСТАЛЛ НАРАН КОНСТРАКШН ХХК
           </h1>
         </section>
@@ -110,83 +149,23 @@ function WelcomeContent() {
                 <h1 className=" nunito-600 uppercase mb-5">
                   БИДНИЙ ГҮЙЦЭТГЭСЭН АЖЛУУДААС
                 </h1>
-                <div className="row">
-                  <div className="col-md-4">
-                    <img
-                      className="center-block"
-                      src="https://source.unsplash.com/Oog0wehKxYs/450x450"
-                      alt="By Håkon Sataøen"
-                    />
-                  </div>
-
-                  <div className="col-md-4">
-                    <img
-                      className="center-block"
-                      src="https://source.unsplash.com/EfpOiZvPbT4/450x450"
-                      alt="By Samuel Zeller"
-                    />
-                  </div>
-
-                  <div className="col-md-4">
-                    <img
-                      className="center-block"
-                      src="https://source.unsplash.com/2aoVQXwLf3g/450x450"
-                      alt="By Scott Webb"
-                    />
-                  </div>
-                </div>
-
-                <div className="row">
-                  <div className="col-md-4">
-                    <img
-                      className="center-block"
-                      src="https://source.unsplash.com/o2KD7JtqTlk/450x450"
-                      alt="By Has Bonk"
-                    />
-                  </div>
-
-                  <div className="col-md-4">
-                    <img
-                      className="center-block"
-                      src="https://source.unsplash.com/TV2ET43jK0w/450x450"
-                      alt="By Scott Webb"
-                    />
-                  </div>
-
-                  <div className="col-md-4">
-                    <img
-                      className="center-block"
-                      src="https://source.unsplash.com/lZ2LB1s_z7s/450x450"
-                      alt="By Daniel Lozano Valdés"
-                    />
-                  </div>
-                </div>
-
-                <div className="row">
-                  <div className="col-md-4">
-                    <img
-                      className="center-block"
-                      src="https://source.unsplash.com/o4qL4FuwN6I/450x450"
-                      alt="By Anthony DELANOIX"
-                    />
-                  </div>
-
-                  <div className="col-md-4">
-                    <img
-                      className="center-block"
-                      src="https://source.unsplash.com/ej7RYC0ED_c/450x450"
-                      alt="By Patrick Pilz"
-                    />
-                  </div>
-
-                  <div className="col-md-4">
-                    <img
-                      className="center-block"
-                      src="https://source.unsplash.com/0G1r-Cg0zS8/450x450"
-                      alt="By Vita Vilcina"
-                    />
-                  </div>
-                </div>
+                {collection.map((container, index) => {
+                  return (
+                    <div key={index} className="row">
+                      {container.map((item, ind) => {
+                        return (
+                          <div key={ind} className="col-md-4">
+                            <img
+                              className="center-block h-[320px] w-full shadow"
+                              src={`${item.img}`}
+                              alt="By Håkon Sataøen"
+                            />
+                          </div>
+                        );
+                      })}
+                    </div>
+                  );
+                })}
               </div>
             </section>
           </div>

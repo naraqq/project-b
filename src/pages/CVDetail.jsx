@@ -1,6 +1,10 @@
+import { useLocation } from "react-router-dom";
 import Layout from "../components/Layouts/Layout";
 
 function CVDetail() {
+  const location = useLocation();
+  const meta_data = location.state;
+  console.log(meta_data);
   return (
     <Layout>
       <div className="body">
@@ -8,10 +12,7 @@ function CVDetail() {
           <section className="contact" id="contact">
             <div className="container">
               <div className="heading text-start">
-                <p className="mx-0 mt-0 mb-2">
-                  1. Ажилд горилогчийн анкетыг үнэн зөв, үг үсэг товчлохгүйгээр
-                  бүрэн гүйцэт бөглөнө үү.
-                </p>
+                <p className="mx-0 mt-0 mb-2">1. Товч танилцуулга.</p>
               </div>
               <div className="row">
                 <div className="col-md-6">
@@ -21,17 +22,24 @@ function CVDetail() {
                         <input
                           type="text"
                           className="form-control"
-                          placeholder="Нэр"
+                          placeholder="Овог"
                         />
                       </div>
                       <div className="col-sm-6">
                         <input
                           type="email"
                           className="form-control"
-                          placeholder="И-мейл хаяг"
+                          placeholder="Нэр"
                         />
                       </div>
-                      <div className="col-sm-12">
+                      <div className="col-sm-6">
+                        <input
+                          type="text"
+                          className="form-control"
+                          placeholder="Гарчиг"
+                        />
+                      </div>
+                      <div className="col-sm-6">
                         <input
                           type="text"
                           className="form-control"
