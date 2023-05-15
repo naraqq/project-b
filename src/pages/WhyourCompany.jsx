@@ -21,7 +21,6 @@ function WhyourCompany() {
       })
       .catch((err) => console.log(err));
   }, []);
-  console.log(data);
   return (
     <Layout>
       {loading ? (
@@ -38,6 +37,14 @@ function WhyourCompany() {
             <section id="home" className="sec-main2">
               <h1 className="main-heading nunito-500 text-[30px] md:text-[30px]">
                 Нээлттэй ажлын байр
+                <br />
+                <button
+                  onClick={() => {
+                    navigate("/CV");
+                  }}
+                >
+                  <i className="bi bi-arrow-right hover:text-[35px] transition-all"></i>
+                </button>
               </h1>
             </section>
           </div>
@@ -82,13 +89,13 @@ function WhyourCompany() {
                   үзүүлэн ажилладаг.
                 </li>
               </ul>
-              {data.length > 0 && (
+              {data?.length > 0 && (
                 <h1 className=" w-full pb-2 border-gray-600 pt-5 pl-3 text-[20px]  text-start uppercase nunito-500 text-gray-500">
                   НЭЭЛТТЭЙ АЖЛЫН БАЙР :
                 </h1>
               )}
               <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 px-3 pb-10 border-b">
-                {data.map((job, index) => {
+                {data?.map((job, index) => {
                   return (
                     <div
                       key={index}
