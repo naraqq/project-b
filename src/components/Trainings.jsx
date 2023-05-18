@@ -1,48 +1,60 @@
 import { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 
-function Trainings() {
-  const [children, setChildren] = useState([
-    {
-      instituteName: "",
-      educationStartDate: "",
-      educationEndDate: "",
-      studiedFieldName: "",
-      educationType: "",
-      educationBadge: "",
-      educationScore: "",
-    },
-  ]);
-
+function Trainings({ trainings, setTrainings }) {
   const addChild = () => {
-    setChildren([
-      ...children,
+    setTrainings([
+      ...trainings,
       {
-        instituteName: "",
-        educationStartDate: "",
-        educationEndDate: "",
-        studiedFieldName: "",
-        educationType: "",
-        educationBadge: "",
-        educationScore: "",
+        trainingFieldName: "string",
+        trainingInstituteName: "string",
+        trainingYear: "string",
+        trainingDuration: "string",
+        trainingCertificateNo: "string",
+        trainingScore: "string",
       },
     ]);
   };
 
   const removeChild = (index) => {
-    const newChildren = [...children];
-    newChildren.splice(index, 1);
-    setChildren(newChildren);
+    const trainings = [...trainings];
+    trainings.splice(index, 1);
+    setTrainings(trainings);
   };
 
-  const handleInputChange = (index, event) => {
-    const newChildren = [...children];
-    newChildren[index].value = event.target.value;
-    setChildren(newChildren);
+  const handleTrainingFieldName = (index, event) => {
+    const newtrainings = [...trainings];
+    newtrainings[index].trainingFieldName = event.target.value;
+    setTrainings(newtrainings);
+  };
+  const handleTrainingInstituteName = (index, event) => {
+    const newtrainings = [...trainings];
+    newtrainings[index].trainingInstituteName = event.target.value;
+    setTrainings(newtrainings);
+  };
+  const handleTrainingYear = (index, event) => {
+    const newtrainings = [...trainings];
+    newtrainings[index].trainingYear = event.target.value;
+    setTrainings(newtrainings);
+  };
+  const handleTrainingDuration = (index, event) => {
+    const newtrainings = [...trainings];
+    newtrainings[index].trainingDuration = event.target.value;
+    setTrainings(newtrainings);
+  };
+  const handleTrainingCertificateNo = (index, event) => {
+    const newtrainings = [...trainings];
+    newtrainings[index].trainingCertificateNo = event.target.value;
+    setTrainings(newtrainings);
+  };
+  const handleTrainingScore = (index, event) => {
+    const newtrainings = [...trainings];
+    newtrainings[index].trainingScore = event.target.value;
+    setTrainings(newtrainings);
   };
 
   const renderChildren = () => {
-    return children.map((child, index) => (
+    return trainings.map((child, index) => (
       <Form.Group
         key={index}
         style={{
@@ -54,31 +66,67 @@ function Trainings() {
             <span className="text-gray-500 nunito-400">
               Ямар чиглэл, Сэдвээр:
             </span>
-            <input type="text" className="outline-none p-2 rounded " />
+            <input
+              onChange={(e) => {
+                handleTrainingFieldName(index, e);
+              }}
+              type="text"
+              className="outline-none p-2 rounded "
+            />
           </div>
           <div className="flex flex-col w-full  md:w-[calc(30%)]">
             <span className="text-gray-500 nunito-400">
               Хаана ямар байгууллагад
             </span>
-            <input type="text" className="outline-none p-2 rounded " />
+            <input
+              onChange={(e) => {
+                handleTrainingInstituteName(index, e);
+              }}
+              type="text"
+              className="outline-none p-2 rounded "
+            />
           </div>
           <div className="flex flex-col w-full  md:w-[calc(30%)]">
             <span className="text-gray-500 nunito-400">Хэзээ</span>
-            <input type="date" className="outline-none p-2 rounded " />
+            <input
+              onChange={(e) => {
+                handleTrainingYear(index, e);
+              }}
+              type="text"
+              className="outline-none p-2 rounded "
+            />
           </div>
           <div className="flex flex-col w-full  md:w-[calc(30%)]">
             <span className="text-gray-500 nunito-400">Ямар хугацаагаар</span>
-            <input type="text" className="outline-none p-2 rounded " />
+            <input
+              onChange={(e) => {
+                handleTrainingDuration(index, e);
+              }}
+              type="text"
+              className="outline-none p-2 rounded "
+            />
           </div>
           <div className="flex flex-col w-full  md:w-[calc(30%)]">
             <span className="text-gray-500 nunito-400">
               Сертифкат, гэрчилгээний №
             </span>
-            <input type="text" className="outline-none p-2 rounded " />
+            <input
+              onChange={(e) => {
+                handleTrainingCertificateNo(index, e);
+              }}
+              type="text"
+              className="outline-none p-2 rounded "
+            />
           </div>
           <div className="flex flex-col w-full  md:w-[calc(30%)]">
             <span className="text-gray-500 nunito-400">Үнэлгээ</span>
-            <input type="text" className="outline-none p-2 rounded " />
+            <input
+              onChange={(e) => {
+                handleTrainingScore(index, e);
+              }}
+              type="text"
+              className="outline-none p-2 rounded "
+            />
           </div>
         </div>
         <button

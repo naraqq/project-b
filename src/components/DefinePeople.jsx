@@ -1,48 +1,54 @@
 import { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 
-function DefinePeople() {
-  const [children, setChildren] = useState([
-    {
-      instituteName: "",
-      educationStartDate: "",
-      educationEndDate: "",
-      studiedFieldName: "",
-      educationType: "",
-      educationBadge: "",
-      educationScore: "",
-    },
-  ]);
-
+function DefinePeople({ definePeople, setDefinePeople }) {
   const addChild = () => {
-    setChildren([
-      ...children,
+    setDefinePeople([
+      ...definePeople,
       {
-        instituteName: "",
-        educationStartDate: "",
-        educationEndDate: "",
-        studiedFieldName: "",
-        educationType: "",
-        educationBadge: "",
-        educationScore: "",
+        personName: "",
+        personCompanyName: "",
+        personOccupation: "",
+        personPhoneNo: "",
+        personKnownYearCount: "",
       },
     ]);
   };
 
   const removeChild = (index) => {
-    const newChildren = [...children];
-    newChildren.splice(index, 1);
-    setChildren(newChildren);
+    const newdefinePeople = [...definePeople];
+    newdefinePeople.splice(index, 1);
+    setDefinePeople(newdefinePeople);
   };
 
-  const handleInputChange = (index, event) => {
-    const newChildren = [...children];
-    newChildren[index].value = event.target.value;
-    setChildren(newChildren);
+  const handlePersonName = (index, event) => {
+    const newdefinePeople = [...definePeople];
+    newdefinePeople[index].personName = event.target.value;
+    setDefinePeople(newdefinePeople);
+  };
+  const handlePersonCompanyName = (index, event) => {
+    const newdefinePeople = [...definePeople];
+    newdefinePeople[index].personCompanyName = event.target.value;
+    setDefinePeople(newdefinePeople);
+  };
+  const handlePersonOccupation = (index, event) => {
+    const newdefinePeople = [...definePeople];
+    newdefinePeople[index].personOccupation = event.target.value;
+    setDefinePeople(newdefinePeople);
+  };
+  const handlePersonPhoneNo = (index, event) => {
+    const newdefinePeople = [...definePeople];
+    newdefinePeople[index].personPhoneNo = event.target.value;
+    setDefinePeople(newdefinePeople);
+  };
+  const handlePersonKnownYearCount = (index, event) => {
+    const newdefinePeople = [...definePeople];
+    newdefinePeople[index].personKnownYearCount = event.target.value;
+    setDefinePeople(newdefinePeople);
   };
 
   const renderChildren = () => {
-    return children.map((child, index) => (
+    return definePeople.map((child, index) => (
       <Form.Group
         key={index}
         style={{
@@ -54,27 +60,57 @@ function DefinePeople() {
             <span className="text-gray-500 nunito-400">
               Тодорхойлолт гаргах хүний нэр:
             </span>
-            <input type="text" className="outline-none p-2 rounded " />
+            <input
+              onChange={(e) => {
+                handlePersonName(index, e);
+              }}
+              type="text"
+              className="outline-none p-2 rounded "
+            />
           </div>
           <div className="flex flex-col w-full  ">
             <span className="text-gray-500 nunito-400">
               Ажиллаж буй байгууллагын нэр
             </span>
-            <input type="text" className="outline-none p-2 rounded " />
+            <input
+              onChange={(e) => {
+                handlePersonCompanyName(index, e);
+              }}
+              type="text"
+              className="outline-none p-2 rounded "
+            />
           </div>
           <div className="flex flex-col w-full  ">
             <span className="text-gray-500 nunito-400">Албан тушаал</span>
-            <input type="text" className="outline-none p-2 rounded " />
+            <input
+              onChange={(e) => {
+                handlePersonOccupation(index, e);
+              }}
+              type="text"
+              className="outline-none p-2 rounded "
+            />
           </div>
           <div className="flex flex-col w-full  ">
             <span className="text-gray-500 nunito-400">Утасны дугаар</span>
-            <input type="number" className="outline-none p-2 rounded " />
+            <input
+              onChange={(e) => {
+                handlePersonPhoneNo(index, e);
+              }}
+              type="number"
+              className="outline-none p-2 rounded "
+            />
           </div>
           <div className="flex flex-col w-full  ">
             <span className="text-gray-500 nunito-400">
               Таныг хэдэн жилийн өмнөөс мэдэх
             </span>
-            <input type="text" className="outline-none p-2 rounded " />
+            <input
+              onChange={(e) => {
+                handlePersonKnownYearCount(index, e);
+              }}
+              type="text"
+              className="outline-none p-2 rounded "
+            />
           </div>
         </div>
         <button

@@ -20,6 +20,7 @@ import WhatWeDone from "./pages/WhatWeDone";
 import NewsDetail from "./pages/NewsDetail";
 import KeepInTouch from "./pages/KeepInTouch";
 import WhyourCompany from "./pages/WhyourCompany";
+import Jobs from "./pages/Jobs";
 function App() {
   return (
     <BrowserRouter>
@@ -36,6 +37,7 @@ function App() {
         <Route path="/Бидний-гүйцэтсэн-ажил" element={<WhatWeDone />} />
         <Route path="/contact-us" element={<KeepInTouch />} />
         <Route path="/cv-detail" element={<CVDetail />} />
+        <Route path="/jobs" element={<Jobs />} />
       </Routes>
     </BrowserRouter>
   );

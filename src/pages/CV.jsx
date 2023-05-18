@@ -1,11 +1,14 @@
 import Layout from "../components/Layouts/Layout";
 import { Form, Button, Alert } from "react-bootstrap";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function CV() {
   const [validated, setValidated] = useState(false);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+  const location = useLocation();
   const [lastname, setLastname] = useState("");
   const [firstname, setFirstname] = useState("");
   const [email, setEmail] = useState("");
@@ -15,42 +18,39 @@ function CV() {
     firstname: firstname,
     email: email,
     selectedCompany: selectedCompany,
+    requestJobId: location.state.jobId,
+  };
+  const checkValidation = () => {
+    if (
+      lastname == "" ||
+      firstname == "" ||
+      email == "" ||
+      selectedCompany == 0
+    ) {
+      return false;
+    } else return true;
   };
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.stopPropagation();
+    if (checkValidation() == false) {
+      toast.error("Талбарын мэдээлэлийг бүрэн бөглөнө үү.", {
+        position: "top-right",
+      });
     } else {
-      try {
-        const response = await fetch("/submit-cv", {
-          method: "POST",
-          body: new FormData(form),
-        });
-        const data = await response.json();
-        if (data.success) {
-          // Success message
-        } else {
-          setError(data.error);
-        }
-      } catch (error) {
-        setError("An error occurred");
-      }
+      navigate("/cv-detail", {
+        state: meta_data,
+      });
     }
-    setValidated(true);
   };
   return (
     <Layout>
+      <ToastContainer />
       <div className="body bg-white">
         <div className="main about-us ">
           {" "}
           <section className="contact" id="contact">
             <div className="container">
               <div className="heading text-center">
-                {/* <h2>
-                  Ажил горилогчдын
-                  <span> анхаарах зүйлс </span>
-                </h2> */}
                 <p>
                   Юуны өмнө манай компанийг сонгож ажил горилогчоор өөрийн
                   анкетаа илгээж байгаад талархлаа илэрхийлье.
@@ -168,10 +168,8 @@ function CV() {
                     </div>
 
                     <button
-                      onClick={() => {
-                        navigate("/cv-detail", {
-                          state: meta_data,
-                        });
+                      onClick={(e) => {
+                        handleSubmit(e);
                       }}
                       className="btn btn-block nunito-500"
                       type="submit"

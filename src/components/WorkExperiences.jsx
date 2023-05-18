@@ -1,48 +1,67 @@
 import { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 
-function WorkExperiences() {
-  const [children, setChildren] = useState([
-    {
-      instituteName: "",
-      educationStartDate: "",
-      educationEndDate: "",
-      studiedFieldName: "",
-      educationType: "",
-      educationBadge: "",
-      educationScore: "",
-    },
-  ]);
-
+function WorkExperiences({ workExperiences, setWorkExperiences }) {
   const addChild = () => {
-    setChildren([
-      ...children,
+    setWorkExperiences([
+      ...workExperiences,
       {
-        instituteName: "",
-        educationStartDate: "",
-        educationEndDate: "",
-        studiedFieldName: "",
-        educationType: "",
-        educationBadge: "",
-        educationScore: "",
+        companyName: "string",
+        workOccupation: "string",
+        workDescription: "string",
+        workStartDate: "string",
+        workEndDate: "string",
+        salary: "string",
+        jobQuitReason: "string",
       },
     ]);
   };
 
   const removeChild = (index) => {
-    const newChildren = [...children];
+    const newChildren = [...workExperiences];
     newChildren.splice(index, 1);
-    setChildren(newChildren);
+    setWorkExperiences(newChildren);
   };
 
-  const handleInputChange = (index, event) => {
-    const newChildren = [...children];
-    newChildren[index].value = event.target.value;
-    setChildren(newChildren);
+  const handleCompanyName = (index, event) => {
+    const newChildren = [...workExperiences];
+    newChildren[index].companyName = event.target.value;
+    setWorkExperiences(newChildren);
+  };
+  const handleWorkOccupation = (index, event) => {
+    const newChildren = [...workExperiences];
+    newChildren[index].workOccupation = event.target.value;
+    setWorkExperiences(newChildren);
+  };
+  const handleWorkDescription = (index, event) => {
+    const newChildren = [...workExperiences];
+    newChildren[index].workDescription = event.target.value;
+    setWorkExperiences(newChildren);
+  };
+  const handleWorkStartDate = (index, event) => {
+    const newChildren = [...workExperiences];
+    newChildren[index].workStartDate = event.target.value;
+    setWorkExperiences(newChildren);
+  };
+
+  const handleEndDate = (index, event) => {
+    const newChildren = [...workExperiences];
+    newChildren[index].workEndDate = event.target.value;
+    setWorkExperiences(newChildren);
+  };
+  const handleWorkSalary = (index, event) => {
+    const newChildren = [...workExperiences];
+    newChildren[index].workSalary = event.target.value;
+    setWorkExperiences(newChildren);
+  };
+  const handleJobQuitReason = (index, event) => {
+    const newChildren = [...workExperiences];
+    newChildren[index].jobQuitReason = event.target.value;
+    setWorkExperiences(newChildren);
   };
 
   const renderChildren = () => {
-    return children.map((child, index) => (
+    return workExperiences.map((child, index) => (
       <Form.Group
         key={index}
         style={{
@@ -52,41 +71,83 @@ function WorkExperiences() {
         <div className="form-control w-full flex gap-2 flex-wrap justify-between">
           <div className="flex flex-col w-full  md:w-[calc(30%)]">
             <span className="text-gray-500 nunito-400">Байгууллагын нэр:</span>
-            <input type="text" className="outline-none p-2 rounded " />
+            <input
+              onChange={(e) => {
+                handleCompanyName(index, e);
+              }}
+              type="text"
+              className="outline-none p-2 rounded "
+            />
           </div>
           <div className="flex flex-col w-full  md:w-[calc(30%)]">
             <span className="text-gray-500 nunito-400">
               Эрхэлж байсан албан тушаал:
             </span>
-            <input type="text" className="outline-none p-2 rounded " />
+            <input
+              onChange={(e) => {
+                handleWorkOccupation(index, e);
+              }}
+              type="text"
+              className="outline-none p-2 rounded "
+            />
           </div>
           <div className="flex flex-col w-full  md:w-[calc(30%)]">
             <span className="text-gray-500 nunito-400">
               Чиг үүрэг /Хийж байсан ажиллууд/
             </span>
-            <input type="text" className="outline-none p-2 rounded " />
+            <input
+              onChange={(e) => {
+                handleWorkDescription(index, e);
+              }}
+              type="text"
+              className="outline-none p-2 rounded "
+            />
           </div>
           <div className="flex flex-col w-full  md:w-[calc(30%)]">
             <span className="text-gray-500 nunito-400">
               Ажилд орсон хугацаа
             </span>
-            <input type="date" className="outline-none p-2 rounded " />
+            <input
+              onChange={(e) => {
+                handleWorkStartDate(index, e);
+              }}
+              type="date"
+              className="outline-none p-2 rounded "
+            />
           </div>
           <div className="flex flex-col w-full  md:w-[calc(30%)]">
             <span className="text-gray-500 nunito-400">
               Ажлаас гарсан хугацаа
             </span>
-            <input type="date" className="outline-none p-2 rounded " />
+            <input
+              onChange={(e) => {
+                handleEndDate(index, e);
+              }}
+              type="date"
+              className="outline-none p-2 rounded "
+            />
           </div>
           <div className="flex flex-col w-full  md:w-[calc(30%)]">
             <span className="text-gray-500 nunito-400">Цалин</span>
-            <input type="number" className="outline-none p-2 rounded " />
+            <input
+              onChange={(e) => {
+                handleWorkSalary(index, e);
+              }}
+              type="number"
+              className="outline-none p-2 rounded "
+            />
           </div>
           <div className="flex flex-col w-full  md:w-[calc(30%)]">
             <span className="text-gray-500 nunito-400">
               Ажлаас гарсан шалтгаан
             </span>
-            <input type="number" className="outline-none p-2 rounded " />
+            <input
+              onChange={(e) => {
+                handleJobQuitReason(index, e);
+              }}
+              type="text"
+              className="outline-none p-2 rounded "
+            />
           </div>
         </div>
         <button

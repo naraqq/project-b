@@ -1,59 +1,38 @@
 import { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 
-function PersonalSkills() {
-  const [children, setChildren] = useState([
-    {
-      instituteName: "",
-      educationStartDate: "",
-      educationEndDate: "",
-      studiedFieldName: "",
-      educationType: "",
-      educationBadge: "",
-      educationScore: "",
-    },
-  ]);
-
-  const addChild = () => {
-    setChildren([
-      ...children,
-      {
-        instituteName: "",
-        educationStartDate: "",
-        educationEndDate: "",
-        studiedFieldName: "",
-        educationType: "",
-        educationBadge: "",
-        educationScore: "",
-      },
-    ]);
+function PersonalSkills({ personalSkills, setPersonalSkills }) {
+  const handleInputChangeAdvantage = (event) => {
+    const newChildren = [...personalSkills];
+    newChildren[0].prosCons = event.target.value;
+    setPersonalSkills(newChildren);
   };
-
-  const removeChild = (index) => {
-    const newChildren = [...children];
-    newChildren.splice(index, 1);
-    setChildren(newChildren);
-  };
-
-  const handleInputChange = (index, event) => {
-    const newChildren = [...children];
-    newChildren[index].value = event.target.value;
-    setChildren(newChildren);
+  const handleInputChangeDisadvantage = (event) => {
+    const newChildren = [...personalSkills];
+    newChildren[1].prosCons = event.target.value;
+    setPersonalSkills(newChildren);
   };
 
   const renderChildren = () => {
-    return children.map((child, index) => (
+    return personalSkills.map((child, index) => (
       <Form.Group
         key={index}
         style={{
           position: "relative",
         }}
       >
-        <div className="flex flex-col md:flex-row gap-2 w-full">
+        <div
+          className={`flex flex-col md:flex-row gap-2 w-full ${
+            index == 0 && "hidden"
+          }`}
+        >
           <div className="form-control w-full ">
             <div className="flex flex-col w-full  ">
               <span className="text-gray-500 nunito-400">Таны давуу тал:</span>
               <textarea
+                onChange={(e) => {
+                  handleInputChangeAdvantage(e);
+                }}
                 rows={5}
                 type="text"
                 className="outline-none p-2 rounded w-full "
@@ -64,18 +43,15 @@ function PersonalSkills() {
             <div className="flex flex-col w-full  ">
               <span className="text-gray-500 nunito-400">Таны сул тал:</span>
               <textarea
+                onChange={(e) => {
+                  handleInputChangeDisadvantage(e);
+                }}
                 rows={5}
                 type="text"
                 className="outline-none p-2 rounded w-full "
               />
             </div>
           </div>
-        </div>
-        <div className="container">
-          <div className="heading text-start">
-            <p className="mx-0 mt-0 mb-0">Таны ойрын 5н жилийн зорилго:</p>
-          </div>
-          <input type="text" className="form-control" />
         </div>
       </Form.Group>
     ));

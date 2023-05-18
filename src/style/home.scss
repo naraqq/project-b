@@ -160,11 +160,39 @@ $red: #ad0000;
     background: rgba(0, 0, 0, 0.5);
   }
 }
+.body-cus .sec-main3 {
+  position: relative;
+  height: 460px;
+  background: url(https://static.vecteezy.com/system/resources/previews/010/815/682/original/hiring-recruitment-open-vacancy-design-we-are-hiring-join-to-team-announcement-creative-3d-illustration-free-vector.jpg)
+    no-repeat center center;
+  background-size: cover;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background: rgba(0, 0, 0, 0.1);
+  }
+}
 
 .body-cus .main-heading {
   position: absolute;
   top: 0;
   right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  padding: 0;
+  margin: auto;
+  height: 40px;
+  color: #fff;
+}
+.body-cus .main-heading3 {
+  position: absolute;
+  top: 0;
   bottom: 0;
   left: 0;
   z-index: 2;

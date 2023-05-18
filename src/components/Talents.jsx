@@ -1,48 +1,54 @@
 import { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 
-function Talents() {
-  const [children, setChildren] = useState([
-    {
-      instituteName: "",
-      educationStartDate: "",
-      educationEndDate: "",
-      studiedFieldName: "",
-      educationType: "",
-      educationBadge: "",
-      educationScore: "",
-    },
-  ]);
-
+function Talents({ talents, setTalents }) {
   const addChild = () => {
-    setChildren([
-      ...children,
+    setTalents([
+      ...talents,
       {
-        instituteName: "",
-        educationStartDate: "",
-        educationEndDate: "",
-        studiedFieldName: "",
-        educationType: "",
-        educationBadge: "",
-        educationScore: "",
+        talentName: "",
+        talentDuration: "",
+        talentBadge: "",
+        talentPrize: "",
+        talentPrizeYear: "",
       },
     ]);
   };
 
   const removeChild = (index) => {
-    const newChildren = [...children];
+    const newChildren = [...talents];
     newChildren.splice(index, 1);
-    setChildren(newChildren);
+    setTalents(newChildren);
   };
 
-  const handleInputChange = (index, event) => {
-    const newChildren = [...children];
-    newChildren[index].value = event.target.value;
-    setChildren(newChildren);
+  const handleTalentsBadge = (index, event) => {
+    const newChildren = [...talents];
+    newChildren[index].talentBadge = event.target.value;
+    setTalents(newChildren);
+  };
+  const handleTalentsDuration = (index, event) => {
+    const newChildren = [...talents];
+    newChildren[index].talentDuration = event.target.value;
+    setTalents(newChildren);
+  };
+  const handleTalentsName = (index, event) => {
+    const newChildren = [...talents];
+    newChildren[index].talentName = event.target.value;
+    setTalents(newChildren);
+  };
+  const handleTalentsPrize = (index, event) => {
+    const newChildren = [...talents];
+    newChildren[index].talentPrize = event.target.value;
+    setTalents(newChildren);
+  };
+  const handleTalentsPrizeYear = (index, event) => {
+    const newChildren = [...talents];
+    newChildren[index].talentPrizeYear = event.target.value;
+    setTalents(newChildren);
   };
 
   const renderChildren = () => {
-    return children.map((child, index) => (
+    return talents.map((child, index) => (
       <Form.Group
         key={index}
         style={{
@@ -52,24 +58,54 @@ function Talents() {
         <div className="form-control flex flex-col  md:grid grid-cols-3 gap-4">
           <div className="flex flex-col w-full ">
             <span className="text-gray-500 nunito-400">Төрөл</span>
-            <input type="text" className="outline-none p-2 rounded " />
+            <input
+              onChange={(e) => {
+                handleTalentsBadge(index, e);
+              }}
+              type="text"
+              className="outline-none p-2 rounded "
+            />
           </div>
           <div className="flex flex-col w-full ">
             <span className="text-gray-500 nunito-400">Хичээллэсэн жил</span>
-            <input type="text" className="outline-none p-2 rounded " />
+            <input
+              onChange={(e) => {
+                handleTalentsDuration(index, e);
+              }}
+              type="text"
+              className="outline-none p-2 rounded "
+            />
           </div>
 
           <div className="flex flex-col w-full ">
             <span className="text-gray-500 nunito-400">Зэрэг цол</span>
-            <input type="text" className="outline-none p-2 rounded " />
+            <input
+              onChange={(e) => {
+                handleTalentsName(index, e);
+              }}
+              type="text"
+              className="outline-none p-2 rounded "
+            />
           </div>
           <div className="flex flex-col w-full ">
             <span className="text-gray-500 nunito-400">Шагнал</span>
-            <input type="text" className="outline-none p-2 rounded " />
+            <input
+              onChange={(e) => {
+                handleTalentsPrize(index, e);
+              }}
+              type="text"
+              className="outline-none p-2 rounded "
+            />
           </div>
           <div className="flex flex-col w-full ">
             <span className="text-gray-500 nunito-400">Шагнагдсан он</span>
-            <input type="date" className="outline-none p-2 rounded " />
+            <input
+              onChange={(e) => {
+                handleTalentsPrizeYear(index, e);
+              }}
+              type="date"
+              className="outline-none p-2 rounded "
+            />
           </div>
         </div>
         <button

@@ -1,48 +1,66 @@
 import { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 
-function Languages() {
-  const [children, setChildren] = useState([
-    {
-      instituteName: "",
-      educationStartDate: "",
-      educationEndDate: "",
-      studiedFieldName: "",
-      educationType: "",
-      educationBadge: "",
-      educationScore: "",
-    },
-  ]);
-
+function Languages({ languages, setLanguages }) {
   const addChild = () => {
-    setChildren([
-      ...children,
+    setLanguages([
+      ...languages,
       {
-        instituteName: "",
-        educationStartDate: "",
-        educationEndDate: "",
-        studiedFieldName: "",
-        educationType: "",
-        educationBadge: "",
-        educationScore: "",
+        languageName: "",
+        listeningSkillScore: "",
+        speakingSkillScore: "",
+        readingSkillScore: "",
+        writingSkillScore: "",
+        toeflScore: "",
+        ieltsScore: "",
       },
     ]);
   };
 
   const removeChild = (index) => {
-    const newChildren = [...children];
+    const newChildren = [...languages];
     newChildren.splice(index, 1);
-    setChildren(newChildren);
+    setLanguages(newChildren);
   };
 
-  const handleInputChange = (index, event) => {
-    const newChildren = [...children];
-    newChildren[index].value = event.target.value;
-    setChildren(newChildren);
+  const handleLanguageName = (index, event) => {
+    const newChildren = [...languages];
+    newChildren[index].languageName = event.target.value;
+    setLanguages(newChildren);
+  };
+  const handleListeningSkillScore = (index, event) => {
+    const newChildren = [...languages];
+    newChildren[index].listeningSkillScore = event.target.value;
+    setLanguages(newChildren);
+  };
+  const handleSpeakingSkillScore = (index, event) => {
+    const newChildren = [...languages];
+    newChildren[index].speakingSkillScore = event.target.value;
+    setLanguages(newChildren);
+  };
+  const handleReadingSkillScore = (index, event) => {
+    const newChildren = [...languages];
+    newChildren[index].readingSkillScore = event.target.value;
+    setLanguages(newChildren);
+  };
+  const handleWritingSkillScore = (index, event) => {
+    const newChildren = [...languages];
+    newChildren[index].writingSkillScore = event.target.value;
+    setLanguages(newChildren);
+  };
+  const handleToeflScore = (index, event) => {
+    const newChildren = [...languages];
+    newChildren[index].toeflScore = event.target.value;
+    setLanguages(newChildren);
+  };
+  const handleIeltsScore = (index, event) => {
+    const newChildren = [...languages];
+    newChildren[index].ieltsScore = event.target.value;
+    setLanguages(newChildren);
   };
 
   const renderChildren = () => {
-    return children.map((child, index) => (
+    return languages.map((child, index) => (
       <Form.Group
         key={index}
         style={{
@@ -52,91 +70,140 @@ function Languages() {
         <div className="form-control w-full flex gap-2 flex-wrap justify-between">
           <div className="flex flex-col w-full  md:w-[calc(30%)]">
             <span className="text-gray-500 nunito-400">Гадаад хэлний нэр:</span>
-            <input type="text" className="outline-none p-2 rounded " />
+            <input
+              onChange={(e) => {
+                handleLanguageName(index, e);
+              }}
+              type="text"
+              className="outline-none p-2 rounded "
+            />
           </div>
-          <div className="flex flex-col w-full  md:w-[calc(30%)]">
-            <span className="text-gray-500 nunito-400">TOEFL</span>
-            <input type="text" className="outline-none p-2 rounded " />
-          </div>
-          <div className="flex flex-col w-full  md:w-[calc(30%)]">
-            <span className="text-gray-500 nunito-400">IELTS</span>
-            <input type="text" className="outline-none p-2 rounded " />
-          </div>
+          {index == 0 && (
+            <div className="flex flex-col w-full  md:w-[calc(30%)]">
+              <span className="text-gray-500 nunito-400">TOEFL</span>
+              <input
+                onChange={(e) => {
+                  handleToeflScore(index, e);
+                }}
+                type="text"
+                className="outline-none p-2 rounded "
+              />
+            </div>
+          )}
+          {index == 0 && (
+            <div className="flex flex-col w-full  md:w-[calc(30%)]">
+              <span className="text-gray-500 nunito-400">IELTS</span>
+              <input
+                onChange={(e) => {
+                  handleIeltsScore(index, e);
+                }}
+                type="text"
+                className="outline-none p-2 rounded "
+              />
+            </div>
+          )}
+
           <div className="flex flex-col w-full  md:w-[calc(30%)]">
             <span className="text-gray-500 nunito-400">Ярьсныг ойлгох</span>
-            <select className="p-2 rounded " placeholder="Гарчиг">
-              <option className="!p-2" value="">
+            <select
+              onChange={(e) => {
+                handleListeningSkillScore(index, e);
+              }}
+              className="p-2 rounded "
+              placeholder="Гарчиг"
+            >
+              <option className="!p-2" value="unknown">
                 СОНГОХ
               </option>
-              <option className="!p-2" value="1">
+              <option className="!p-2" value="Сайн">
                 Сайн
               </option>
-              <option className="!p-2" value="2">
+              <option className="!p-2" value="Дунд">
                 Дунд
               </option>
-              <option className="!p-2" value="2">
+              <option className="!p-2" value="Муу">
                 Муу
               </option>
             </select>
           </div>
           <div className="flex flex-col w-full  md:w-[calc(30%)]">
             <span className="text-gray-500 nunito-400">Өөрөө ярих</span>
-            <select className="p-2 rounded " placeholder="Гарчиг">
-              <option className="!p-2" value="">
+            <select
+              onChange={(e) => {
+                handleSpeakingSkillScore(index, e);
+              }}
+              className="p-2 rounded "
+              placeholder="Гарчиг"
+            >
+              <option className="!p-2" value="unknown">
                 СОНГОХ
               </option>
-              <option className="!p-2" value="1">
+              <option className="!p-2" value="Сайн">
                 Сайн
               </option>
-              <option className="!p-2" value="2">
+              <option className="!p-2" value="Дунд">
                 Дунд
               </option>
-              <option className="!p-2" value="2">
+              <option className="!p-2" value="Муу">
                 Муу
               </option>
             </select>
           </div>
           <div className="flex flex-col w-full  md:w-[calc(30%)]">
             <span className="text-gray-500 nunito-400">Уншиж ойлгох</span>
-            <select className="p-2 rounded " placeholder="Гарчиг">
-              <option className="!p-2" value="">
+            <select
+              onChange={(e) => {
+                handleReadingSkillScore(index, e);
+              }}
+              className="p-2 rounded "
+              placeholder="Гарчиг"
+            >
+              <option className="!p-2" value="unknown">
                 СОНГОХ
               </option>
-              <option className="!p-2" value="1">
+              <option className="!p-2" value="Сайн">
                 Сайн
               </option>
-              <option className="!p-2" value="2">
+              <option className="!p-2" value="Дунд">
                 Дунд
               </option>
-              <option className="!p-2" value="2">
+              <option className="!p-2" value="Муу">
                 Муу
               </option>
             </select>
           </div>
           <div className="flex flex-col w-full  md:w-[calc(30%)]">
             <span className="text-gray-500 nunito-400">Бичиж орчуулах</span>
-            <select className="p-2 rounded " placeholder="Гарчиг">
-              <option className="!p-2" value="">
+            <select
+              onChange={(e) => {
+                handleWritingSkillScore(index, e);
+              }}
+              className="p-2 rounded "
+              placeholder="Гарчиг"
+            >
+              <option className="!p-2" value="unknown">
                 СОНГОХ
               </option>
-              <option className="!p-2" value="1">
+              <option className="!p-2" value="Сайн">
                 Сайн
               </option>
-              <option className="!p-2" value="2">
+              <option className="!p-2" value="Дунд">
                 Дунд
               </option>
-              <option className="!p-2" value="2">
+              <option className="!p-2" value="Муу">
                 Муу
               </option>
             </select>
           </div>
         </div>
-        <button
-          className="absolute right-[5px] bottom-[5px] text-red-500 text-[18px]"
-          onClick={() => removeChild(index)}
-        >
-          <i className="bi bi-trash active:scale-105"></i>
-        </button>
+        {languages.length > 1 && (
+          <button
+            className="absolute right-[5px] bottom-[5px] text-red-500 text-[18px]"
+            onClick={() => removeChild(index)}
+          >
+            <i className="bi bi-trash active:scale-105"></i>
+          </button>
+        )}
       </Form.Group>
     ));
   };
