@@ -33,14 +33,7 @@ function Jobs() {
         </div>
       ) : (
         <div className="h-full relative bg-white">
-          <div className="body-cus wrapper">
-            <section id="home" className="sec-main3">
-              {/* <h1 className="main-heading3 nunito-500 text-[30px] md:text-[30px]">
-                НЭЭЛТТЭЙ АЖЛЫН БАЙР
-                <br />
-              </h1> */}
-            </section>
-          </div>
+          <div className="body-cus wrapper"></div>
 
           <div className="body ">
             <div className="main about-us min-h-[calc(100vh-200px)] ">
