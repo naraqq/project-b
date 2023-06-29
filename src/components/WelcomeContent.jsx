@@ -41,10 +41,12 @@ function WelcomeContent() {
       <div className="body-cus wrapper">
         <section id="home" className="sec-main">
           <h1 className="main-heading  nunito-500 text-[20px] md:text-[30px] flex flex-col  items-center justify-center">
-            <img
-              className=" rounded-full px-2 w-[60px] md:w-[100px]  mr-1 mb-3"
-              src="logo.svg"
-            />
+            <div className="spinner mb-4">
+              <img
+                className=" rounded-full px-2 w-[60px] md:w-[100px]"
+                src="logo.svg"
+              />
+            </div>
             ИНСТАЛЛ НАРАН КОНСТРАКШН ХХК
           </h1>
         </section>
@@ -58,9 +60,20 @@ function WelcomeContent() {
               ИНСТАЛЛ НАРАН КОНСТРАКШН ХХК
             </h1> */}
             <div className="row flex items-center justify-center">
-              <div className=" w-full md:w-2/3">
-                {/* <h6 className="nunito-300">Бидний эрхэм зорилго</h6> */}
-                <p className="text-justify nunito-300 text-center">
+              <div className=" w-full md:w-5/6">
+                {/* <div className=" flex justify-center mb-5">
+                  <h6 className="nunito-600 text-[#DF2F29] text-xl text-center">
+                    ИХ БҮТЭЭН БАЙГУУЛАЛТЫН ЗҮГ ХАМТДАА ТЭМҮҮЛЦГЭЭЕ.
+                  </h6>
+                </div> */}
+                <div className="text-effect nunito-500">
+                  <div>ИХ БҮТЭЭН БАЙГУУЛАЛТЫН ЗҮГ</div>
+                  <div>
+                    <span>ХАМТДАА ТЭМҮҮЛЦГЭЭЕ.</span>
+                  </div>
+                </div>
+
+                <p className="text-justify nunito-300 ">
                   Монгол улсад хүчин төгөлдөр мөрдөгдөж буй БНБД болон бусад
                   стандарт, журмуудыг баримтлан барилга угсралтын салбарт шинэ
                   дэвшилтэт технологийг нэвтрүүлэн үйл ажиллагаагаа улам
@@ -82,7 +95,7 @@ function WelcomeContent() {
             </h1> */}
             <div className="w-full flex justify-center">
               <div className="w-full md:w-10/12">
-                <div className="flex flex-col md:flex-row">
+                <div className="flex flex-col md:flex-row gap-5">
                   <div className="w-full flex flex-col justify-start items-center">
                     <img
                       className="w-[40px] md:w-[50px] h-[40px] md:h-[50px] mr-1"
@@ -94,12 +107,12 @@ function WelcomeContent() {
                       ИНСТАЛЛ НАРАН КОНСТРАКШН ХХК
                     </h2>
 
-                    <p className="text-[16px] text-center nunito-400">
+                    <p className="text-[16px] !text-justify nunito-400">
                       Манай компани нь анх 2009 онд байгуулагдаж өнөөг хүртэл
                       МУын барилгын салбарт үйл ажилгаагаа амжилттай явуулж
                       байгаа билээ.
                     </p>
-                    <p className="text-[16px] text-center nunito-400 ">
+                    <p className="text-[16px] !text-justify nunito-400 ">
                       Бид 2014 онд компаниа өргөжүүлж “Инсталл наран констракшн”
                       ХХК болгон БУА-ын 2.1.1~5, 2.2.1~4 болон БА-6.2 тус тус
                       заалттай тусгай зөвшөөрөлтэйгээр үйл ажиллагаагаа явуулж
@@ -118,11 +131,11 @@ function WelcomeContent() {
                       ИНСТАЛЛ НАРАН КОНКРИТ ХХК
                     </h2>
 
-                    <div className="text-[16px] text-center nunito-300">
+                    <div className="text-[16px] text-justify nunito-300">
                       Бид иргэний барилга байгууламж болон дэд бүтцийн төслийн
                       хэрэгцээ, шаардлагад нийцсэн бетон зуурмагийн үйлдвэрлэл,
                       нийлүүлэлтийн цогц үйлчилгээг санал болгон ажиллаж байна:
-                      <div className="text-[16px] text-start nunito-300 ml-10">
+                      <div className="text-[16px] text-justify nunito-300 ml-10">
                         <br />
                         • M100-500 маркийн бетон зуурмаг
                         <br /> • Хүйтний бетон зуурмаг
@@ -147,7 +160,7 @@ function WelcomeContent() {
             >
               <div className="container">
                 <h1 className=" nunito-600 uppercase mb-5">
-                  БИДНИЙ ГҮЙЦЭТГЭСЭН АЖЛУУДААС
+                  Бүтээн байгуулалт
                 </h1>
                 {collection.map((container, index) => {
                   return (
@@ -184,7 +197,7 @@ function WelcomeContent() {
 
                     <h2 className="h3 nunito-200">Чанар</h2>
 
-                    <p className="text-[16px] text-center nunito-400">
+                    <p className="text-[16px] !text-justify nunito-400">
                       Бид иргэний барилга байгууламж болон дэд бүтцийн төслийн
                       хэрэгцээ, шаардлагад нийцсэн бетон зуурмагийн үйлдвэрлэл,
                       нийлүүлэлтийн цогц үйлчилгээг санал болгон ажиллаж байна
@@ -196,7 +209,7 @@ function WelcomeContent() {
 
                     <h2 className="h3 nunito-200">24/7</h2>
 
-                    <p className="text-[16px] text-center nunito-400">
+                    <p className="text-[16px] !text-justify nunito-400">
                       Манай компани нь тасралтгүй ажиллах 24/7 үйлчилгээг санал
                       болгон ажиллаж байна
                     </p>
@@ -206,10 +219,10 @@ function WelcomeContent() {
 
                     <h2 className="h3 nunito-200">Хурд</h2>
 
-                    <p className="text-[16px] text-center nunito-400">
-                      Манай компани нь анх 2009 онд байгуулагдаж өнөөг хүртэл
-                      МУын барилгын салбарт үйл ажилгаагаа амжилттай явуулж
-                      байгаа билээ.
+                    <p className="text-[16px] !text-justify nunito-400">
+                      Барилга угсралтын ажил болон Бетон зуурмагийг захиалсан
+                      цаг хугацаанд цаг алдалгүй, төлөвлөгөөний дагуу хийж
+                      гүйцэтгэнэ.
                     </p>
                   </div>
                 </div>

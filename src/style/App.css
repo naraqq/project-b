@@ -204,3 +204,16 @@
 .parent-red:active .child-red {
   color: rgb(254, 61, 61);
 }
+
+.spinner {
+  animation: spin 5s infinite linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

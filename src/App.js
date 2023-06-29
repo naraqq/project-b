@@ -5,7 +5,6 @@ import "./style/news.scss";
 import "./style/home.scss";
 import "./style/footer.css";
 import "./style/style.less";
-import "./style/keepin.scss";
 import "./style/partners.scss";
 import "./style/contact-us.scss";
 import CV from "./pages/CV";
