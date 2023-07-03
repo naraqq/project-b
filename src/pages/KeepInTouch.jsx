@@ -27,7 +27,7 @@ function KeepInTouch() {
                       <h4 className="d-inline-block">
                         УТАС :
                         <br />
-                        <span>+976 7779292</span>
+                        <span>+976 77779292</span>
                       </h4>
                     </div>
                     <div className="info">
