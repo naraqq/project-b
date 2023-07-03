@@ -52,7 +52,7 @@ function WhyourCompany() {
                         onClick={() => {
                           navigate("/cv-detail", {
                             state: {
-                              requestJobId: "1112233",
+                              requestJobId: "0",
                             },
                           });
                         }}
