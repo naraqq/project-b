@@ -20,6 +20,10 @@ import { toast, ToastContainer } from "react-toastify";
 function CVDetail() {
   const location = useLocation();
   const meta_data = location.state;
+  const [lastname, setLastname] = useState("");
+  const [firstname, setFirstname] = useState("");
+  const [email, setEmail] = useState("");
+  const [selectedCompany, setSelectedCompany] = useState(0);
   const [originName, setOriginName] = useState("");
   const [age, setAge] = useState("");
   const [sex, setSex] = useState("");
@@ -218,17 +222,17 @@ function CVDetail() {
     },
   ]);
   const final = {
-    requestCompanyId: meta_data.selectedCompany,
-    requestJobId: meta_data.requestJobId,
-    lastName: meta_data.lastname,
-    firstName: meta_data.firstname,
+    requestCompanyId: selectedCompany,
+    requestJobId: "",
+    lastName: lastname,
+    firstName: firstname,
     originName: originName,
     age: age,
     sex: sex,
     birthDate: birthday,
     birthPlace: birthPlace,
     registerNo: registerNo,
-    email: meta_data.email,
+    email: email,
     phoneNo: phoneNumber,
     homePhoneNo: homePhoneNumber,
     hasDriverLicense: hasDriverLicence,
@@ -425,7 +429,6 @@ function CVDetail() {
         },
       })
       .then((res) => {
-        console.log(res);
         if (res.data.isSuccess == true) {
           setLoading(false);
           toast.success("Бид таны анкетыг хүлээж авлаа, Баярлалаа");
@@ -458,6 +461,64 @@ function CVDetail() {
               <div className="container">
                 <div className="heading text-start">
                   <p className="mx-0 mt-0 mb-2">1. Товч танилцуулга.</p>
+                </div>
+                <div className="col-md-12">
+                  <form className="mt-4 md:!mt-0">
+                    <div className="row">
+                      <div className="col-sm-6">
+                        <input
+                          onChange={(e) => {
+                            setLastname(e.target.value);
+                          }}
+                          type="text"
+                          className="form-control"
+                          placeholder="Овог"
+                        />
+                      </div>
+                      <div className="col-sm-6">
+                        <input
+                          onChange={(e) => {
+                            setFirstname(e.target.value);
+                          }}
+                          type="text"
+                          className="form-control"
+                          placeholder="Нэр"
+                        />
+                      </div>
+                      <div className="form-group">
+                        <div className="col-sm-12">
+                          <input
+                            onChange={(e) => {
+                              setEmail(e.target.value);
+                            }}
+                            type="email"
+                            className="form-control"
+                            placeholder="И-мейл хаяг"
+                          />
+                        </div>
+                      </div>
+                      <div className="col-sm-12">
+                        <select
+                          onChange={(e) => {
+                            setSelectedCompany(e.target.value);
+                          }}
+                          value={selectedCompany}
+                          className="form-control"
+                          placeholder="Гарчиг"
+                        >
+                          <option className="!p-2" value="">
+                            СОНГОХ
+                          </option>
+                          <option className="!p-2" value="1">
+                            ИНСТАЛЛ НАРАН КОНСТРАКШН ХХК
+                          </option>
+                          <option className="!p-2" value="2">
+                            ИНСТАЛЛ НАРАН КОНКРИТ ХХК
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                  </form>
                 </div>
                 <div className="row">
                   <div className="col-md-6">

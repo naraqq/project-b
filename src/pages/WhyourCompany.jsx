@@ -18,7 +18,7 @@ function WhyourCompany() {
         </div>
       ) : (
         <div className="h-full relative bg-white">
-          <div className="body-cus wrapper">
+          {/* <div className="body-cus wrapper">
             <section id="home" className="sec-main2">
               <h1 className="main-heading nunito-500 text-[30px] md:text-[30px]">
                 ТА МАНАЙД АЖИЛД ОРСНООР
@@ -32,9 +32,9 @@ function WhyourCompany() {
                 </button>
               </h1>
             </section>
-          </div>
+          </div> */}
           <div className="body">
-            <div className="main">
+            <div className="main min-h-[calc(100vh-380px)]">
               <ul className="cards border-b mt-5">
                 <li className="cards_item !text-[14px] text-gray-500 nunito-400">
                   • Мэргэшсэн баг болон багийн ажиллагааг төлөвшүүлэх,
@@ -70,17 +70,30 @@ function WhyourCompany() {
 
               <div className="w-full p-3">
                 <div className="w-full bg-[#F9F9F9] rounded p-3 nunito-400 text-gray-600 text-sm ">
+                  <div className="nunito-400 text-gray-600 text-sm"></div>
+                  <div
+                    onClick={() => {
+                      navigate("/jobs");
+                    }}
+                    className="mt-2 rounded bg-white uppercase hover:shadow text-gray-600 w-fit nunito-400 text-sm p-2 select-none cursor-pointer"
+                  >
+                    нээлттэй ажлын байр
+                  </div>
+                </div>
+              </div>
+              <div className="w-full p-3">
+                <div className="w-full bg-[#F9F9F9] rounded p-3 nunito-400 text-gray-600 text-sm ">
                   <div className="nunito-400 text-gray-600 text-sm">
                     Та нээлттэй ажлын байранд тавигдах шаардлагыг хангаж байна
                     гэж үзвэл онлайн анкетаа илгээнэ үү.
                   </div>
                   <div
                     onClick={() => {
-                      navigate("/jobs");
+                      navigate("/cv-detail");
                     }}
-                    className="mt-2 rounded bg-white hover:shadow text-gray-600 w-fit nunito-400 text-sm p-2 select-none cursor-pointer"
+                    className="mt-2 rounded bg-white uppercase hover:shadow text-gray-600 w-fit nunito-400 text-sm p-2 select-none cursor-pointer"
                   >
-                    НЭЭЛТТЭЙ АЖЛЫН БАЙР
+                    Анкет бөглөх
                   </div>
                 </div>
               </div>

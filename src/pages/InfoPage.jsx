@@ -1,13 +1,22 @@
 import { useEffect, useState } from "react";
 import Layout from "../components/Layouts/Layout";
 import axios from "axios";
-
+import { useMediaQuery } from "react-responsive";
 import { useNavigate } from "react-router-dom";
 import Spinner from "react-bootstrap/Spinner";
 function InfoPage() {
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const isMobile = useMediaQuery({ maxWidth: 555 });
+  const isTablet = useMediaQuery({ minWidth: 556, maxWidth: 1023 });
+  const isDesktop = useMediaQuery({ minWidth: 1024 });
+  let gridColumns = "grid-cols-1";
+  if (isTablet) {
+    gridColumns = "grid-cols-2";
+  } else if (isDesktop) {
+    gridColumns = "grid-cols-3";
+  }
   useEffect(() => {
     setLoading(true);
     axios
@@ -33,27 +42,15 @@ function InfoPage() {
             </Spinner>
           </div>
         </div>
-      ) : (
+      ) : news.length > 0 ? (
         <div className="body ">
           <div className="main about-us min-h-[calc(100vh-60px)]  ">
-            <section className="contact" id="contact">
+            <section className="contact " id="contact">
               <div className="container">
                 <div className="row">
-                  <div className="col-md-2">
-                    <div className="title mt-10">
-                      <div className="w-full border-b-[3px] border-red-500 mb-2">
-                        <h3 className="!text-[40px]">Мэдээ мэдээлэл</h3>
-                      </div>
-                      <p>
-                        Бид компанийн үйл ажиллагаатай холбоотой мэдээ
-                        мэдээллийг танд хүргэж байна.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="col-md-10 flex flex-wrap gap-4 justify-center md:justify-start ">
+                  {/* <div className="col-md-10 flex flex-wrap gap-4 justify-center md:justify-start "> */}
+                  <div className={`grid ${gridColumns} gap-4`}>
                     {news.map((info, index) => {
-                      // console.log(info);
                       return (
                         <div
                           key={index}
@@ -62,24 +59,24 @@ function InfoPage() {
                               state: info,
                             });
                           }}
-                          className={`w-[300px] ${
+                          className={` ${
                             info.newsType == 2 && "hidden"
-                          } p-2 rounded hover:!shadow-lg shadow h-[400px] overflow-hidden !text-[#999999] cursor-pointer`}
+                          } p-2 rounded h-[400px] hover:scale-105 transition-all font-bold overflow-hidden !text-[#323232] cursor-pointer`}
                         >
                           <img
                             src={info.imgPath}
                             alt=""
-                            className="rounded h-[200px] w-full"
+                            className="rounded-cus shadow-sm h-[300px] w-full"
                           />
-                          <div className="h-[150px] w-full">
-                            <p className="nunito-500 text-sm mt-2 truncate">
-                              • {info.title}
+                          <div className="h-[50px] w-full">
+                            <p className="nunito-500 text-sm mt-2 truncate !font-[900]">
+                              {info.title}
                             </p>
-                            <div className="nunito-500 text-sm mt-2">
+                            <div className="nunito-500 !font-[300] text-sm mt-2 truncate text-gray-500">
                               {info.description}
                             </div>
                           </div>
-                          <div className="nunito-500 text-sm mt-auto w-full flex justify-end">
+                          <div className="nunito-500 !font-[300] text-sm text-gray-500 w-full flex justify-start">
                             {info.createdDate}
                           </div>
                         </div>
@@ -91,6 +88,8 @@ function InfoPage() {
             </section>
           </div>
         </div>
+      ) : (
+        <div>Шинэ мэдээ байхгүй байна.</div>
       )}
     </Layout>
   );
