@@ -116,23 +116,22 @@ function OurHistory() {
                   )}{" "}
                   {selected === 1 && (
                     <div className="nunito-300 text-[14px]  min-h-[400px]">
-                      <img src="/new/staffs.png" alt="" />
+                      <img src="/new/cover.jpg" alt="" className="" />
 
-                      <div className="nunito-300 text-[14px] mt-2 md:mt-5 mb-2 ">
+                      <div className="nunito-300 text-[14px] mt-2 md:mt-5 mb-2 text-justify">
                         Манай компани нь анх 2009 онд байгуулагдаж өнөөг хүртэл
                         МУын барилгын салбарт үйл ажилгаагаа амжилттай явуулж
                         байна. <br />
                       </div>
-                      <div className="nunito-300 text-[14px] mt-2 md:mt-5">
+                      <div className="nunito-300 text-[14px] my-2 text-justify">
                         Бид 2014 онд компаниа өргөжүүлж “Инсталл наран
                         констракшн” ХХК болгон БУА-ын 2.1.1~5, 2.2.1~4 болон
                         БА-6.2 тус тус заалттай тусгай зөвшөөрөлтэйгээр үйл
                         ажиллагаагаа явуулж байна <br />
                       </div>
                       {/* <img src="/new/staffs.png" alt="" className="my-3" /> */}
-                      <img src="/new/cover.jpg" alt="" className="my-3" />
 
-                      <div className="nunito-300 text-[14px] mb-2">
+                      <div className="nunito-300 text-[14px] mb-2 text-justify">
                         Мөн 2022 онд “Инсталл наран конкрит” ХХК МҮ-4.2.3 тусгай
                         зөвшөөрөлтэй бетон зуурмагийн үйлдвэрээ байгуулж чанарын
                         өндөр түвшинд, үйлчлүүлэгчийн хэрэгцээ шаардлагад
@@ -146,10 +145,11 @@ function OurHistory() {
                   )}
                   {selected === 2 && (
                     <div className="nunito-300 text-[14px] min-h-[400px]">
-                      <h6 className="nunito-400 mb-3 mt-3">
+                      <img src="/new/staffs.png" alt="" />
+                      <h6 className="nunito-400 mb-3 font-[900] text-[20px] mt-2 md:mt-0">
                         Бидний эрхэм зорилго
                       </h6>
-                      <p className="nunito-300 text-justify">
+                      <p className="nunito-300 text-justify mt-2">
                         Бид үйл ажиллагаандаа МУ-д хүчин төгөлдөр мөрдөгдөж буй
                         БНбД болон бусад стандарт, журмуудыг баримтлан барилга
                         угсралтын салбарт шинэ дэвшилтэт технологийг нэвтрүүлэн
