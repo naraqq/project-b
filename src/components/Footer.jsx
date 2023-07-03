@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <div className="footer ">
-      <footer className="site-footer !bg-[#DF2F29]">
+      <footer className="site-footer !bg-[#F4271C]">
         <div className="container w-11/12 md:w-9/12 flex justify-center">
           <div className="row">
             <div className="col-sm-12 col-md-6">
