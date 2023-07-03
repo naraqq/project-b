@@ -65,7 +65,7 @@ function Footer() {
                 </li>
                 <li>
                   <a className="hover:!text-white nunito-300 text-white">
-                    И мэйл: install.naran@gmail.com,
+                    Цахим шуудан : install.naran@gmail.com,
                   </a>
                 </li>
               </ul>

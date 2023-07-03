@@ -141,7 +141,7 @@ function CV() {
                             }}
                             type="email"
                             className="form-control"
-                            placeholder="И-мейл хаяг"
+                            placeholder="Цахим шуудан"
                           />
                         </div>
                       </div>

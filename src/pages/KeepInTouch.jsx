@@ -33,7 +33,7 @@ function KeepInTouch() {
                     <div className="info">
                       <i className="bi bi-envelope"></i>
                       <h4 className="d-inline-block">
-                        EMAIL :
+                        Цахим шуудан :
                         <br />
                         <span>install.naran@gmail.com </span>
                       </h4>
@@ -65,7 +65,7 @@ function KeepInTouch() {
                         <input
                           type="email"
                           className="form-control"
-                          placeholder="И-мейл хаяг"
+                          placeholder=" Цахим шуудан"
                         />
                       </div>
                       <div className="col-sm-12">
