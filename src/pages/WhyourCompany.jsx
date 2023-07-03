@@ -3,9 +3,13 @@ import Layout from "../components/Layouts/Layout";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Spinner from "react-bootstrap/Spinner";
+import HumanResource from "../components/HumanResource";
+import Jobs from "./Jobs";
+import JobsSmall from "./job/JobsSmall";
 function WhyourCompany() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
+  const [selected, setSelected] = useState(0);
   return (
     <Layout>
       {loading ? (
@@ -18,82 +22,51 @@ function WhyourCompany() {
         </div>
       ) : (
         <div className="h-full relative bg-white">
-          {/* <div className="body-cus wrapper">
-            <section id="home" className="sec-main2">
-              <h1 className="main-heading nunito-500 text-[30px] md:text-[30px]">
-                ТА МАНАЙД АЖИЛД ОРСНООР
-                <br />
-                <button
-                  onClick={() => {
-                    navigate("/jobs");
-                  }}
-                >
-                  <i className="bi bi-arrow-right hover:text-[35px] transition-all"></i>
-                </button>
-              </h1>
-            </section>
-          </div> */}
           <div className="body">
             <div className="main min-h-[calc(100vh-380px)]">
-              <ul className="cards border-b mt-5">
-                <li className="cards_item !text-[14px] text-gray-500 nunito-400">
-                  • Мэргэшсэн баг болон багийн ажиллагааг төлөвшүүлэх,
-                  өрсөлдөхүйц цалин хөлс, хангамжуудыг цогцоор нь шийдсэн
-                  хүлээлтээс давсан ханамжийг өгөх болно.
-                </li>
-                <li className="cards_item !text-[14px] text-gray-500 nunito-400">
-                  • Нэгдмэл зорилготой эрч хүчээр дүүрэн, эвсэг залуу хамт
-                  олонтой мөр зэрэгцэн ажиллана.
-                </li>
-                <li className="cards_item !text-[14px] text-gray-500 nunito-400">
-                  • Зах зээлд өрсөлдөхүйц цалин хөлс, үр дүнд тулгуурласан
-                  шагнал урамшуулал авна.
-                </li>
-                <li className="cards_item !text-[14px] text-gray-500 nunito-400">
-                  • Ёс зүйтэй, шинэчлэгч, манлайлагч байх урам зориг, хүсэл
-                  тэмүүллийг мэдэрнэ.
-                </li>
-                <li className="cards_item !text-[14px] text-gray-500 nunito-400">
-                  • Эрч хүчтэй, бүтээлч үйл ажиллагааг хүний нөөцийн
-                  бодлоготойгоо уялдуулан, ховор соёл бүхий, ажил олгогч загвар
-                  байгууллага болохоор зорьж ажиллана. Манай давуу тал
-                </li>
-                <li className="cards_item !text-[14px] text-gray-500 nunito-400">
-                  • Бид ажилтнууддаа тогтвор суурьшилтай ажиллах, хийж буй
-                  ажилдаа сэтгэл хангалуун байх нөхцлийг нь бүрдүүлж өгөх
-                  үүднээс таатай ажлын байр, зах зээлд өрсөлдөхүйц цалин, ажлын
-                  гүйцэтгэлтэй уялдсан урамшуулал, өсөж дэвжих, өөрийгөө
-                  хөгжүүлэх боломж, шаардлагатай нийгмийн халамж, дэмжлэгийг
-                  үзүүлэн ажилладаг.
-                </li>
-              </ul>
-
-              <div className="w-full p-3">
-                <div className="w-full bg-[#F9F9F9] rounded p-3 nunito-400 text-gray-600 text-sm ">
-                  <div className="nunito-400 text-gray-600 text-sm"></div>
-                  <div
-                    onClick={() => {
-                      navigate("/jobs");
-                    }}
-                    className="mt-2 rounded bg-white uppercase hover:shadow text-gray-600 w-fit nunito-400 text-sm p-2 select-none cursor-pointer"
-                  >
-                    нээлттэй ажлын байр
+              <div className="container ">
+                <div className="row mt-14">
+                  <div className="col-md-3">
+                    <div className="content">
+                      <div
+                        onClick={() => {
+                          setSelected(0);
+                        }}
+                        className={`border-b  border-t  ${
+                          selected === 0 && "!bg-gray-100 text-red-500"
+                        } p-3 nunito-400 text-[14px] text-gray-500 hover:bg-gray-50 select-none cursor-pointer rounded`}
+                      >
+                        Хүний нөөцийн бодлого
+                      </div>
+                      <div
+                        onClick={() => {
+                          setSelected(1);
+                        }}
+                        className={`border-b ${
+                          selected === 1 && "!bg-gray-100 text-red-500"
+                        } p-3 nunito-400 text-[14px] text-gray-500 hover:bg-gray-50 select-none cursor-pointer rounded`}
+                      >
+                        Нээлттэй ажлын байр
+                      </div>
+                      <div
+                        onClick={() => {
+                          navigate("/cv-detail", {
+                            state: {
+                              requestJobId: "1112233",
+                            },
+                          });
+                        }}
+                        className={`border-b ${
+                          selected === 2 && "!bg-gray-100 text-red-500"
+                        } p-3 nunito-400 text-[14px] text-gray-500 hover:bg-gray-50 select-none cursor-pointer rounded`}
+                      >
+                        Анкет бөглөх
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div className="w-full p-3">
-                <div className="w-full bg-[#F9F9F9] rounded p-3 nunito-400 text-gray-600 text-sm ">
-                  <div className="nunito-400 text-gray-600 text-sm">
-                    Та нээлттэй ажлын байранд тавигдах шаардлагыг хангаж байна
-                    гэж үзвэл онлайн анкетаа илгээнэ үү.
-                  </div>
-                  <div
-                    onClick={() => {
-                      navigate("/cv-detail");
-                    }}
-                    className="mt-2 rounded bg-white uppercase hover:shadow text-gray-600 w-fit nunito-400 text-sm p-2 select-none cursor-pointer"
-                  >
-                    Анкет бөглөх
+                  <div className="col-md-9">
+                    {selected == 0 && <HumanResource />}
+                    {selected == 1 && <JobsSmall />}
                   </div>
                 </div>
               </div>

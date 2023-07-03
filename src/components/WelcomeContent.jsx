@@ -57,16 +57,8 @@ function WelcomeContent() {
           className="sec-about px-1 !py-[70px] md:!py-[90px] md:p-5"
         >
           <div className="container">
-            {/* <h1 className="mb-5 nunito-500 uppercase ">
-              ИНСТАЛЛ НАРАН КОНСТРАКШН ХХК
-            </h1> */}
             <div className="row flex items-center justify-center">
               <div className=" w-full md:w-5/6">
-                {/* <div className=" flex justify-center mb-5">
-                  <h6 className="nunito-600 text-[#DF2F29] text-xl text-center">
-                    ИХ БҮТЭЭН БАЙГУУЛАЛТЫН ЗҮГ ХАМТДАА ТЭМҮҮЛЦГЭЭЕ.
-                  </h6>
-                </div> */}
                 <div className="text-effect nunito-500">
                   <div>ИХ БҮТЭЭН БАЙГУУЛАЛТЫН ЗҮГ</div>
                   <div>
@@ -91,9 +83,6 @@ function WelcomeContent() {
           className="sec-services px-1 !py-[70px] md:!py-[60px] md:p-5"
         >
           <div className="container">
-            {/* <h1 className=" nunito-600 uppercase ">
-              ИНСТАЛЛ НАРАН КОНКРИТ ХХК
-            </h1> */}
             <div className="w-full flex justify-center">
               <div className="w-full md:w-10/12">
                 <div className="flex flex-col md:flex-row gap-5">
@@ -163,28 +152,6 @@ function WelcomeContent() {
                 <h1 className=" nunito-600 uppercase mb-5">
                   Бүтээн байгуулалт
                 </h1>
-                {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-                  {news?.map((item, index) => {
-                    return (
-                      <div
-                        key={index}
-                        className={`cursor-pointer hover:shadow p-3 rounded`}
-                      >
-                        <img
-                          className={`  center-block h-[320px] w-full rounded`}
-                          src={`${item.imgPath}`}
-                          alt="By Håkon Sataøen"
-                        />
-                        <p className="mt-2 text-[16px] !text-justify nunito-400 truncate">
-                          {item.title}
-                        </p>
-                        <p className="mt-2 text-[16px] !text-justify nunito-400 truncate">
-                          {item.newsBody}
-                        </p>
-                      </div>
-                    );
-                  })}
-                </div> */}
                 <div className="">
                   <div className="">
                     <div className={`grid ${gridColumns} gap-4`}>
@@ -230,7 +197,6 @@ function WelcomeContent() {
           className="sec-services px-1 !py-[70px] md:!py-[60px] md:p-5"
         >
           <div className="container">
-            {/* <h1 className=" nunito-600 uppercase ">БИДНИЙ давуу тал</h1> */}
             <div className="w-full flex justify-center">
               <div className="w-full md:w-10/12">
                 <div className="row">
