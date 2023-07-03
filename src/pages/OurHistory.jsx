@@ -7,9 +7,9 @@ function OurHistory() {
   return (
     <Layout>
       <div className="body">
-        <div className="main about-us ">
-          <section className="contact" id="contact">
-            <div className="container">
+        <div className="main about-us">
+          <section className="contact  " id="contact">
+            <div className="container min-h-[calc(100vh-400px)]">
               <div className="row">
                 <div className="col-md-3">
                   <div className="content">
@@ -52,21 +52,21 @@ function OurHistory() {
                       <img
                         src="ceo.jpg"
                         alt=""
-                        className="h-[] md:h-[500px] shadow"
+                        className="md:h-[500px] shadow"
                       />
                       <div>
-                        <div className="nunito-300 text-[14px] mb-2">
+                        <div className="nunito-300 text-[14px] mb-2 text-justify">
                           Эрхэм танд “Инсталл наран констаркшн” ХХК-ийн хамт
                           олны өмнөөс мэндчилж байна. <br />
                         </div>
-                        <div className="nunito-300 text-[14px] mb-2">
+                        <div className="nunito-300 text-[14px] mb-2 text-justify">
                           Бид барилга бүтээн байгуулалтын болон үл хөдлөх
                           хөрөнгийн салбарт 2009 оноос эхлэн өнөөдрийг хүртэл
                           амжилттай үйл ажиллагаагаа явуулан Монгол улсынхаа
                           хөгжил дэвшилд хувь нэмрээ оруулан ажиллаж байна.{" "}
                           <br />
                         </div>
-                        <div className="nunito-300 text-[14px] mb-2">
+                        <div className="nunito-300 text-[14px] mb-2 text-justify">
                           Манай байгууллагын үйл ажиллагааны цар хүрээ өргөжин
                           тэлж өнөөдөр 3 салбар компани бүхий Группийн нэгдлийг
                           үүсгэн барилга бүтээн байгуулалтын салбарт мэргэжлийн
@@ -76,7 +76,7 @@ function OurHistory() {
                           амжилттай хэрэгжүүлж байна.
                           <br />
                         </div>
-                        <div className="nunito-300 text-[14px] mb-2">
+                        <div className="nunito-300 text-[14px] mb-2 text-justify">
                           2022 онд бид үйл ажиллагаа өргөжүүлж “Инсталл Наран
                           Конкрит” ХХК-ийг үүсгэн байгуулж, Бетон зуурмаг
                           үйлдвэрлэлийн салбарт төрөлжсөн бүх төрлийн үйлчилгээг
@@ -84,7 +84,7 @@ function OurHistory() {
                           зорилго тавин ажиллаж байна.
                           <br />
                         </div>
-                        <div className="nunito-300 text-[14px] mb-2">
+                        <div className="nunito-300 text-[14px] mb-2 text-justify">
                           Мөн бид компанийнхаа зах зээлд өрсөлдөх чадварыг
                           бэхжүүлэх, үйл ажиллагаагаа өргөжүүлэхээр Олон улсын
                           болон Монголын топ компаниудын туршлагыг өөрийн соёл,
@@ -92,22 +92,22 @@ function OurHistory() {
                           сэтгэл зүрхээрээ нэгдэн хөдөлмөрлөж байна.
                           <br />
                         </div>
-                        <div className="nunito-300 text-[14px] mb-2">
+                        <div className="nunito-300 text-[14px] mb-2 text-justify">
                           Биднийг үргэлж дэмжин ажилладаг ажилтнууд,
                           харилцагчид, хамтран ажиллагч байгууллагууддаа
                           баярлалаа. Та бүхэнд ажлын өндөр амжилт, эрүүл энх
                           сайн сайхан бүхнийг хүсэн ерөөе.
                           <br />
                         </div>
-                        <div className="nunito-300 text-[14px] mb-2">
+                        <div className="nunito-300 text-[14px] mb-2 text-justify">
                           ХҮНДЭТГЭСЭН:
                           <br />
                         </div>
-                        <div className="nunito-300 text-[14px] mb-2">
+                        <div className="nunito-300 text-[14px] mb-2 text-justify">
                           “ИНСТАЛЛ НАРАН КОНСТРАКШ” ХХК-ИЙН
                           <br />
                         </div>
-                        <div className="nunito-300 text-[14px] mb-2">
+                        <div className="nunito-300 text-[14px] mb-2 text-justify">
                           ЕРӨНХИЙ ЗАХИРАЛ Н.ЧУЛУУНБАЯР
                           <br />
                         </div>
@@ -116,7 +116,7 @@ function OurHistory() {
                   )}{" "}
                   {selected === 1 && (
                     <div className="nunito-300 text-[14px]  min-h-[400px]">
-                      <img src="/new/cover.jpg" alt="" />
+                      <img src="/new/staffs.png" alt="" />
 
                       <div className="nunito-300 text-[14px] mt-2 md:mt-5 mb-2 ">
                         Манай компани нь анх 2009 онд байгуулагдаж өнөөг хүртэл
@@ -129,7 +129,8 @@ function OurHistory() {
                         БА-6.2 тус тус заалттай тусгай зөвшөөрөлтэйгээр үйл
                         ажиллагаагаа явуулж байна <br />
                       </div>
-                      <img src="/new/staffs.png" alt="" className="my-3" />
+                      {/* <img src="/new/staffs.png" alt="" className="my-3" /> */}
+                      <img src="/new/cover.jpg" alt="" className="my-3" />
 
                       <div className="nunito-300 text-[14px] mb-2">
                         Мөн 2022 онд “Инсталл наран конкрит” ХХК МҮ-4.2.3 тусгай

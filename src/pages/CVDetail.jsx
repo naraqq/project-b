@@ -223,7 +223,7 @@ function CVDetail() {
   ]);
   const final = {
     requestCompanyId: selectedCompany,
-    requestJobId: "",
+    requestJobId: meta_data.requestJobId ? meta_data.requestJobId : "",
     lastName: lastname,
     firstName: firstname,
     originName: originName,
