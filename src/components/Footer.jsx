@@ -55,7 +55,7 @@ function Footer() {
               <ul className="footer-links">
                 <li>
                   <a className="hover:!text-white nunito-300 text-white">
-                    Утас: 7779292
+                    Утас: 77779292
                   </a>
                 </li>
                 <li>

@@ -5,29 +5,29 @@ function HumanResource() {
   return (
     <div>
       <ul className="cards border-b">
-        <li className="cards_item !text-[14px] text-gray-500 nunito-400">
+        <li className="cards_item !text-[14px] text-gray-500 text-justify nunito-400">
           • Мэргэшсэн баг болон багийн ажиллагааг төлөвшүүлэх, өрсөлдөхүйц цалин
           хөлс, хангамжуудыг цогцоор нь шийдсэн хүлээлтээс давсан ханамжийг өгөх
           болно.
         </li>
-        <li className="cards_item !text-[14px] text-gray-500 nunito-400">
+        <li className="cards_item !text-[14px] text-gray-500 text-justify nunito-400">
           • Нэгдмэл зорилготой эрч хүчээр дүүрэн, эвсэг залуу хамт олонтой мөр
           зэрэгцэн ажиллана.
         </li>
-        <li className="cards_item !text-[14px] text-gray-500 nunito-400">
+        <li className="cards_item !text-[14px] text-gray-500 text-justify nunito-400">
           • Зах зээлд өрсөлдөхүйц цалин хөлс, үр дүнд тулгуурласан шагнал
           урамшуулал авна.
         </li>
-        <li className="cards_item !text-[14px] text-gray-500 nunito-400">
+        <li className="cards_item !text-[14px] text-gray-500 text-justify nunito-400">
           • Ёс зүйтэй, шинэчлэгч, манлайлагч байх урам зориг, хүсэл тэмүүллийг
           мэдэрнэ.
         </li>
-        <li className="cards_item !text-[14px] text-gray-500 nunito-400">
+        <li className="cards_item !text-[14px] text-gray-500 text-justify nunito-400">
           • Эрч хүчтэй, бүтээлч үйл ажиллагааг хүний нөөцийн бодлоготойгоо
           уялдуулан, ховор соёл бүхий, ажил олгогч загвар байгууллага болохоор
           зорьж ажиллана. Манай давуу тал
         </li>
-        <li className="cards_item !text-[14px] text-gray-500 nunito-400">
+        <li className="cards_item !text-[14px] text-gray-500 text-justify nunito-400">
           • Бид ажилтнууддаа тогтвор суурьшилтай ажиллах, хийж буй ажилдаа
           сэтгэл хангалуун байх нөхцлийг нь бүрдүүлж өгөх үүднээс таатай ажлын
           байр, зах зээлд өрсөлдөхүйц цалин, ажлын гүйцэтгэлтэй уялдсан
