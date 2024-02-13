@@ -130,8 +130,7 @@ $red: #ad0000;
 .body-cus .sec-main {
   position: relative;
   height: 560px;
-  background: url(https://www.hsimagazine.com/wp-content/uploads/2020/01/iStock-1028568006.jpg)
-    no-repeat center center;
+  background: url("../../public/home-bg.jpg") no-repeat center center;
   background-size: cover;
 
   &:after {

@@ -26,7 +26,15 @@ function InfoPage() {
         },
       })
       .then((res) => {
-        setNews(res.data.news);
+        let pre = [];
+        for (let index = 0; index < res.data.news.length; index++) {
+          const element = res.data.news[index];
+          console.log(element);
+          if (element.newsType != 2) {
+            pre.push(element);
+          }
+        }
+        setNews(pre);
         setLoading(false);
       })
       .catch((err) => console.log(err));
@@ -89,7 +97,13 @@ function InfoPage() {
           </div>
         </div>
       ) : (
-        <div>Шинэ мэдээ байхгүй байна.</div>
+        <div className="body ">
+          <div className="main about-us min-h-[calc(100vh-60px)]  ">
+            <div className="p-5 text-center text-[14px] nunito-300">
+              Шинэ мэдээ байхгүй байна.
+            </div>
+          </div>
+        </div>
       )}
     </Layout>
   );

@@ -1,6 +1,6 @@
 import Layout from "../components/Layouts/Layout";
 import { useState } from "react";
-import ReactPlayer from "react-player";
+import HistoryDetail from "./History/HistoryDetail";
 
 function OurHistory() {
   const [selected, setSelected] = useState(1);
@@ -12,7 +12,7 @@ function OurHistory() {
             <div className="container min-h-[calc(100vh-400px)]">
               <div className="row">
                 <div className="col-md-3">
-                  <div className="content">
+                  <div className="content mb-4">
                     <div
                       onClick={() => {
                         setSelected(1);
@@ -50,6 +50,11 @@ function OurHistory() {
                   {selected === 0 && (
                     <div className="nunito-300 text-[14px] flex flex-col md:flex-row gap-4">
                       <img
+                        src="desc/Instal Naran Construction_Taniltsuulga_Ekh_LAST_Har_LAST_page-0001.jpg"
+                        alt=""
+                        className="mb-2"
+                      />
+                      {/* <img
                         src="ceo.jpg"
                         alt=""
                         className="md:h-[500px] shadow"
@@ -111,38 +116,10 @@ function OurHistory() {
                           ЕРӨНХИЙ ЗАХИРАЛ Н.ЧУЛУУНБАЯР
                           <br />
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                   )}{" "}
-                  {selected === 1 && (
-                    <div className="nunito-300 text-[14px]  min-h-[400px]">
-                      <img src="/new/cover.jpg" alt="" className="" />
-
-                      <div className="nunito-300 text-[14px] mt-2 md:mt-5 mb-2 text-justify">
-                        Манай компани нь анх 2009 онд байгуулагдаж өнөөг хүртэл
-                        МУын барилгын салбарт үйл ажилгаагаа амжилттай явуулж
-                        байна. <br />
-                      </div>
-                      <div className="nunito-300 text-[14px] my-2 text-justify">
-                        Бид 2014 онд компаниа өргөжүүлж “Инсталл наран
-                        констракшн” ХХК болгон БУА-ын 2.1.1~5, 2.2.1~4 болон
-                        БА-6.2 тус тус заалттай тусгай зөвшөөрөлтэйгээр үйл
-                        ажиллагаагаа явуулж байна <br />
-                      </div>
-                      {/* <img src="/new/staffs.png" alt="" className="my-3" /> */}
-
-                      <div className="nunito-300 text-[14px] mb-2 text-justify">
-                        Мөн 2022 онд “Инсталл наран конкрит” ХХК МҮ-4.2.3 тусгай
-                        зөвшөөрөлтэй бетон зуурмагийн үйлдвэрээ байгуулж чанарын
-                        өндөр түвшинд, үйлчлүүлэгчийн хэрэгцээ шаардлагад
-                        нийцсэн бетон зуурмагийг нийлүүлэн ажиллаж байна. <br />
-                      </div>
-                      <ReactPlayer
-                        width={"100%"}
-                        url="https://fb.watch/khvhdcoiHZ/"
-                      />
-                    </div>
-                  )}
+                  {selected === 1 && <HistoryDetail />}
                   {selected === 2 && (
                     <div className="nunito-300 text-[14px] min-h-[400px]">
                       <img src="/new/staffs.png" alt="" />
